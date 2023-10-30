@@ -3,12 +3,12 @@
 @import "../../styles/mixins/displayFont.scss";
 @import "../../styles/mixins/textFont.scss";
 
-.heroContainer {
+.mainWrapper {
   background-color: $background-primary-default;
+}
+
+.heroContainer {
   color: $background-default;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  height: 100dvh;
 }
 
 .heroWrapper {
@@ -79,4 +79,55 @@
 
 .detail {
   @include textFontM;
+}
+
+.summary {
+  display: block;
+  padding-top: 192px;
+  color: $background-default;
+  @include textFontM;
+}
+
+.summaryWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.summaryFirstParagraph {
+  margin-bottom: 128px;
+
+  @include media($tablet) {
+    margin-bottom: 156px;
+    width: 70%;
+  }
+
+  @include media($desktop) {
+    width: 50%;
+  }
+
+  @include media($largeDesktop) {
+    margin-bottom: 192px;
+  }
+}
+
+.summaryTitle {
+  @include displayFontL;
+
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+
+.summarySecondParagraph {
+  @include media($tablet) {
+    width: 55%;
+  }
+
+  @include media($desktop) {
+    width: 50%;
+  }
+
+  @include media($largeDesktop) {
+    width: 40%;
+  }
 }

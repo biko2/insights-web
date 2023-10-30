@@ -6,7 +6,7 @@ import styles from './home.module.scss';
 
 export const Home: React.FC = () => {
   return (
-    <>
+    <main className={styles.mainWrapper}>
       <section className={styles.heroContainer}>
         <div className={container.container}>
           <div className={styles.heroWrapper}>
@@ -41,7 +41,30 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      <section></section>
-    </>
+      <section className={styles.summary}>
+        <div className={container.container}>
+          <div className={styles.summaryWrapper}>
+            <p className={styles.summaryFirstParagraph}>
+              Ya está disponible la{" "}
+              <span className={styles.highlight}>sexta edición</span> de
+              <span className={styles.highlight}>BikoInsights</span>, el
+              documento que contiene nuestra visión sobre lo que se está
+              moviendo (y sobre lo que creemos que se moverá) en el entorno
+              digital. En cada entrega tratamos distintos temas relacionados con
+              tecnología, software, experimentación digital...
+            </p>
+          </div>
+
+          <h3 className={styles.summaryTitle}>Sumario</h3>
+
+          <p className={styles.summarySecondParagraph}>
+            En esta edición nos movemos entre la esperanza y el aburrimiento
+            tecnológico. Es posible que empecemos a cansarnos de las promesas
+            incumplidas pero nos negamos a tirar la toalla. Es hora de darle la
+            vuelta al aburrimiento en Internet.
+          </p>
+        </div>
+      </section>
+    </main>
   );
 };

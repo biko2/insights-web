@@ -6,6 +6,7 @@ $l: 88px, 72px, 36px;
 @mixin displayFontXL() {
   font-family: "Raleway";
   font-size: 42px;
+  line-height: 100%;
 
   @include media($tablet) {
     font-size: 88px;
@@ -19,6 +20,7 @@ $l: 88px, 72px, 36px;
 @mixin displayFontL() {
   font-family: "Raleway";
   font-size: 36px;
+  line-height: 100%;
 
   @include media($tablet) {
     font-size: 72px;
