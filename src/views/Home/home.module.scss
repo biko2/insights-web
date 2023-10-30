@@ -1,20 +1,82 @@
-.heroWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@import "../../styles/mixins/colors.scss";
+@import "../../styles/mixins/media.scss";
+@import "../../styles/mixins/displayFont.scss";
+@import "../../styles/mixins/textFont.scss";
+
+.heroContainer {
+  background-color: $background-primary-default;
+  color: $background-default;
+  display: grid;
+  grid-template-rows: auto 1fr;
   height: 100dvh;
-  background-color: #040066;
+}
+
+.heroWrapper {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100dvh;
+
+  @include media($desktop) {
+    width: 58%;
+  }
 }
 
 .heroContent {
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
 }
 
 .heroLead {
-  font-size: 72px;
-  color: #ffffff;
+  @include displayFontL;
+
+  margin-bottom: 48px;
+  font-weight: bold;
 }
 
 .highlight {
-  color: #ff8982;
+  color: $content-highlight;
+}
+
+.headerItems {
+  display: flex;
+  text-transform: uppercase;
+  gap: 24px;
+}
+
+.flexbox {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.insightNumber {
+  @include displayFontXL;
+}
+
+.insight {
+  @include textFontM;
+}
+
+.callToAction {
+  width: fit-content;
+  padding: 26px 24px;
+  background: $background-secondary-default;
+  border: none;
+  border-radius: 128px;
+  font-size: 20px;
+  line-height: 100%;
+  color: $background-default;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.detail {
+  @include textFontM;
 }
