@@ -1,6 +1,5 @@
 import React from 'react';
 
-import logo from '../../../public/logo.svg';
 import container from '../components/container.module.scss';
 import styles from './home.module.scss';
 
