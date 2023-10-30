@@ -195,6 +195,8 @@
   column-gap: 24px;
   row-gap: 48px;
 
+  margin-bottom: 96px;
+
   @include media($tablet) {
     grid-template-columns: 1fr 1fr;
   }
@@ -232,4 +234,18 @@
   padding-bottom: 16px;
 
   border-bottom: 2px solid $border;
+}
+
+.footer {
+  @include textFontXS;
+
+  padding-top: 96px;
+  padding-bottom: 24px;
+
+  background-color: $background-primary-default;
+  color: $background-default;
+}
+
+.footerText {
+  text-align: center;
 }

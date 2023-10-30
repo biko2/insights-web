@@ -322,6 +322,15 @@ export const Home: React.FC = () => {
           </ul>
         </div>
       </section>
+
+      <footer className={styles.footer}>
+        <div className={container.container}>
+          <p className={styles.footerText}>
+            BikoInsights es un documento sobre tendencias digitales elaborado
+            por Jakala | Biko con carácter divulgativo.
+          </p>
+        </div>
+      </footer>
     </>
   );
 };
