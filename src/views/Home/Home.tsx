@@ -249,6 +249,76 @@ export const Home: React.FC = () => {
                 </li>
               </ul>
             </li>
+            <li>
+              <p className={styles.collectionItemTitle}>
+                BikoInsights #2{" "}
+                <span className={styles.collectionDate}>2019</span>
+              </p>
+              <ul>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    Movidos por el sonido
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    Cuando las ondas sonoras construyen interfaces de usuario.
+                  </p>
+                </li>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    Narrativas metafóricas
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    En el extrarradio de la palabra.
+                  </p>
+                </li>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    Machine learning
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    La responsabilidad de la predicción.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p className={styles.collectionItemTitle}>
+                BikoInsights #1{" "}
+                <span className={styles.collectionDate}>2018</span>
+              </p>
+              <ul>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>React</h4>
+                  <p className={styles.collectionItemListDescription}>
+                    El desarrollo por componentes.
+                  </p>
+                </li>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    Marketing automation
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    Saber más para conocer mejor.
+                  </p>
+                </li>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    Adopta un científico
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    La metodología científica desde la perspectiva de negocio.
+                  </p>
+                </li>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    Immersive Web
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    Las interfaces mutan.
+                  </p>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </section>
