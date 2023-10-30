@@ -133,18 +133,121 @@ export const Home: React.FC = () => {
                 BikoInsights #5{" "}
                 <span className={styles.collectionDate}>2022</span>
               </p>
+              <ul>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    La automatización paternalista
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    Un artículo de Ujué Agudo y Karlos G. Liberal.
+                  </p>
+                </li>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    Entrevista a Luis Montero
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    Una entrevista de Bikolabs Laboratorio de especulación en
+                    Biko
+                  </p>
+                </li>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    NFT y criptomonedas. El Blockchain desembarca en el mundo
+                    del arte.
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    Un artículo de Diego Cenzano.
+                  </p>
+                </li>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    Una empresa que crea escuela
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    Un artículo de Aritz Suescun y Pablo Albizu.
+                  </p>
+                </li>
+              </ul>
             </li>
             <li>
               <p className={styles.collectionItemTitle}>
                 BikoInsights #4{" "}
                 <span className={styles.collectionDate}>2021</span>
               </p>
+              <ul>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    La gestión de contenidos en la era Jamstack
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    El reto de Biko de integrar un CMS como Drupal en
+                    arquitecturas Jamstack.
+                  </p>
+                </li>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    ¿Hacia la singularidad o hacia un nuevo invierno en la IA?
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    Una entrevista de Radio3.
+                  </p>
+                </li>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    Claves para hacer frente a la desinformación
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    El mayor peligro somos nosotros mismos.
+                  </p>
+                </li>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    Sociocracia 3.0
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    Un año de recorrido en Biko.
+                  </p>
+                </li>
+              </ul>
             </li>
             <li>
               <p className={styles.collectionItemTitle}>
                 BikoInsights #3{" "}
                 <span className={styles.collectionDate}>2020</span>
               </p>
+              <ul>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    Gestión de contenidos moderna
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    Un cambio de paradigma.
+                  </p>
+                </li>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    Estrategia digital
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    Qué podemos aprender de los museos.
+                  </p>
+                </li>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>Open Space</h4>
+                  <p className={styles.collectionItemListDescription}>
+                    La autoorganización como motor del cambio.
+                  </p>
+                </li>
+                <li>
+                  <h4 className={styles.collectionItemListTitle}>
+                    Narrativa de la convivencia
+                  </h4>
+                  <p className={styles.collectionItemListDescription}>
+                    En las relaciones humano-inteligencia artificial.
+                  </p>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>

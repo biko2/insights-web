@@ -192,7 +192,8 @@
 .collectionWrapper {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  column-gap: 24px;
+  row-gap: 48px;
 
   @include media($tablet) {
     grid-template-columns: 1fr 1fr;
@@ -217,4 +218,18 @@
 
 .collectionDate {
   color: $content-light-body;
+}
+
+.collectionItemListTitle {
+  @include textFontS;
+  padding-top: 24px;
+  margin-bottom: 8px;
+  color: $background-primary-default;
+}
+
+.collectionItemListDescription {
+  color: $content-body;
+  padding-bottom: 16px;
+
+  border-bottom: 2px solid $border;
 }
