@@ -188,3 +188,33 @@
   margin-bottom: 48px;
   @include textFontM;
 }
+
+.collectionWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  @include media($tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include media($largeDesktop) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.collectionTitle {
+  @include textFontM;
+
+  margin-right: 12px;
+  padding-bottom: 24px;
+
+  color: $background-primary-default;
+  text-transform: uppercase;
+
+  border-bottom: 2px solid $background-primary-default;
+}
+
+.collectionDate {
+  color: $content-light-body;
+}

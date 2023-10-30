@@ -127,6 +127,26 @@ export const Home: React.FC = () => {
           <p className={styles.collectionDescription}>
             No te preocupes, aquí tienes las ediciones anteriores:
           </p>
+          <ul className={styles.collectionWrapper}>
+            <li>
+              <p className={styles.collectionTitle}>
+                BikoInsights #5{" "}
+                <span className={styles.collectionDate}>2022</span>
+              </p>
+            </li>
+            <li>
+              <p className={styles.collectionTitle}>
+                BikoInsights #4{" "}
+                <span className={styles.collectionDate}>2021</span>
+              </p>
+            </li>
+            <li>
+              <p className={styles.collectionTitle}>
+                BikoInsights #3{" "}
+                <span className={styles.collectionDate}>2020</span>
+              </p>
+            </li>
+          </ul>
         </div>
       </section>
     </>
