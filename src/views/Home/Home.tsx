@@ -63,6 +63,53 @@ export const Home: React.FC = () => {
             incumplidas pero nos negamos a tirar la toalla. Es hora de darle la
             vuelta al aburrimiento en Internet.
           </p>
+
+          <div className={styles.listWrapper}>
+            <ul className={styles.list}>
+              <li className={styles.listBox}>
+                <h4 className={styles.listTitle}>Editorial</h4>
+              </li>
+              <li className={styles.listBox}>
+                <h4 className={styles.listTitle}>
+                  Paren las redes, que yo me bajo
+                </h4>
+                <p className={styles.listDescription}>
+                  Devolvamos las redes a su esencia para hacerlas mejores.
+                </p>
+              </li>
+              <li className={styles.listBox}>
+                <h4 className={styles.listTitle}>Más allá del ciberespacio</h4>
+                <p className={styles.listDescription}>
+                  Un repaso de la cultura digital para poder ampliar los
+                  horizontes o crearlos nuevos.
+                </p>
+              </li>
+              <li className={styles.listBox}>
+                <h4 className={styles.listTitle}>
+                  Nostalgia para combatir el aburrimiento
+                </h4>
+              </li>
+              <li className={styles.listBox}>
+                <h4 className={styles.listTitle}>
+                  Complejidad, evolución y el fin del ciclo del internet de los
+                  pioneros
+                </h4>
+                <p className={styles.listDescription}>
+                  En 2023, internet ya no es ese lugar de 25 años atrás, sino un
+                  commodity de una complejidad extrema.
+                </p>
+              </li>
+              <li className={styles.listBox}>
+                <h4 className={styles.listTitle}>
+                  Automatizando las tareas sucias, peligrosas y aburridas
+                </h4>
+                <p className={styles.listDescription}>
+                  Cuestiones a considerar para que la automatización aumente
+                  nuestra autonomía.
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>

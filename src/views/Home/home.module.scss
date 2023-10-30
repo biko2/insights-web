@@ -119,6 +119,8 @@
 }
 
 .summarySecondParagraph {
+  margin-bottom: 36px;
+
   @include media($tablet) {
     width: 55%;
   }
@@ -130,4 +132,45 @@
   @include media($largeDesktop) {
     width: 40%;
   }
+}
+
+.listWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  @include media($tablet) {
+    width: 80%;
+  }
+
+  @include media($desktop) {
+    width: 60%;
+  }
+
+  @include media($largeDesktop) {
+    width: 40%;
+  }
+}
+
+.listBox {
+  padding: 28px 32px;
+  background-color: $background-default;
+  border-radius: 16px;
+  @include textFontM;
+}
+
+.listTitle {
+  color: $background-primary-default;
+  text-transform: uppercase;
+}
+
+.listDescription {
+  margin-top: 8px;
+  color: $content-body;
+  @include textFontXS;
 }
