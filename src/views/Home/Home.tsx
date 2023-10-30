@@ -129,19 +129,19 @@ export const Home: React.FC = () => {
           </p>
           <ul className={styles.collectionWrapper}>
             <li>
-              <p className={styles.collectionTitle}>
+              <p className={styles.collectionItemTitle}>
                 BikoInsights #5{" "}
                 <span className={styles.collectionDate}>2022</span>
               </p>
             </li>
             <li>
-              <p className={styles.collectionTitle}>
+              <p className={styles.collectionItemTitle}>
                 BikoInsights #4{" "}
                 <span className={styles.collectionDate}>2021</span>
               </p>
             </li>
             <li>
-              <p className={styles.collectionTitle}>
+              <p className={styles.collectionItemTitle}>
                 BikoInsights #3{" "}
                 <span className={styles.collectionDate}>2020</span>
               </p>
