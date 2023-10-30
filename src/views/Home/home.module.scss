@@ -3,7 +3,7 @@
 @import "../../styles/mixins/displayFont.scss";
 @import "../../styles/mixins/textFont.scss";
 
-.mainWrapper {
+.introSection {
   background-color: $background-primary-default;
 }
 
@@ -137,6 +137,8 @@
 .listWrapper {
   display: flex;
   justify-content: flex-end;
+
+  padding-bottom: 96px;
 }
 
 .list {
@@ -173,4 +175,16 @@
   margin-top: 8px;
   color: $content-body;
   @include textFontXS;
+}
+
+.collectionTitle {
+  margin-top: 96px;
+  margin-bottom: 48px;
+  color: $background-primary-default;
+  @include displayFontL;
+}
+
+.collectionDescription {
+  margin-bottom: 48px;
+  @include textFontM;
 }
