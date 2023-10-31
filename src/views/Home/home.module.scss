@@ -360,6 +360,7 @@
 }
 
 .collectionItemListDescription {
+  @include textFontXS;
   color: $content-body;
   padding-bottom: 16px;
 
