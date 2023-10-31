@@ -75,7 +75,7 @@ export const Home: React.FC = () => {
             <div className={styles.summaryWrapper}>
               <p className={styles.summaryFirstParagraph}>
                 Ya está disponible la{" "}
-                <span className={styles.highlight}>sexta edición</span> de
+                <span className={styles.highlight}>sexta edición</span> de{" "}
                 <span className={styles.highlight}>BikoInsights</span>, el
                 documento que contiene nuestra visión sobre lo que se está
                 moviendo (y sobre lo que creemos que se moverá) en el entorno
