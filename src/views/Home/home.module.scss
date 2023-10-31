@@ -19,6 +19,17 @@
     background-size: cover;
   }
 
+  @include media($largeTablet) {
+    background: linear-gradient(
+        to right,
+        $background-primary-default 50%,
+        transparent 50%
+      ),
+      url("/images/bg-medium.jpg") no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+
   @include media($desktop) {
     background: linear-gradient(
         to right,
@@ -58,8 +69,9 @@
   flex-direction: column;
   justify-content: center;
 
-  @include media($desktop) {
-    margin-left: 96px;
+  @include media($largeTablet) {
+    padding-left: 96px;
+    padding-right: 96px;
   }
 }
 
@@ -156,7 +168,7 @@
     width: fit-content;
   }
 
-  padding: 26px 24px;
+  padding: 24px;
   background: $background-secondary-default;
   border: none;
   border-radius: 128px;
@@ -223,7 +235,7 @@
     width: 70%;
   }
 
-  @include media($desktop) {
+  @include media($largeTablet) {
     width: 50%;
   }
 
