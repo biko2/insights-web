@@ -134,6 +134,10 @@ export const Home: React.FC = () => {
           </p>
           <ul className={styles.collectionWrapper}>
             <li>
+              <img
+                className={styles.collectionItemImage}
+                src="../../../public/images/img-biko-insights-3.jpg"
+              />
               <p className={styles.collectionItemTitle}>
                 BikoInsights #5{" "}
                 <span className={styles.collectionDate}>2022</span>
@@ -176,6 +180,10 @@ export const Home: React.FC = () => {
               </ul>
             </li>
             <li>
+              <img
+                className={styles.collectionItemImage}
+                src="../../../public/images/img-biko-insights-4.jpg"
+              />
               <p className={styles.collectionItemTitle}>
                 BikoInsights #4{" "}
                 <span className={styles.collectionDate}>2021</span>
@@ -217,6 +225,10 @@ export const Home: React.FC = () => {
               </ul>
             </li>
             <li>
+              <img
+                className={styles.collectionItemImage}
+                src="../../../public/images/img-biko-insights-3.jpg"
+              />
               <p className={styles.collectionItemTitle}>
                 BikoInsights #3{" "}
                 <span className={styles.collectionDate}>2020</span>
@@ -255,6 +267,10 @@ export const Home: React.FC = () => {
               </ul>
             </li>
             <li>
+              <img
+                className={styles.collectionItemImage}
+                src="../../../public/images/img-biko-insights-2.jpg"
+              />
               <p className={styles.collectionItemTitle}>
                 BikoInsights #2{" "}
                 <span className={styles.collectionDate}>2019</span>
@@ -287,6 +303,10 @@ export const Home: React.FC = () => {
               </ul>
             </li>
             <li>
+              <img
+                className={styles.collectionItemImage}
+                src="../../../public/images/img-biko-insights-1.jpg"
+              />
               <p className={styles.collectionItemTitle}>
                 BikoInsights #1{" "}
                 <span className={styles.collectionDate}>2018</span>
