@@ -388,6 +388,11 @@
   border-bottom: 2px solid $background-primary-default;
 }
 
+.collectionItemTitleContent {
+  display: flex;
+  gap: 12px;
+}
+
 .collectionDate {
   color: $content-light-body;
 }

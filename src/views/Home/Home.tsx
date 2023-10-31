@@ -186,7 +186,7 @@ export const Home: React.FC = () => {
                 src="/images/img-biko-insights-5.jpg"
               />
               <div className={styles.collectionItemTitle}>
-                <p>
+                <p className={styles.collectionItemTitleContent}>
                   BikoInsights #5{" "}
                   <span className={styles.collectionDate}>2022</span>
                 </p>
@@ -243,7 +243,7 @@ export const Home: React.FC = () => {
                 src="/images/img-biko-insights-4.jpg"
               />
               <div className={styles.collectionItemTitle}>
-                <p>
+                <p className={styles.collectionItemTitleContent}>
                   BikoInsights #4{" "}
                   <span className={styles.collectionDate}>2021</span>
                 </p>
@@ -299,7 +299,7 @@ export const Home: React.FC = () => {
                 src="/images/img-biko-insights-3.jpg"
               />
               <div className={styles.collectionItemTitle}>
-                <p>
+                <p className={styles.collectionItemTitleContent}>
                   BikoInsights #3{" "}
                   <span className={styles.collectionDate}>2020</span>
                 </p>
@@ -352,7 +352,7 @@ export const Home: React.FC = () => {
                 src="/images/img-biko-insights-2.jpg"
               />
               <div className={styles.collectionItemTitle}>
-                <p>
+                <p className={styles.collectionItemTitleContent}>
                   BikoInsights #2{" "}
                   <span className={styles.collectionDate}>2019</span>
                 </p>
@@ -399,7 +399,7 @@ export const Home: React.FC = () => {
                 src="/images/img-biko-insights-1.jpg"
               />
               <div className={styles.collectionItemTitle}>
-                <p>
+                <p className={styles.collectionItemTitleContent}>
                   BikoInsights #1{" "}
                   <span className={styles.collectionDate}>2018</span>
                 </p>
