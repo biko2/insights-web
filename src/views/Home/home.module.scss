@@ -137,6 +137,16 @@
   gap: 8px;
 
   cursor: pointer;
+  > img {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    > img {
+      transform: translateY(5px);
+      transition: all 0.3s ease-in-out;
+    }
+  }
 }
 
 .flexbox {
@@ -437,6 +447,10 @@
 .insightLink {
   display: inline;
   vertical-align: bottom;
+
+  &:hover {
+    color: #bf0808;
+  }
 }
 
 .firstHexagon {
