@@ -71,7 +71,7 @@ export const Home: React.FC = () => {
           </div>
         </section>
 
-        <section className={styles.summary}>
+        <section id="sumario" className={styles.summary}>
           <div className={container.container}>
             <div className={styles.summaryWrapper}>
               <p className={styles.summaryFirstParagraph}>
@@ -90,9 +90,7 @@ export const Home: React.FC = () => {
                 className={styles.summaryImage}
                 src="/images/img-sumario-bikoinsights6.jpg"
               />
-              <h3 id="sumario" className={styles.summaryTitle}>
-                Sumario
-              </h3>
+              <h3 className={styles.summaryTitle}>Sumario</h3>
 
               <p className={styles.summarySecondParagraph}>
                 En esta edición nos movemos entre la esperanza y el aburrimiento
@@ -154,9 +152,9 @@ export const Home: React.FC = () => {
         </section>
       </section>
 
-      <section>
+      <section id="ediciones-anteriores">
         <div className={container.container}>
-          <h3 id="ediciones-anteriores" className={styles.collectionTitle}>
+          <h3 className={styles.collectionTitle}>
             ¿Te perdiste algún BikoInsights?
           </h3>
           <p className={styles.collectionDescription}>
