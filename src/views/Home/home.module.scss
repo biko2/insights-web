@@ -182,10 +182,29 @@
 }
 
 .summary {
+  position: relative;
   display: block;
   padding-top: 192px;
   color: $background-default;
   @include textFontM;
+  overflow: hidden;
+
+  z-index: 10;
+}
+
+.summaryImage {
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+  width: auto;
+
+  z-index: -1;
+
+  @include media($tablet) {
+    top: 32%;
+  }
 }
 
 .summaryWrapper {
@@ -215,18 +234,6 @@
   position: relative;
 
   z-index: 1;
-}
-
-.summaryImage {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 100%;
-  height: auto;
-  width: auto;
-
-  z-index: -1;
 }
 
 .summaryTitle {

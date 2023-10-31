@@ -72,6 +72,10 @@ export const Home: React.FC = () => {
         </section>
 
         <section id="sumario" className={styles.summary}>
+          <img
+            className={styles.summaryImage}
+            src="/images/img-sumario-bikoinsights6.jpg"
+          />
           <div className={container.container}>
             <div className={styles.summaryWrapper}>
               <p className={styles.summaryFirstParagraph}>
@@ -86,10 +90,6 @@ export const Home: React.FC = () => {
             </div>
 
             <div className={styles.summaryBackgroundWrapper}>
-              <img
-                className={styles.summaryImage}
-                src="/images/img-sumario-bikoinsights6.jpg"
-              />
               <h3 className={styles.summaryTitle}>Sumario</h3>
 
               <p className={styles.summarySecondParagraph}>
