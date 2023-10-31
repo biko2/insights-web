@@ -39,16 +39,16 @@
   display: grid;
   grid-template-rows: auto 1fr;
   height: 100dvh;
-
-  @include media($desktop) {
-    width: 58%;
-  }
 }
 
 .heroContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include media($desktop) {
+    width: 58%;
+  }
 }
 
 .header {
@@ -69,9 +69,22 @@
 }
 
 .headerItems {
+  display: none;
+
+  @include media($tablet) {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 24px;
+  }
+}
+
+.headerItem {
   display: flex;
-  text-transform: uppercase;
-  gap: 24px;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
 }
 
 .flexbox {

@@ -11,11 +11,25 @@ export const Home: React.FC = () => {
           <div className={container.container}>
             <div className={styles.heroWrapper}>
               <header className={styles.header}>
+                <img src="/logo.svg" />
                 <ul className={styles.headerItems}>
-                  <li>Sumario</li>
-                  <li>Ediciones anteriores</li>
+                  <li>
+                    <a href="#sumario" className={styles.headerItem}>
+                      Sumario <img src="/icons/arrow-down.svg" />
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#ediciones-anteriores"
+                      className={styles.headerItem}
+                    >
+                      Ediciones anteriores <img src="/icons/arrow-down.svg" />
+                    </a>
+                  </li>
                 </ul>
               </header>
+
               <div className={styles.heroContent}>
                 <p className={styles.heroLead}>
                   Entre la <span className={styles.highlight}>esperanza</span> y
@@ -60,9 +74,11 @@ export const Home: React.FC = () => {
             <div className={styles.summaryBackgroundWrapper}>
               <img
                 className={styles.summaryImage}
-                src="../../../public/images/img-sumario-bikoinsights6.jpg"
+                src="/images/img-sumario-bikoinsights6.jpg"
               />
-              <h3 className={styles.summaryTitle}>Sumario</h3>
+              <h3 id="sumario" className={styles.summaryTitle}>
+                Sumario
+              </h3>
 
               <p className={styles.summarySecondParagraph}>
                 En esta edición nos movemos entre la esperanza y el aburrimiento
@@ -126,7 +142,7 @@ export const Home: React.FC = () => {
 
       <section>
         <div className={container.container}>
-          <h3 className={styles.collectionTitle}>
+          <h3 id="ediciones-anteriores" className={styles.collectionTitle}>
             ¿Te perdiste algún BikoInsights?
           </h3>
           <p className={styles.collectionDescription}>
@@ -136,7 +152,7 @@ export const Home: React.FC = () => {
             <li>
               <img
                 className={styles.collectionItemImage}
-                src="../../../public/images/img-biko-insights-3.jpg"
+                src="/images/img-biko-insights-3.jpg"
               />
               <p className={styles.collectionItemTitle}>
                 BikoInsights #5{" "}
@@ -182,7 +198,7 @@ export const Home: React.FC = () => {
             <li>
               <img
                 className={styles.collectionItemImage}
-                src="../../../public/images/img-biko-insights-4.jpg"
+                src="/images/img-biko-insights-4.jpg"
               />
               <p className={styles.collectionItemTitle}>
                 BikoInsights #4{" "}
@@ -227,7 +243,7 @@ export const Home: React.FC = () => {
             <li>
               <img
                 className={styles.collectionItemImage}
-                src="../../../public/images/img-biko-insights-3.jpg"
+                src="/images/img-biko-insights-3.jpg"
               />
               <p className={styles.collectionItemTitle}>
                 BikoInsights #3{" "}
@@ -269,7 +285,7 @@ export const Home: React.FC = () => {
             <li>
               <img
                 className={styles.collectionItemImage}
-                src="../../../public/images/img-biko-insights-2.jpg"
+                src="/images/img-biko-insights-2.jpg"
               />
               <p className={styles.collectionItemTitle}>
                 BikoInsights #2{" "}
@@ -305,7 +321,7 @@ export const Home: React.FC = () => {
             <li>
               <img
                 className={styles.collectionItemImage}
-                src="../../../public/images/img-biko-insights-1.jpg"
+                src="/images/img-biko-insights-1.jpg"
               />
               <p className={styles.collectionItemTitle}>
                 BikoInsights #1{" "}
