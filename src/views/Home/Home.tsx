@@ -96,7 +96,7 @@ export const Home: React.FC = () => {
               className={styles.summaryImage}
               src="/images/img-sumario-bikoinsights6.jpg"
             />
-            <div className={styles.summaryWrapper}>
+            <div className={`${styles.summaryWrapper} ${styles.reveal} reveal`}>
               <p className={styles.summaryFirstParagraph}>
                 Ya está disponible la{" "}
                 <span className={styles.highlight}>sexta edición</span> de{" "}
@@ -109,9 +109,13 @@ export const Home: React.FC = () => {
             </div>
 
             <div className={styles.summaryBackgroundWrapper}>
-              <h3 className={styles.summaryTitle}>Sumario</h3>
+              <h3 className={`${styles.summaryTitle} ${styles.reveal} reveal`}>
+                Sumario
+              </h3>
 
-              <p className={styles.summarySecondParagraph}>
+              <p
+                className={`${styles.summarySecondParagraph} ${styles.reveal} reveal`}
+              >
                 En esta edición nos movemos entre la esperanza y el aburrimiento
                 tecnológico. Es posible que empecemos a cansarnos de las
                 promesas incumplidas pero nos negamos a tirar la toalla. Es hora
@@ -120,7 +124,7 @@ export const Home: React.FC = () => {
             </div>
 
             <div className={styles.listWrapper}>
-              <ul className={styles.list}>
+              <ul className={`${styles.list} ${styles.reveal} reveal`}>
                 <li className={styles.listBox}>
                   <h4 className={styles.listTitle}>Editorial</h4>
                 </li>
