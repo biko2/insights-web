@@ -164,14 +164,22 @@ export const Home: React.FC = () => {
             <li>
               <img
                 className={styles.collectionItemImage}
-                src="/images/img-biko-insights-3.jpg"
+                src="/images/img-biko-insights-5.jpg"
               />
               <div className={styles.collectionItemTitle}>
                 <p>
                   BikoInsights #5{" "}
                   <span className={styles.collectionDate}>2022</span>
                 </p>
-                <img src="/icons/download.svg" />
+                <a
+                  target="_blank"
+                  href="https://www.biko2.com/insights/BIKO-INSIGHTS-5-2022.pdf"
+                >
+                  <img
+                    className={styles.insightLink}
+                    src="/icons/download.svg"
+                  />
+                </a>
               </div>
               <ul>
                 <li>
@@ -217,10 +225,18 @@ export const Home: React.FC = () => {
               />
               <div className={styles.collectionItemTitle}>
                 <p>
-                  BikoInsights #5{" "}
-                  <span className={styles.collectionDate}>2022</span>
+                  BikoInsights #4{" "}
+                  <span className={styles.collectionDate}>2021</span>
                 </p>
-                <img src="/icons/download.svg" />
+                <a
+                  target="_blank"
+                  href="https://www.biko2.com/insights/BIKO-INSIGHTS-4-2021.pdf"
+                >
+                  <img
+                    className={styles.insightLink}
+                    src="/icons/download.svg"
+                  />
+                </a>
               </div>
               <ul>
                 <li>
@@ -265,10 +281,18 @@ export const Home: React.FC = () => {
               />
               <div className={styles.collectionItemTitle}>
                 <p>
-                  BikoInsights #5{" "}
-                  <span className={styles.collectionDate}>2022</span>
+                  BikoInsights #3{" "}
+                  <span className={styles.collectionDate}>2020</span>
                 </p>
-                <img src="/icons/download.svg" />
+                <a
+                  target="_blank"
+                  href="https://www.biko2.com/insights/BIKO-INSIGHTS-3-2020.pdf"
+                >
+                  <img
+                    className={styles.insightLink}
+                    src="/icons/download.svg"
+                  />
+                </a>
               </div>
               <ul>
                 <li>
@@ -310,10 +334,18 @@ export const Home: React.FC = () => {
               />
               <div className={styles.collectionItemTitle}>
                 <p>
-                  BikoInsights #5{" "}
-                  <span className={styles.collectionDate}>2022</span>
+                  BikoInsights #2{" "}
+                  <span className={styles.collectionDate}>2019</span>
                 </p>
-                <img src="/icons/download.svg" />
+                <a
+                  target="_blank"
+                  href="https://www.biko2.com/insights/BIKO-INSIGHTS-2-2019.pdf"
+                >
+                  <img
+                    className={styles.insightLink}
+                    src="/icons/download.svg"
+                  />
+                </a>
               </div>
               <ul>
                 <li>
@@ -349,10 +381,18 @@ export const Home: React.FC = () => {
               />
               <div className={styles.collectionItemTitle}>
                 <p>
-                  BikoInsights #5{" "}
-                  <span className={styles.collectionDate}>2022</span>
+                  BikoInsights #1{" "}
+                  <span className={styles.collectionDate}>2018</span>
                 </p>
-                <img src="/icons/download.svg" />
+                <a
+                  target="_blank"
+                  href="https://www.biko2.com/insights/BIKO-INSIGHTS-1-2018.pdf "
+                >
+                  <img
+                    className={styles.insightLink}
+                    src="/icons/download.svg"
+                  />
+                </a>
               </div>
               <ul>
                 <li>

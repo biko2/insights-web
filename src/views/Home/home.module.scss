@@ -8,29 +8,36 @@
 }
 
 .heroContainer {
-  background: url("../../../public/images/bg-medium.jpg");
-  background-repeat: no-repeat;
+  color: $background-default;
+  background: url("/images/bg-small.jpg") no-repeat;
   background-position: center;
   background-size: cover;
 
-  color: $background-default;
   @include media($tablet) {
-    background: url("../../../public/images/bg-large.jpg");
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
+    background: url("/images/bg-medium.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   @include media($desktop) {
-    background: url("../../../public/images/bg-xlarge.jpg");
-    background-repeat: no-repeat;
-    background-position: right;
+    background: linear-gradient(
+        to right,
+        $background-primary-default 50%,
+        transparent 50%
+      ),
+      url("/images/bg-2xlarge.jpg") no-repeat center center;
     background-size: contain;
+    background-position: right;
   }
 
   @include media($largeDesktop) {
-    background: url("../../../public/images/bg-2xlarge.jpg");
-    background-repeat: no-repeat;
+    background: linear-gradient(
+        to right,
+        $background-primary-default 50%,
+        transparent 50%
+      ),
+      url("/images/bg-2xlarge.jpg") no-repeat center center;
+    background-size: contain;
     background-position: right;
   }
 }
@@ -391,4 +398,9 @@
 
 .footerText {
   text-align: center;
+}
+
+.insightLink {
+  display: inline;
+  vertical-align: bottom;
 }
