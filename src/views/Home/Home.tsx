@@ -11,7 +11,8 @@ export const Home: React.FC = () => {
           <div className={container.container}>
             <div className={styles.heroWrapper}>
               <header className={styles.header}>
-                <img src="/logo.svg" />
+                <img className={styles.heroLogo} src="/logo.svg" />
+
                 <ul className={styles.headerItems}>
                   <li>
                     <a href="#sumario" className={styles.headerItem}>
@@ -49,9 +50,21 @@ export const Home: React.FC = () => {
                   Descargar BikoInsights #6
                 </button>
                 <p className={styles.detail}>
+                  <img
+                    className={styles.bulletpoint}
+                    src="/icons/bullet-red.svg"
+                  />
                   ¿Quieres una edición impresa de BikoInsigts #6?, envíanos un
                   email y háznoslo saber.
                 </p>
+
+                <div className={styles.scrollText}>
+                  <p>
+                    Scroll
+                    <br /> page
+                  </p>
+                  <img src="/icons/scroll-arrow.svg" />
+                </div>
               </div>
             </div>
           </div>
