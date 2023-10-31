@@ -11,7 +11,10 @@ export const Home: React.FC = () => {
           <div className={container.container}>
             <div className={styles.heroWrapper}>
               <header className={styles.header}>
-                <img className={styles.heroLogo} src="/logo.svg" />
+                <img
+                  className={styles.heroLogo}
+                  src="/logo-bikoinsights-large.svg"
+                />
 
                 <ul className={styles.headerItems}>
                   <li>

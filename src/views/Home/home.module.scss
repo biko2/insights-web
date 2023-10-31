@@ -146,7 +146,9 @@
 .callToAction {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+
   @include textFontS;
   width: 100%;
 
