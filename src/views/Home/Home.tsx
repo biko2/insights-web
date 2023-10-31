@@ -48,6 +48,7 @@ export const Home: React.FC = () => {
                 </div>
                 <button className={styles.callToAction}>
                   Descargar BikoInsights #6
+                  <img src="/icons/cta-download.svg" />
                 </button>
                 <p className={styles.detail}>
                   <img
