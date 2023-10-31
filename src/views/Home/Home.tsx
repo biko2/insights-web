@@ -40,7 +40,7 @@ export const Home: React.FC = () => {
                 <div className={styles.flexbox}>
                   <span className={styles.insightNumber}>#06</span>
                   <div className={styles.insight}>
-                    <p className={styles.highlight}>BikoInsights</p>
+                    <p className={styles.highlightHero}>BikoInsights</p>
                     <p>
                       Tendencias digitales para un mundo en constante cambio.
                     </p>

@@ -84,6 +84,10 @@
   }
 }
 
+.highlightHero {
+  color: $content-highlight;
+}
+
 .highlight {
   color: $content-highlight;
   font-weight: bold;
@@ -110,8 +114,14 @@
 
 .flexbox {
   display: flex;
-  align-items: center;
-  gap: 24px;
+  flex-direction: column;
+  gap: 12px;
+
+  @include media($tablet) {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
 }
 
 .insightNumber {
