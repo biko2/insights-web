@@ -75,12 +75,27 @@ export const Home: React.FC = () => {
         </section>
 
         <section id="sumario" className={styles.summary}>
-          <img className={styles.firstHexagon} src="/icons/white-hexagon.svg" />
-          <img
-            className={styles.summaryImage}
-            src="/images/img-sumario-bikoinsights6.jpg"
-          />
           <div className={container.container}>
+            <img
+              className={`${styles.hexagon} ${styles.firstHexagon}`}
+              src="/icons/white-hexagon.svg"
+            />
+            <img
+              className={`${styles.hexagon} ${styles.secondHexagon}`}
+              src="/icons/red-hexagon.svg"
+            />
+            <img
+              className={`${styles.hexagon} ${styles.thirdHexagon}`}
+              src="/icons/red-hexagon.svg"
+            />
+            <img
+              className={`${styles.hexagon} ${styles.fourthHexagon}`}
+              src="/icons/white-hexagon.svg"
+            />
+            <img
+              className={styles.summaryImage}
+              src="/images/img-sumario-bikoinsights6.jpg"
+            />
             <div className={styles.summaryWrapper}>
               <p className={styles.summaryFirstParagraph}>
                 Ya está disponible la{" "}
