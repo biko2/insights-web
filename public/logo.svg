@@ -10,7 +10,7 @@
 <mask id="mask0_535_71" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="9" y="0" width="8" height="31">
 <path d="M9.13611 0.000213623H16.3655V30.0989H9.13611V0.000213623Z" fill="#F00A0A"/>
 </mask>
-<g mask="url(#mask0_535_71)">
+<g>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.13611 30.0989C13.3006 29.0563 16.3655 24.8392 16.3655 20.7877V-0.000579834H9.13611V16.6318V19.2056V29.7397V30.0989Z" fill="#F00A0A"/>
 </g>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M188 22L181 18.0115L181 9.98641L188 6L195 9.9864L195 18.0115L188 22Z" fill="#F00A0A"/>
