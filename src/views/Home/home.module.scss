@@ -251,14 +251,10 @@
   gap: 4px;
   width: 100%;
   @include media($tablet) {
-    width: 80%;
-  }
-
-  @include media($desktop) {
     width: 60%;
   }
 
-  @include media($largeDesktop) {
+  @include media($desktop) {
     width: 40%;
   }
 }
@@ -316,7 +312,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  @include media($largeDesktop) {
+  @include media($desktop) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
