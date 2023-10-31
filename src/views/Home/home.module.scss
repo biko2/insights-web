@@ -99,8 +99,12 @@
 .heroLead {
   @include displayFontL;
 
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   font-weight: bold;
+
+  @include media($tablet) {
+    margin-bottom: 48px;
+  }
 
   @include media($desktop) {
     width: 60%;
@@ -165,6 +169,8 @@
   width: 100%;
 
   @include media($tablet) {
+    margin-top: 48px;
+    margin-bottom: 48px;
     width: fit-content;
   }
 
@@ -175,8 +181,8 @@
   font-weight: bold;
 
   color: $background-default;
-  margin-top: 48px;
-  margin-bottom: 48px;
+  margin-top: 32px;
+  margin-bottom: 32px;
 
   transition: all 0.2s ease-in-out;
   cursor: pointer;
