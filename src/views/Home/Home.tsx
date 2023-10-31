@@ -154,10 +154,13 @@ export const Home: React.FC = () => {
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-3.jpg"
               />
-              <p className={styles.collectionItemTitle}>
-                BikoInsights #5{" "}
-                <span className={styles.collectionDate}>2022</span>
-              </p>
+              <div className={styles.collectionItemTitle}>
+                <p>
+                  BikoInsights #5{" "}
+                  <span className={styles.collectionDate}>2022</span>
+                </p>
+                <img src="/icons/download.svg" />
+              </div>
               <ul>
                 <li>
                   <h4 className={styles.collectionItemListTitle}>
@@ -200,10 +203,13 @@ export const Home: React.FC = () => {
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-4.jpg"
               />
-              <p className={styles.collectionItemTitle}>
-                BikoInsights #4{" "}
-                <span className={styles.collectionDate}>2021</span>
-              </p>
+              <div className={styles.collectionItemTitle}>
+                <p>
+                  BikoInsights #5{" "}
+                  <span className={styles.collectionDate}>2022</span>
+                </p>
+                <img src="/icons/download.svg" />
+              </div>
               <ul>
                 <li>
                   <h4 className={styles.collectionItemListTitle}>
@@ -245,10 +251,13 @@ export const Home: React.FC = () => {
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-3.jpg"
               />
-              <p className={styles.collectionItemTitle}>
-                BikoInsights #3{" "}
-                <span className={styles.collectionDate}>2020</span>
-              </p>
+              <div className={styles.collectionItemTitle}>
+                <p>
+                  BikoInsights #5{" "}
+                  <span className={styles.collectionDate}>2022</span>
+                </p>
+                <img src="/icons/download.svg" />
+              </div>
               <ul>
                 <li>
                   <h4 className={styles.collectionItemListTitle}>
@@ -287,10 +296,13 @@ export const Home: React.FC = () => {
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-2.jpg"
               />
-              <p className={styles.collectionItemTitle}>
-                BikoInsights #2{" "}
-                <span className={styles.collectionDate}>2019</span>
-              </p>
+              <div className={styles.collectionItemTitle}>
+                <p>
+                  BikoInsights #5{" "}
+                  <span className={styles.collectionDate}>2022</span>
+                </p>
+                <img src="/icons/download.svg" />
+              </div>
               <ul>
                 <li>
                   <h4 className={styles.collectionItemListTitle}>
@@ -323,10 +335,13 @@ export const Home: React.FC = () => {
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-1.jpg"
               />
-              <p className={styles.collectionItemTitle}>
-                BikoInsights #1{" "}
-                <span className={styles.collectionDate}>2018</span>
-              </p>
+              <div className={styles.collectionItemTitle}>
+                <p>
+                  BikoInsights #5{" "}
+                  <span className={styles.collectionDate}>2022</span>
+                </p>
+                <img src="/icons/download.svg" />
+              </div>
               <ul>
                 <li>
                   <h4 className={styles.collectionItemListTitle}>React</h4>
@@ -366,10 +381,13 @@ export const Home: React.FC = () => {
 
       <footer className={styles.footer}>
         <div className={container.container}>
-          <p className={styles.footerText}>
-            BikoInsights es un documento sobre tendencias digitales elaborado
-            por Jakala | Biko con carácter divulgativo.
-          </p>
+          <div className={styles.footerWrapper}>
+            <img src="icons/jakala.svg" />
+            <p className={styles.footerText}>
+              BikoInsights es un documento sobre tendencias digitales elaborado
+              por Jakala | Biko con carácter divulgativo.
+            </p>
+          </div>
         </div>
       </footer>
     </>

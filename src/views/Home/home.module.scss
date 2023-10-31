@@ -279,12 +279,16 @@
 .collectionItemImage {
   margin-bottom: 24px;
   border: 1px solid $background-medium;
+  width: 100%;
 }
 
 .collectionItemTitle {
   @include textFontM;
 
-  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   padding-bottom: 24px;
 
   color: $background-primary-default;
@@ -319,6 +323,14 @@
 
   background-color: $background-primary-default;
   color: $background-default;
+}
+
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 32px;
 }
 
 .footerText {
