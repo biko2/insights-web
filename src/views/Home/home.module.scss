@@ -282,15 +282,26 @@
 }
 
 .collectionTitle {
+  margin-bottom: 32px;
   margin-top: 96px;
-  margin-bottom: 48px;
+
   color: $background-primary-default;
+
   @include displayFontL;
+  @include media($tablet) {
+    margin-bottom: 48px;
+    margin-left: 96px;
+  }
 }
 
 .collectionDescription {
-  margin-bottom: 48px;
+  margin-bottom: 32px;
+
   @include textFontM;
+  @include media($tablet) {
+    margin-bottom: 48px;
+    margin-left: 96px;
+  }
 }
 
 .collectionWrapper {

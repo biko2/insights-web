@@ -155,7 +155,7 @@ export const Home: React.FC = () => {
       <section id="ediciones-anteriores">
         <div className={container.container}>
           <h3 className={styles.collectionTitle}>
-            ¿Te perdiste algún BikoInsights?
+            ¿Te perdiste algún <br /> BikoInsights?
           </h3>
           <p className={styles.collectionDescription}>
             No te preocupes, aquí tienes las ediciones anteriores:
