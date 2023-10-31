@@ -207,7 +207,7 @@
   padding-top: 192px;
   color: $background-default;
   @include textFontM;
-  overflow: hidden;
+  overflow-x: hidden;
 
   z-index: 10;
 }
@@ -248,6 +248,8 @@
   @include media($largeDesktop) {
     margin-bottom: 192px;
   }
+
+  z-index: 10;
 }
 
 .summaryBackgroundWrapper {
@@ -430,4 +432,22 @@
 .insightLink {
   display: inline;
   vertical-align: bottom;
+}
+
+.firstHexagon {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+
+  height: 56px;
+
+  @include media($tablet) {
+    height: 96px;
+  }
+
+  @include media($desktop) {
+    height: 128px;
+  }
+
+  z-index: -10;
 }
