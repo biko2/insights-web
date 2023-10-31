@@ -57,14 +57,20 @@ export const Home: React.FC = () => {
               </p>
             </div>
 
-            <h3 className={styles.summaryTitle}>Sumario</h3>
+            <div className={styles.summaryBackgroundWrapper}>
+              <img
+                className={styles.summaryImage}
+                src="../../../public/images/img-sumario-bikoinsights6.jpg"
+              />
+              <h3 className={styles.summaryTitle}>Sumario</h3>
 
-            <p className={styles.summarySecondParagraph}>
-              En esta edición nos movemos entre la esperanza y el aburrimiento
-              tecnológico. Es posible que empecemos a cansarnos de las promesas
-              incumplidas pero nos negamos a tirar la toalla. Es hora de darle
-              la vuelta al aburrimiento en Internet.
-            </p>
+              <p className={styles.summarySecondParagraph}>
+                En esta edición nos movemos entre la esperanza y el aburrimiento
+                tecnológico. Es posible que empecemos a cansarnos de las
+                promesas incumplidas pero nos negamos a tirar la toalla. Es hora
+                de darle la vuelta al aburrimiento en Internet.
+              </p>
+            </div>
 
             <div className={styles.listWrapper}>
               <ul className={styles.list}>

@@ -143,6 +143,24 @@
   }
 }
 
+.summaryBackgroundWrapper {
+  position: relative;
+
+  z-index: 1;
+}
+
+.summaryImage {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  height: auto;
+  width: auto;
+
+  z-index: -1;
+}
+
 .summaryTitle {
   @include displayFontL;
 
@@ -171,10 +189,13 @@
 }
 
 .listWrapper {
+  position: relative;
   display: flex;
   justify-content: flex-end;
 
   padding-bottom: 96px;
+
+  z-index: 10;
 }
 
 .list {
