@@ -208,6 +208,10 @@
     align-items: flex-start;
     gap: 24px;
   }
+
+  @include media($desktop) {
+    align-items: center;
+  }
 }
 
 .insightNumber {
