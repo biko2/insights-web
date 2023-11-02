@@ -76,9 +76,9 @@
   display: grid;
   grid-template-rows: auto 1fr;
   padding-bottom: 32px;
+  min-height: 100dvh;
 
   @include media($tablet) {
-    min-height: 100dvh;
     padding-bottom: 0;
   }
 }
