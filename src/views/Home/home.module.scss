@@ -53,6 +53,23 @@
   }
 }
 
+.link {
+  text-decoration: underline;
+
+  &:link,
+  &:visited {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 2px solid $focus-outline;
+  }
+
+  &:hover {
+    color: $background-secondary-default-hover;
+  }
+}
+
 .heroWrapper {
   display: grid;
   grid-template-rows: auto 1fr;

@@ -55,8 +55,14 @@ export const Home: React.FC = () => {
                     className={styles.bulletpoint}
                     src="/icons/bullet-red.svg"
                   />
-                  ¿Quieres una edición impresa de BikoInsigts #6?, envíanos un
-                  email y háznoslo saber.
+                  ¿Quieres una edición impresa de BikoInsigts #6?, envíanos un{" "}
+                  <a
+                    className={styles.link}
+                    href="mailto:insightsmag@biko2.com"
+                  >
+                    email
+                  </a>{" "}
+                  y háznoslo saber.
                 </p>
 
                 <div className={styles.scrollText}>
