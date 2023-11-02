@@ -232,6 +232,8 @@ export const Home: React.FC = () => {
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-5.jpg"
                 alt="Captura del sumario del BikoInsights #5"
+                width={420}
+                height={295}
               />
 
               <div className={styles.collectionItemTitle}>
@@ -287,6 +289,8 @@ export const Home: React.FC = () => {
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-4.jpg"
                 alt="Captura del sumario del BikoInsights #4"
+                width={420}
+                height={295}
               />
               <div className={styles.collectionItemTitle}>
                 <h3 className={styles.collectionItemTitleContent}>
@@ -340,6 +344,8 @@ export const Home: React.FC = () => {
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-3.jpg"
                 alt="Captura del sumario del BikoInsights #3"
+                width={420}
+                height={295}
               />
               <div className={styles.collectionItemTitle}>
                 <h3 className={styles.collectionItemTitleContent}>
@@ -390,6 +396,8 @@ export const Home: React.FC = () => {
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-2.jpg"
                 alt="Captura del sumario del BikoInsights #2"
+                width={420}
+                height={295}
               />
               <div className={styles.collectionItemTitle}>
                 <h3 className={styles.collectionItemTitleContent}>
@@ -434,6 +442,8 @@ export const Home: React.FC = () => {
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-1.jpg"
                 alt="Captura del sumario del BikoInsights #1"
+                width={420}
+                height={295}
               />
               <div className={styles.collectionItemTitle}>
                 <h3 className={styles.collectionItemTitleContent}>
