@@ -22,11 +22,13 @@ export const Home: React.FC = () => {
                     <li>
                       <a href="#sumario" className={styles.headerItem}>
                         Sumario{" "}
-                        <img
-                          alt=""
+                        <svg
+                          style={{ width: 24, height: 24 }}
+                          role="img"
                           aria-hidden="true"
-                          src="/icons/arrow-down.svg"
-                        />
+                        >
+                          <use xlinkHref={"/sprite.svg#arrow-down"} />
+                        </svg>
                       </a>
                     </li>
 
@@ -36,11 +38,13 @@ export const Home: React.FC = () => {
                         className={styles.headerItem}
                       >
                         Ediciones anteriores{" "}
-                        <img
-                          alt=""
+                        <svg
+                          style={{ width: 24, height: 24 }}
+                          role="img"
                           aria-hidden="true"
-                          src="/icons/arrow-down.svg"
-                        />
+                        >
+                          <use xlinkHref={"/sprite.svg#arrow-down"} />
+                        </svg>
                       </a>
                     </li>
                   </ul>
