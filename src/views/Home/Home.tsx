@@ -62,14 +62,14 @@ export const Home: React.FC = () => {
                     </p>
                   </div>
                 </div>
-                <button className={styles.callToAction}>
+                <a href="#" className={styles.callToAction}>
                   Descargar BikoInsights #6
                   <img
                     alt=""
                     aria-hidden="true"
                     src="/icons/cta-download.svg"
                   />
-                </button>
+                </a>
                 <p className={styles.detail}>
                   <img
                     className={styles.bulletpoint}
