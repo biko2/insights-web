@@ -75,7 +75,12 @@
 .heroWrapper {
   display: grid;
   grid-template-rows: auto 1fr;
-  min-height: 100dvh;
+  padding-bottom: 32px;
+
+  @include media($tablet) {
+    min-height: 100dvh;
+    padding-bottom: 0;
+  }
 }
 
 .heroLogo {
@@ -89,9 +94,11 @@
 }
 
 .heroContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include media($tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   @include media($largeTablet) {
     padding-left: 96px;
@@ -100,16 +107,20 @@
 }
 
 .scrollText {
-  display: flex;
+  display: none;
 
-  position: absolute;
-  @include textFontS;
-  text-transform: uppercase;
-  bottom: 2%;
-  right: 5%;
+  @include media($tablet) {
+    display: flex;
 
-  > img {
-    margin-top: 32px;
+    position: absolute;
+    @include textFontS;
+    text-transform: uppercase;
+    bottom: 2%;
+    right: 5%;
+
+    > img {
+      margin-top: 32px;
+    }
   }
 }
 
@@ -118,6 +129,11 @@
   justify-content: space-between;
   padding-top: 24px;
   gap: 18px;
+  margin-bottom: 32px;
+
+  @include media($tablet) {
+    margin-bottom: 0px;
+  }
 }
 
 .heroLead {
