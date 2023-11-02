@@ -194,15 +194,11 @@ export const Home: React.FC = () => {
                   BikoInsights #5{" "}
                   <span className={styles.collectionDate}>2022</span>
                 </p>
-                <a
-                  target="_blank"
-                  href="https://www.biko2.com/insights/BIKO-INSIGHTS-5-2022.pdf"
-                >
-                  <img
-                    className={styles.insightLink}
-                    src="/icons/download.svg"
-                  />
-                </a>
+
+                <DownloadLink
+                  to="https://www.biko2.com/insights/BIKO-INSIGHTS-5-2022.pdf"
+                  edition={5}
+                />
               </div>
               <ul>
                 <li>
@@ -251,15 +247,11 @@ export const Home: React.FC = () => {
                   BikoInsights #4{" "}
                   <span className={styles.collectionDate}>2021</span>
                 </p>
-                <a
-                  target="_blank"
-                  href="https://www.biko2.com/insights/BIKO-INSIGHTS-4-2021.pdf"
-                >
-                  <img
-                    className={styles.insightLink}
-                    src="/icons/download.svg"
-                  />
-                </a>
+
+                <DownloadLink
+                  to="https://www.biko2.com/insights/BIKO-INSIGHTS-4-2021.pdf"
+                  edition={4}
+                />
               </div>
               <ul>
                 <li>
@@ -307,15 +299,11 @@ export const Home: React.FC = () => {
                   BikoInsights #3{" "}
                   <span className={styles.collectionDate}>2020</span>
                 </p>
-                <a
-                  target="_blank"
-                  href="https://www.biko2.com/insights/BIKO-INSIGHTS-3-2020.pdf"
-                >
-                  <img
-                    className={styles.insightLink}
-                    src="/icons/download.svg"
-                  />
-                </a>
+
+                <DownloadLink
+                  to="https://www.biko2.com/insights/BIKO-INSIGHTS-3-2020.pdf"
+                  edition={3}
+                />
               </div>
               <ul>
                 <li>
@@ -360,15 +348,11 @@ export const Home: React.FC = () => {
                   BikoInsights #2{" "}
                   <span className={styles.collectionDate}>2019</span>
                 </p>
-                <a
-                  target="_blank"
-                  href="https://www.biko2.com/insights/BIKO-INSIGHTS-2-2019.pdf"
-                >
-                  <img
-                    className={styles.insightLink}
-                    src="/icons/download.svg"
-                  />
-                </a>
+
+                <DownloadLink
+                  to="https://www.biko2.com/insights/BIKO-INSIGHTS-2-2019.pdf"
+                  edition={2}
+                />
               </div>
               <ul>
                 <li>
@@ -407,15 +391,11 @@ export const Home: React.FC = () => {
                   BikoInsights #1{" "}
                   <span className={styles.collectionDate}>2018</span>
                 </p>
-                <a
-                  target="_blank"
-                  href="https://www.biko2.com/insights/BIKO-INSIGHTS-1-2018.pdf "
-                >
-                  <img
-                    className={styles.insightLink}
-                    src="/icons/download.svg"
-                  />
-                </a>
+
+                <DownloadLink
+                  to="https://www.biko2.com/insights/BIKO-INSIGHTS-1-2018.pdf"
+                  edition={1}
+                />
               </div>
               <ul>
                 <li>
@@ -468,3 +448,18 @@ export const Home: React.FC = () => {
     </>
   );
 };
+
+const DownloadLink: React.FC<{ to: string; edition: number }> = ({
+  to,
+  edition,
+}) => (
+  <a target="_blank" href={to} className={styles.download}>
+    <svg
+      style={{ width: 44, height: 44 }}
+      role="img"
+      aria-label={`Descarga el BikoInsights #${edition}`}
+    >
+      <use xlinkHref={"/sprite.svg#download"} />
+    </svg>
+  </a>
+);

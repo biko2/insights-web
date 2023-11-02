@@ -136,7 +136,6 @@
   align-items: center;
   gap: 8px;
 
-  cursor: pointer;
   > img {
     transition: all 0.3s ease-in-out;
   }
@@ -146,6 +145,10 @@
       transform: translateY(5px);
       transition: all 0.3s ease-in-out;
     }
+  }
+
+  &:focus {
+    outline: 2px solid $focus-outline;
   }
 }
 
@@ -200,6 +203,10 @@
   &:hover {
     transition: all 0.2s ease-in-out;
     background: $background-secondary-default-hover;
+  }
+
+  &:focus {
+    outline: 2px solid $focus-outline;
   }
 }
 
@@ -384,8 +391,6 @@
 }
 
 .collectionItemTitle {
-  @include textFontM;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -401,6 +406,8 @@
 .collectionItemTitleContent {
   display: flex;
   gap: 12px;
+
+  @include textFontM;
 }
 
 .collectionDate {
@@ -504,4 +511,23 @@
 
 .reveal {
   transition: all 1s ease;
+}
+
+.download {
+  color: $background-secondary-default;
+
+  transition: all 0.2s ease-in-out;
+
+  &:link,
+  &:visited {
+    color: $background-secondary-default;
+  }
+
+  &:hover {
+    color: $background-secondary-default-hover;
+  }
+
+  &:focus {
+    outline: 2px solid $focus-outline;
+  }
 }
