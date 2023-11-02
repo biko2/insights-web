@@ -395,7 +395,7 @@
   color: $background-primary-default;
 
   @include displayFontL;
-  @include media($tablet) {
+  @include media($largeTablet) {
     margin-bottom: 48px;
     margin-left: 96px;
   }
@@ -405,7 +405,7 @@
   margin-bottom: 32px;
 
   @include textFontM;
-  @include media($tablet) {
+  @include media($largeTablet) {
     margin-bottom: 48px;
     margin-left: 96px;
   }
