@@ -1,0 +1,33 @@
+@import "./media.scss";
+
+$xl: 96px, 88px, 48px;
+$l: 88px, 72px, 36px;
+
+@mixin displayFontXL() {
+  font-family: "Raleway";
+  font-size: 48px;
+  line-height: 100%;
+
+  @include media($tablet) {
+    font-size: 88px;
+  }
+
+  @include media($desktop) {
+    font-size: 96px;
+  }
+}
+
+@mixin displayFontL() {
+  font-family: "Raleway";
+  font-size: 36px;
+  line-height: 125%;
+
+  @include media($tablet) {
+    font-size: 72px;
+    line-height: 100%;
+  }
+
+  @include media($desktop) {
+    font-size: 88px;
+  }
+}
