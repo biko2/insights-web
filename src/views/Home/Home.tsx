@@ -66,7 +66,11 @@ export const Home: React.FC = () => {
                     </p>
                   </div>
                 </div>
-                <a href="#" className={styles.callToAction}>
+
+                <a
+                  href="https://www.biko2.com/insights/BIKO-INSIGHTS-6-2023.pdf"
+                  className={styles.callToAction}
+                >
                   Descargar BikoInsights #6
                   <img
                     alt=""
@@ -74,6 +78,7 @@ export const Home: React.FC = () => {
                     src="/icons/cta-download.svg"
                   />
                 </a>
+
                 <p className={styles.detail}>
                   <img
                     className={styles.bulletpoint}
