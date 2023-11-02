@@ -17,44 +17,46 @@ export const Home: React.FC = () => {
                   alt="Logo de Jakala BikoInsights"
                 />
 
-                <ul className={styles.headerItems}>
-                  <li>
-                    <a href="#sumario" className={styles.headerItem}>
-                      Sumario{" "}
-                      <img
-                        alt=""
-                        aria-hidden="true"
-                        src="/icons/arrow-down.svg"
-                      />
-                    </a>
-                  </li>
+                <nav>
+                  <ul className={styles.headerItems}>
+                    <li>
+                      <a href="#sumario" className={styles.headerItem}>
+                        Sumario{" "}
+                        <img
+                          alt=""
+                          aria-hidden="true"
+                          src="/icons/arrow-down.svg"
+                        />
+                      </a>
+                    </li>
 
-                  <li>
-                    <a
-                      href="#ediciones-anteriores"
-                      className={styles.headerItem}
-                    >
-                      Ediciones anteriores{" "}
-                      <img
-                        alt=""
-                        aria-hidden="true"
-                        src="/icons/arrow-down.svg"
-                      />
-                    </a>
-                  </li>
-                </ul>
+                    <li>
+                      <a
+                        href="#ediciones-anteriores"
+                        className={styles.headerItem}
+                      >
+                        Ediciones anteriores{" "}
+                        <img
+                          alt=""
+                          aria-hidden="true"
+                          src="/icons/arrow-down.svg"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </header>
 
               <div className={styles.heroContent}>
-                <p className={styles.heroLead}>
+                <h1 className={styles.heroLead}>
                   Entre la <span className={styles.highlight}>esperanza</span> y
                   el <span className={styles.highlight}>aburrimiento</span>{" "}
                   tecnológico
-                </p>
+                </h1>
                 <div className={styles.flexbox}>
                   <span className={styles.insightNumber}>#06</span>
                   <div className={styles.insight}>
-                    <p className={styles.highlightHero}>BikoInsights</p>
+                    <h2 className={styles.highlightHero}>BikoInsights</h2>
                     <p>
                       Tendencias digitales para un mundo en constante cambio.
                     </p>
@@ -146,9 +148,9 @@ export const Home: React.FC = () => {
             </div>
 
             <div className={styles.summaryBackgroundWrapper}>
-              <h3 className={`${styles.summaryTitle} ${styles.reveal} reveal`}>
+              <h2 className={`${styles.summaryTitle} ${styles.reveal} reveal`}>
                 Sumario
-              </h3>
+              </h2>
 
               <p
                 className={`${styles.summarySecondParagraph} ${styles.reveal} reveal`}
@@ -163,44 +165,44 @@ export const Home: React.FC = () => {
             <div className={styles.listWrapper}>
               <ul className={`${styles.list} ${styles.reveal} reveal`}>
                 <li className={styles.listBox}>
-                  <h4 className={styles.listTitle}>Editorial</h4>
+                  <h3 className={styles.listTitle}>Editorial</h3>
                 </li>
                 <li className={styles.listBox}>
-                  <h4 className={styles.listTitle}>
+                  <h3 className={styles.listTitle}>
                     Paren las redes, que yo me bajo
-                  </h4>
+                  </h3>
                   <p className={styles.listDescription}>
                     Devolvamos las redes a su esencia para hacerlas mejores.
                   </p>
                 </li>
                 <li className={styles.listBox}>
-                  <h4 className={styles.listTitle}>
+                  <h3 className={styles.listTitle}>
                     Más allá del ciberespacio
-                  </h4>
+                  </h3>
                   <p className={styles.listDescription}>
                     Un repaso de la cultura digital para poder ampliar los
                     horizontes o crearlos nuevos.
                   </p>
                 </li>
                 <li className={styles.listBox}>
-                  <h4 className={styles.listTitle}>
+                  <h3 className={styles.listTitle}>
                     Nostalgia para combatir el aburrimiento
-                  </h4>
+                  </h3>
                 </li>
                 <li className={styles.listBox}>
-                  <h4 className={styles.listTitle}>
+                  <h3 className={styles.listTitle}>
                     Complejidad, evolución y el fin del ciclo del internet de
                     los pioneros
-                  </h4>
+                  </h3>
                   <p className={styles.listDescription}>
                     En 2023, internet ya no es ese lugar de 25 años atrás, sino
                     un commodity de una complejidad extrema.
                   </p>
                 </li>
                 <li className={styles.listBox}>
-                  <h4 className={styles.listTitle}>
+                  <h3 className={styles.listTitle}>
                     Automatizando las tareas sucias, peligrosas y aburridas
-                  </h4>
+                  </h3>
                   <p className={styles.listDescription}>
                     Cuestiones a considerar para que la automatización aumente
                     nuestra autonomía.
@@ -214,24 +216,25 @@ export const Home: React.FC = () => {
 
       <section id="ediciones-anteriores">
         <div className={container.container}>
-          <h3 className={styles.collectionTitle}>
+          <h2 className={styles.collectionTitle}>
             ¿Te perdiste algún <br /> BikoInsights?
-          </h3>
+          </h2>
           <p className={styles.collectionDescription}>
             No te preocupes, aquí tienes las ediciones anteriores:
           </p>
-          <ul className={styles.collectionWrapper}>
-            <li>
+          <div className={styles.collectionWrapper}>
+            <div>
               <img
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-5.jpg"
                 alt="Captura del sumario del BikoInsights #5"
               />
+
               <div className={styles.collectionItemTitle}>
-                <p className={styles.collectionItemTitleContent}>
+                <h3 className={styles.collectionItemTitleContent}>
                   BikoInsights #5{" "}
                   <span className={styles.collectionDate}>2022</span>
-                </p>
+                </h3>
 
                 <DownloadLink
                   to="https://www.biko2.com/insights/BIKO-INSIGHTS-5-2022.pdf"
@@ -274,18 +277,18 @@ export const Home: React.FC = () => {
                   </p>
                 </li>
               </ul>
-            </li>
-            <li>
+            </div>
+            <div>
               <img
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-4.jpg"
                 alt="Captura del sumario del BikoInsights #4"
               />
               <div className={styles.collectionItemTitle}>
-                <p className={styles.collectionItemTitleContent}>
+                <h3 className={styles.collectionItemTitleContent}>
                   BikoInsights #4{" "}
                   <span className={styles.collectionDate}>2021</span>
-                </p>
+                </h3>
 
                 <DownloadLink
                   to="https://www.biko2.com/insights/BIKO-INSIGHTS-4-2021.pdf"
@@ -327,18 +330,18 @@ export const Home: React.FC = () => {
                   </p>
                 </li>
               </ul>
-            </li>
-            <li>
+            </div>
+            <div>
               <img
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-3.jpg"
                 alt="Captura del sumario del BikoInsights #3"
               />
               <div className={styles.collectionItemTitle}>
-                <p className={styles.collectionItemTitleContent}>
+                <h3 className={styles.collectionItemTitleContent}>
                   BikoInsights #3{" "}
                   <span className={styles.collectionDate}>2020</span>
-                </p>
+                </h3>
 
                 <DownloadLink
                   to="https://www.biko2.com/insights/BIKO-INSIGHTS-3-2020.pdf"
@@ -377,18 +380,18 @@ export const Home: React.FC = () => {
                   </p>
                 </li>
               </ul>
-            </li>
-            <li>
+            </div>
+            <div>
               <img
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-2.jpg"
                 alt="Captura del sumario del BikoInsights #2"
               />
               <div className={styles.collectionItemTitle}>
-                <p className={styles.collectionItemTitleContent}>
+                <h3 className={styles.collectionItemTitleContent}>
                   BikoInsights #2{" "}
                   <span className={styles.collectionDate}>2019</span>
-                </p>
+                </h3>
 
                 <DownloadLink
                   to="https://www.biko2.com/insights/BIKO-INSIGHTS-2-2019.pdf"
@@ -421,18 +424,18 @@ export const Home: React.FC = () => {
                   </p>
                 </li>
               </ul>
-            </li>
-            <li>
+            </div>
+            <div>
               <img
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-1.jpg"
                 alt="Captura del sumario del BikoInsights #1"
               />
               <div className={styles.collectionItemTitle}>
-                <p className={styles.collectionItemTitleContent}>
+                <h3 className={styles.collectionItemTitleContent}>
                   BikoInsights #1{" "}
                   <span className={styles.collectionDate}>2018</span>
-                </p>
+                </h3>
 
                 <DownloadLink
                   to="https://www.biko2.com/insights/BIKO-INSIGHTS-1-2018.pdf"
@@ -471,8 +474,8 @@ export const Home: React.FC = () => {
                   </p>
                 </li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -495,11 +498,16 @@ const DownloadLink: React.FC<{ to: string; edition: number }> = ({
   to,
   edition,
 }) => (
-  <a target="_blank" href={to} className={styles.download}>
+  <a
+    title={`Descarga el BikoInsights #${edition} (PDF)`}
+    target="_blank"
+    href={to}
+    className={styles.download}
+  >
     <svg
       style={{ width: 44, height: 44 }}
       role="img"
-      aria-label={`Descarga el BikoInsights #${edition}`}
+      aria-label={`Descarga el BikoInsights #${edition} (PDF)`}
     >
       <use xlinkHref={"/sprite.svg#download"} />
     </svg>
