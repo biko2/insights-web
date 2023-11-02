@@ -11,12 +11,21 @@ export const Home: React.FC = () => {
           <div className={container.container}>
             <div className={styles.heroWrapper}>
               <header className={styles.header}>
-                <img className={styles.heroLogo} src="/logo-bikoinsights.svg" />
+                <img
+                  className={styles.heroLogo}
+                  src="/logo-bikoinsights.svg"
+                  alt="Logo de Jakala BikoInsights"
+                />
 
                 <ul className={styles.headerItems}>
                   <li>
                     <a href="#sumario" className={styles.headerItem}>
-                      Sumario <img src="/icons/arrow-down.svg" />
+                      Sumario{" "}
+                      <img
+                        alt=""
+                        aria-hidden="true"
+                        src="/icons/arrow-down.svg"
+                      />
                     </a>
                   </li>
 
@@ -25,7 +34,12 @@ export const Home: React.FC = () => {
                       href="#ediciones-anteriores"
                       className={styles.headerItem}
                     >
-                      Ediciones anteriores <img src="/icons/arrow-down.svg" />
+                      Ediciones anteriores{" "}
+                      <img
+                        alt=""
+                        aria-hidden="true"
+                        src="/icons/arrow-down.svg"
+                      />
                     </a>
                   </li>
                 </ul>
@@ -48,12 +62,18 @@ export const Home: React.FC = () => {
                 </div>
                 <button className={styles.callToAction}>
                   Descargar BikoInsights #6
-                  <img src="/icons/cta-download.svg" />
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    src="/icons/cta-download.svg"
+                  />
                 </button>
                 <p className={styles.detail}>
                   <img
                     className={styles.bulletpoint}
                     src="/icons/bullet-red.svg"
+                    alt=""
+                    aria-hidden="true"
                   />
                   ¿Quieres una edición impresa de BikoInsigts #6?, envíanos un{" "}
                   <a
@@ -65,12 +85,16 @@ export const Home: React.FC = () => {
                   y háznoslo saber.
                 </p>
 
-                <div className={styles.scrollText}>
+                <div aria-hidden="true" className={styles.scrollText}>
                   <p>
                     Scroll
                     <br /> page
                   </p>
-                  <img src="/icons/scroll-arrow.svg" />
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    src="/icons/scroll-arrow.svg"
+                  />
                 </div>
               </div>
             </div>
@@ -82,22 +106,32 @@ export const Home: React.FC = () => {
             <img
               className={`${styles.hexagon} ${styles.firstHexagon}`}
               src="/icons/white-hexagon.svg"
+              alt=""
+              aria-hidden="true"
             />
             <img
               className={`${styles.hexagon} ${styles.secondHexagon}`}
               src="/icons/red-hexagon.svg"
+              alt=""
+              aria-hidden="true"
             />
             <img
               className={`${styles.hexagon} ${styles.thirdHexagon}`}
               src="/icons/red-hexagon.svg"
+              alt=""
+              aria-hidden="true"
             />
             <img
               className={`${styles.hexagon} ${styles.fourthHexagon}`}
               src="/icons/white-hexagon.svg"
+              alt=""
+              aria-hidden="true"
             />
             <img
               className={styles.summaryImage}
               src="/images/img-sumario-bikoinsights6.jpg"
+              alt=""
+              aria-hidden="true"
             />
             <div className={`${styles.summaryWrapper} ${styles.reveal} reveal`}>
               <p className={styles.summaryFirstParagraph}>
@@ -191,6 +225,7 @@ export const Home: React.FC = () => {
               <img
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-5.jpg"
+                alt="Captura del sumario del BikoInsights #5"
               />
               <div className={styles.collectionItemTitle}>
                 <p className={styles.collectionItemTitleContent}>
@@ -244,6 +279,7 @@ export const Home: React.FC = () => {
               <img
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-4.jpg"
+                alt="Captura del sumario del BikoInsights #4"
               />
               <div className={styles.collectionItemTitle}>
                 <p className={styles.collectionItemTitleContent}>
@@ -296,6 +332,7 @@ export const Home: React.FC = () => {
               <img
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-3.jpg"
+                alt="Captura del sumario del BikoInsights #3"
               />
               <div className={styles.collectionItemTitle}>
                 <p className={styles.collectionItemTitleContent}>
@@ -345,6 +382,7 @@ export const Home: React.FC = () => {
               <img
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-2.jpg"
+                alt="Captura del sumario del BikoInsights #2"
               />
               <div className={styles.collectionItemTitle}>
                 <p className={styles.collectionItemTitleContent}>
@@ -388,6 +426,7 @@ export const Home: React.FC = () => {
               <img
                 className={styles.collectionItemImage}
                 src="/images/img-biko-insights-1.jpg"
+                alt="Captura del sumario del BikoInsights #1"
               />
               <div className={styles.collectionItemTitle}>
                 <p className={styles.collectionItemTitleContent}>
@@ -440,7 +479,7 @@ export const Home: React.FC = () => {
       <footer className={styles.footer}>
         <div className={container.container}>
           <div className={styles.footerWrapper}>
-            <img src="icons/jakala.svg" />
+            <img src="icons/jakala.svg" alt="Logo de Jakala" />
             <p className={styles.footerText}>
               BikoInsights es un documento sobre tendencias digitales elaborado
               por Jakala | Biko con carácter divulgativo.
