@@ -22,7 +22,23 @@ const { title } = Astro.props;
       name="og:image"
       content="https://insightsmag.io/images/bikoinsights-social-media.png"
     />
+    <meta
+      name="og:image:secure_url"
+      content="https://insightsmag.io/images/bikoinsights-social-media.png"
+    />
+    <meta name="og:image:type" content="image/png" />
+    <meta name="og:image:width" content="1200" />
+    <meta name="og:image:height" content="630" />
+    <meta name="og:image:alt" content="BikoInsights #6 por Jakala Biko" />
+    <meta name="og:title" content={title} />
+    <meta
+      name="og:description"
+      content="Es posible que empecemos a cansarnos de las promesas incumplidas pero nos negamos a tirar la toalla. Nuestro nuevo informe aporta algunas claves y respuestas para recuperar el entusiasmo por el Internet que vimos nacer."
+    />
+    <meta name="og:url" content="https://insightsmag.io" />
+    <meta name="og:type" content="website" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href="https://insightsmag.io" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
