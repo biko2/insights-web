@@ -127,6 +127,10 @@
     margin-bottom: 48px;
   }
 
+  @include media($largeTablet) {
+    width: 88%;
+  }
+
   @include media($desktop) {
     width: 70%;
   }
