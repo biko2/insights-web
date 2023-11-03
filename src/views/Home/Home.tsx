@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import container from '../components/container.module.scss';
-import styles from './home.module.scss';
+import container from "../components/container.module.scss";
+import styles from "./home.module.scss";
 
 export const Home: React.FC = () => {
   return (
@@ -167,8 +167,9 @@ export const Home: React.FC = () => {
               >
                 En esta edición nos movemos entre la esperanza y el aburrimiento
                 tecnológico. Es posible que empecemos a cansarnos de las
-                promesas incumplidas pero nos negamos a tirar la toalla. Es hora
-                de darle la vuelta al aburrimiento en Internet.
+                promesas incumplidas pero nos negamos a tirar la toalla, nuestro
+                nuevo informe aporta algunas claves y respuestas para recuperar
+                el entusiasmo por el Internet que vimos nacer.
               </p>
             </div>
 
