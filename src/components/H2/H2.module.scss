@@ -2,10 +2,9 @@
 @import "../../styles/mixins/colors.scss";
 
 .content {
+  width: 75%;
   margin-top: 128px;
   margin-bottom: 128px;
-  grid-column-start: 1;
-  grid-column-end: 10;
 
   @include titleFontXL;
   color: $primary-blue;

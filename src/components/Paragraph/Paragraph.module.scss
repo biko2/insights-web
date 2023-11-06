@@ -2,8 +2,9 @@
 @import "../../styles/mixins/colors.scss";
 
 .content {
-  grid-column-start: 4;
-  grid-column-end: 10;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 
   @include textFontM;
   color: $secondary-grey;

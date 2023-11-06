@@ -2,8 +2,9 @@
 @import "../../styles/mixins/textFont.scss";
 
 .wrapper {
-  grid-column-start: 4;
-  grid-column-end: 10;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 24px;
 
   list-style: disc;
