@@ -17,7 +17,13 @@ const { Content } = await post.render();
 ---
 
 <Layout {...post.data}>
-  <Article>
+  <Article
+    squareHeroImageUrl={post.data.squareHeroImageUrl}
+    panoramicHeroImageUrl={post.data.panoramicHeroImageUrl}
+    heroImageAlt={post.data.heroImageAlt}
+    title={post.data.title}
+    description={post.data.description}
+  >
     <Content />
   </Article>
 </Layout>

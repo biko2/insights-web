@@ -1,9 +1,24 @@
-import React from "react";
+import React from 'react';
 
-import containerStyles from "../components/container.module.scss";
-import styles from "./Article.module.scss";
+import containerStyles from '../components/container.module.scss';
+import styles from './Article.module.scss';
 
-export const Article: React.FC<React.PropsWithChildren> = ({ children }) => {
+interface Props {
+  panoramicHeroImageUrl: string;
+  squareHeroImageUrl: string;
+  heroImageAlt: string;
+  title: string;
+  description: string;
+}
+
+export const Article: React.FC<React.PropsWithChildren<Props>> = ({
+  children,
+  panoramicHeroImageUrl,
+  squareHeroImageUrl,
+  heroImageAlt,
+  title,
+  description,
+}) => {
   return (
     <>
       <header className={styles.header}>
@@ -44,8 +59,25 @@ export const Article: React.FC<React.PropsWithChildren> = ({ children }) => {
         </nav>
       </header>
 
-      <main className={`${containerStyles.container} ${styles.wrapper}`}>
-        {children}
+      <main className={containerStyles.container}>
+        <div className={styles.heroWrapper}>
+          <picture>
+            <source media="(min-width:1024px)" srcSet={panoramicHeroImageUrl} />
+            <img
+              src={squareHeroImageUrl}
+              alt={heroImageAlt}
+              className={styles.heroImage}
+            />
+          </picture>
+
+          <div className={styles.heroContentWrapper}>
+            <h1 className={styles.heroTitle}>{title}</h1>
+
+            <p className={styles.heroDescription}>{description}</p>
+          </div>
+        </div>
+
+        <div className={styles.wrapper}>{children}</div>
       </main>
 
       <footer className={styles.footer}>

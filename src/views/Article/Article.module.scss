@@ -2,6 +2,7 @@
 @import "../../styles/mixins/media.scss";
 @import "../../styles/mixins/displayFont.scss";
 @import "../../styles/mixins/textFont.scss";
+@import "../../styles/mixins/titleFont.scss";
 
 .header {
   display: flex;
@@ -57,6 +58,43 @@
   &:focus {
     outline: 2px solid $focus-outline;
   }
+}
+
+.heroWrapper {
+  position: relative;
+  margin-bottom: 128px;
+}
+
+.heroImage {
+  width: 100%;
+}
+
+.heroContentWrapper {
+  padding: 48px;
+
+  position: absolute;
+  top: 0;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.heroTitle {
+  margin-bottom: 12px;
+
+  @include titleFontXXL;
+  color: $primary-blue;
+}
+
+.heroDescription {
+  @include textFontL;
+  color: $secondary-grey;
 }
 
 .wrapper {
