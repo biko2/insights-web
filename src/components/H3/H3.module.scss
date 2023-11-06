@@ -1,0 +1,12 @@
+@import "../../styles/mixins/titleFont.scss";
+@import "../../styles/mixins/colors.scss";
+
+.content {
+  margin-top: 128px;
+  margin-bottom: 24px;
+  grid-column-start: 4;
+  grid-column-end: 10;
+
+  @include titleFontL;
+  color: $primary-blue;
+}

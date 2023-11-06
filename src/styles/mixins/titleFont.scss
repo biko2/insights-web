@@ -1,0 +1,24 @@
+@import "./media.scss";
+
+$xl: 96px, 88px, 48px;
+$l: 88px, 72px, 36px;
+
+@mixin titleFontXL() {
+  font-family: "Raleway";
+  font-size: 32px;
+  line-height: 125%;
+
+  @include media($tablet) {
+    font-size: 40px;
+  }
+}
+
+@mixin titleFontL() {
+  font-family: "Raleway";
+  font-size: 24px;
+  line-height: 125%;
+
+  @include media($tablet) {
+    font-size: 32px;
+  }
+}

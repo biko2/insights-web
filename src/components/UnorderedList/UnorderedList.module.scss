@@ -1,0 +1,21 @@
+@import "../../styles/mixins/colors.scss";
+@import "../../styles/mixins/textFont.scss";
+
+.wrapper {
+  grid-column-start: 4;
+  grid-column-end: 10;
+  margin-bottom: 24px;
+
+  list-style: disc;
+
+  li {
+    @include textFontM;
+    color: $secondary-grey;
+
+    list-style-position: inside;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}

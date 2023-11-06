@@ -1,0 +1,36 @@
+@import "../../styles/mixins/colors.scss";
+@import "../../styles/mixins/titleFont.scss";
+
+.wrapper {
+  padding-left: 32px;
+  margin-top: 128px;
+  margin-bottom: 128px;
+
+  border-left: 4px solid $primary-blue;
+  grid-column-start: 1;
+  grid-column-end: 7;
+
+  p {
+    color: $primary-blue;
+    @include titleFontXL;
+    font-style: italic;
+
+    &::before {
+      content: "“";
+    }
+    &::after {
+      content: "”";
+    }
+  }
+
+  cite {
+    color: $secondary-grey;
+
+    &::before {
+      content: "(";
+    }
+    &::after {
+      content: ")";
+    }
+  }
+}

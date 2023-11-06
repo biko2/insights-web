@@ -1,0 +1,14 @@
+@import "../../styles/mixins/textFont.scss";
+@import "../../styles/mixins/colors.scss";
+
+.content {
+  grid-column-start: 4;
+  grid-column-end: 10;
+
+  @include textFontM;
+  color: $secondary-grey;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
