@@ -21,7 +21,7 @@ export const Article: React.FC<React.PropsWithChildren<Props>> = ({
 }) => {
   return (
     <>
-      <header className={styles.header}>
+      <header className={`${containerStyles.container} ${styles.header}`}>
         <img
           className={styles.heroLogo}
           src="/logo-bikoinsights-dark.svg"
@@ -31,28 +31,21 @@ export const Article: React.FC<React.PropsWithChildren<Props>> = ({
         <nav>
           <ul className={styles.headerItems}>
             <li>
-              <a href="#sumario" className={styles.headerItem}>
-                Sumario{" "}
+              <a href="/#sumario" className={styles.headerItem}>
                 <svg
                   style={{ width: 24, height: 24 }}
                   role="img"
                   aria-hidden="true"
                 >
-                  <use xlinkHref={"/sprite.svg#arrow-down"} />
-                </svg>
+                  <use xlinkHref={"/sprite.svg#arrow-left"} />
+                </svg>{" "}
+                Sumario
               </a>
             </li>
 
             <li>
-              <a href="#ediciones-anteriores" className={styles.headerItem}>
-                Ediciones anteriores{" "}
-                <svg
-                  style={{ width: 24, height: 24 }}
-                  role="img"
-                  aria-hidden="true"
-                >
-                  <use xlinkHref={"/sprite.svg#arrow-down"} />
-                </svg>
+              <a href="/#ediciones-anteriores" className={styles.headerItem}>
+                Ediciones anteriores
               </a>
             </li>
           </ul>

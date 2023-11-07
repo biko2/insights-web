@@ -47,10 +47,10 @@
   }
 
   &:hover {
-    color: $link-hover;
+    color: $background-secondary-default-hover;
 
     > svg {
-      transform: translateY(5px);
+      transform: translateX(-5px);
       transition: all 0.3s ease-in-out;
     }
   }
