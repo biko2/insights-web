@@ -1,16 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./Image.module.scss";
+import styles from './Image.module.scss';
 
 interface Props {
   panoramicSrc: string;
+  squareSrc: string;
   alt: string;
 }
 
-export const Image: React.FC<Props> = ({ panoramicSrc, alt }) => {
+export const Image: React.FC<Props> = ({ panoramicSrc, squareSrc, alt }) => {
   return (
     <picture>
-      <img className={styles.wrapper} src={panoramicSrc} alt={alt}></img>
+      <source media="(min-width:1024px)" srcSet={panoramicSrc} />
+      <img className={styles.wrapper} src={squareSrc} alt={alt}></img>
     </picture>
   );
 };
