@@ -2,12 +2,28 @@
 @import "../../styles/mixins/colors.scss";
 
 .content {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 128px;
+  margin-top: 96px;
   margin-bottom: 24px;
 
   @include titleFontL;
   color: $primary-blue;
+
+  @include media($tablet) {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media($largeTablet) {
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media($desktop) {
+    margin-top: 128px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
