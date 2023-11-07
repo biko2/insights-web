@@ -183,12 +183,22 @@ export const Home: React.FC = () => {
                     className={styles.listLink}
                     href="/paren-las-redes-que-yo-me-bajo"
                   >
-                    <h3 className={styles.listTitle}>
-                      Paren las redes, que yo me bajo
-                    </h3>
-                    <p className={styles.listDescription}>
-                      Devolvamos las redes a su esencia para hacerlas mejores.
-                    </p>
+                    <div>
+                      <h3 className={styles.listTitle}>
+                        Paren las redes, que yo me bajo
+                      </h3>
+                      <p className={styles.listDescription}>
+                        Devolvamos las redes a su esencia para hacerlas mejores.
+                      </p>
+                    </div>
+
+                    <svg
+                      style={{ width: 44, height: 44 }}
+                      role="img"
+                      aria-label="Lee el artículo 'Paren las redes, que yo me bajo'"
+                    >
+                      <use xlinkHref={"/sprite.svg#jakala-arrow"} />
+                    </svg>
                   </a>
                 </li>
                 <li className={styles.listBox}>

@@ -17,4 +17,13 @@
         </g>
     </symbol>
 
+    <symbol id="jakala-arrow" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M22.1047 1.48083L39.6915 11.7426V32.2623L22.1047 42.5186L4.51781 32.2623V11.7426L22.1047 1.48083ZM6.90114 13.1113V30.8932L22.1047 39.7596L37.3082 30.8932V13.1113L22.1047 4.24021L6.90114 13.1113Z"
+            fill="currentColor" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M23.6394 21.658L19.324 17.3426L21.0093 15.6573L27.01 21.658L21.0093 27.6587L19.324 25.9734L23.6394 21.658Z"
+            fill="currentColor" />
+    </symbol>
+
 </svg>
