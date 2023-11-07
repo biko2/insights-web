@@ -1,11 +1,30 @@
 @import "../../styles/mixins/titleFont.scss";
 @import "../../styles/mixins/colors.scss";
+@import "../../styles/mixins/media.scss";
 
 .content {
-  width: 75%;
-  margin-top: 128px;
-  margin-bottom: 128px;
+  margin-top: 96px;
+  margin-bottom: 24px;
 
   @include titleFontXL;
   color: $primary-blue;
+
+  @include media($tablet) {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media($largeTablet) {
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media($desktop) {
+    margin-top: 128px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
