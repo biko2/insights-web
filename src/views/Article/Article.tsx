@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import containerStyles from "../components/container.module.scss";
-import styles from "./Article.module.scss";
+import containerStyles from '../components/container.module.scss';
+import styles from './Article.module.scss';
 
 interface Props {
   panoramicHeroImageUrl: string;
@@ -9,6 +9,7 @@ interface Props {
   heroImageAlt: string;
   title: string;
   description: string;
+  authorship: string;
 }
 
 export const Article: React.FC<React.PropsWithChildren<Props>> = ({
@@ -18,6 +19,7 @@ export const Article: React.FC<React.PropsWithChildren<Props>> = ({
   heroImageAlt,
   title,
   description,
+  authorship,
 }) => {
   return (
     <>
@@ -64,6 +66,15 @@ export const Article: React.FC<React.PropsWithChildren<Props>> = ({
           </picture>
 
           <div className={styles.heroContentWrapper}>
+            <p className={styles.authorship}>
+              <img
+                className={styles.bulletpoint}
+                src="/icons/bullet-red.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              {authorship}
+            </p>
             <h1 className={styles.heroTitle}>{title}</h1>
 
             <p className={styles.heroDescription}>{description}</p>
@@ -71,6 +82,18 @@ export const Article: React.FC<React.PropsWithChildren<Props>> = ({
         </div>
 
         <div className={styles.wrapper}>{children}</div>
+
+        <div className={styles.fullAuthorshipWrapper}>
+          <p className={styles.authorship}>
+            <img
+              className={styles.bulletpoint}
+              src="/icons/bullet-red.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            {authorship}
+          </p>
+        </div>
       </main>
 
       <footer className={styles.footer}>

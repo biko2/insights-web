@@ -100,6 +100,36 @@
   }
 }
 
+.authorship {
+  margin-bottom: 48px;
+
+  @include textFontXS;
+  color: $secondary-grey;
+}
+
+.fullAuthorshipWrapper {
+  @include textFontXS;
+  color: $secondary-grey;
+
+  @include media($tablet) {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media($largeTablet) {
+    width: 66%;
+  }
+
+  @include media($desktop) {
+    width: 50%;
+  }
+}
+
+.bulletpoint {
+  margin-right: 12px;
+}
+
 .heroTitle {
   margin-bottom: 12px;
 
