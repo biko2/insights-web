@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import containerStyles from '../components/container.module.scss';
-import styles from './Article.module.scss';
+import containerStyles from "../components/container.module.scss";
+import styles from "./Article.module.scss";
 
 interface Props {
   panoramicHeroImageUrl: string;
@@ -24,7 +24,7 @@ export const Article: React.FC<React.PropsWithChildren<Props>> = ({
       <header className={styles.header}>
         <img
           className={styles.heroLogo}
-          src="/logo-bikoinsights.svg"
+          src="/logo-bikoinsights-dark.svg"
           alt="Logo de Jakala BikoInsights"
         />
 
