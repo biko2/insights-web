@@ -61,10 +61,17 @@ export const Article: React.FC<React.PropsWithChildren<Props>> = ({
       <main className={containerStyles.container}>
         <div className={styles.heroWrapper}>
           <picture>
-            <source media="(min-width:1024px)" srcSet={panoramicHeroImageUrl} />
+            <source
+              height={797}
+              width={1416}
+              media="(min-width:1024px)"
+              srcSet={panoramicHeroImageUrl}
+            />
             <img
               src={squareHeroImageUrl}
               alt={heroImageAlt}
+              height={720}
+              width={720}
               className={styles.heroImage}
             />
           </picture>
