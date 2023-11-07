@@ -9,22 +9,8 @@
   @include titleFontXL;
   color: $primary-blue;
 
-  @include media($tablet) {
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @include media($largeTablet) {
-    width: 66%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   @include media($desktop) {
     margin-top: 128px;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 66%;
   }
 }
