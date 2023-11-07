@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import container from "../components/container.module.scss";
-import styles from "./home.module.scss";
+import container from '../components/container.module.scss';
+import styles from './home.module.scss';
 
 export const Home: React.FC = () => {
   return (
@@ -179,12 +179,17 @@ export const Home: React.FC = () => {
                   <h3 className={styles.listTitle}>Editorial</h3>
                 </li>
                 <li className={styles.listBox}>
-                  <h3 className={styles.listTitle}>
-                    Paren las redes, que yo me bajo
-                  </h3>
-                  <p className={styles.listDescription}>
-                    Devolvamos las redes a su esencia para hacerlas mejores.
-                  </p>
+                  <a
+                    className={styles.listLink}
+                    href="/paren-las-redes-que-yo-me-bajo"
+                  >
+                    <h3 className={styles.listTitle}>
+                      Paren las redes, que yo me bajo
+                    </h3>
+                    <p className={styles.listDescription}>
+                      Devolvamos las redes a su esencia para hacerlas mejores.
+                    </p>
+                  </a>
                 </li>
                 <li className={styles.listBox}>
                   <h3 className={styles.listTitle}>
