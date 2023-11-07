@@ -1,16 +1,26 @@
-@import "../../styles/mixins/colors.scss";
-@import "../../styles/mixins/titleFont.scss";
 @import "../../styles/mixins/media.scss";
 
 .wrapper {
   width: 100%;
-  height: auto;
 
-  margin-top: 96px;
-  margin-bottom: 96px;
+  p {
+    img {
+      width: 100%;
+      height: auto;
 
-  @include media($desktop) {
-    margin-top: 128px;
-    margin-bottom: 128px;
+      &:nth-child(1) {
+        @include media($largeTablet) {
+          display: none;
+        }
+      }
+
+      &:nth-child(2) {
+        display: none;
+
+        @include media($largeTablet) {
+          display: initial;
+        }
+      }
+    }
   }
 }
