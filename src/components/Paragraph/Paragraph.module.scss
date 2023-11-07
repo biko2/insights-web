@@ -1,15 +1,30 @@
 @import "../../styles/mixins/textFont.scss";
 @import "../../styles/mixins/colors.scss";
+@import "../../styles/mixins/media.scss";
 
 .content {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-
   @include textFontM;
   color: $secondary-grey;
 
   &:not(:last-child) {
-    margin-bottom: 24px;
+    margin-bottom: 1em;
+  }
+
+  @include media($tablet) {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media($largeTablet) {
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media($desktop) {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
