@@ -10,6 +10,7 @@ interface Props {
   title: string;
   description: string;
   authorship: string;
+  authorshipSecondary: string;
 }
 
 export const Article: React.FC<React.PropsWithChildren<Props>> = ({
@@ -20,6 +21,7 @@ export const Article: React.FC<React.PropsWithChildren<Props>> = ({
   title,
   description,
   authorship,
+  authorshipSecondary,
 }) => {
   return (
     <>
@@ -68,15 +70,18 @@ export const Article: React.FC<React.PropsWithChildren<Props>> = ({
           </picture>
 
           <div className={styles.heroContentWrapper}>
-            <p className={styles.authorship}>
-              <img
-                className={styles.bulletpoint}
-                src="/icons/bullet-red.svg"
-                alt=""
-                aria-hidden="true"
-              />
-              {authorship}
-            </p>
+            <div className={styles.heroAuthorshipWrapper}>
+              <p className={styles.authorship}>
+                <img
+                  className={styles.bulletpoint}
+                  src="/icons/bullet-red.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                {authorship}
+              </p>
+            </div>
+
             <h1 className={styles.heroTitle}>{title}</h1>
 
             <p className={styles.heroDescription}>{description}</p>
@@ -95,6 +100,7 @@ export const Article: React.FC<React.PropsWithChildren<Props>> = ({
             />
             {authorship}
           </p>
+          <p className={styles.authorshipSecondary}>{authorshipSecondary}</p>
         </div>
       </main>
 

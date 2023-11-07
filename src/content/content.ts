@@ -7,6 +7,7 @@ const blog = defineCollection({
       title: z.string(),
       description: z.string(),
       authorship: z.string(),
+      authorshipSecondary: z.string(),
       squareHeroImageUrl: z.string(),
       panoramicHeroImageUrl: z.string(),
       heroImageAlt: z.string(),

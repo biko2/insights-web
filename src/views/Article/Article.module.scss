@@ -111,14 +111,25 @@
   }
 }
 
-.authorship {
+.heroAuthorshipWrapper {
   margin-bottom: 48px;
+}
 
+.authorship {
   @include textFontXS;
   color: $secondary-grey;
 }
 
+.authorshipSecondary {
+  margin-left: 20px;
+
+  @include textFontXS;
+  color: $secondary-grey-500;
+}
+
 .fullAuthorshipWrapper {
+  margin-bottom: 96px;
+
   @include textFontXS;
   color: $secondary-grey;
 
@@ -133,6 +144,7 @@
   }
 
   @include media($desktop) {
+    margin-bottom: 128px;
     width: 50%;
   }
 }
