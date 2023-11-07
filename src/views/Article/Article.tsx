@@ -24,11 +24,13 @@ export const Article: React.FC<React.PropsWithChildren<Props>> = ({
   return (
     <>
       <header className={`${containerStyles.container} ${styles.header}`}>
-        <img
-          className={styles.heroLogo}
-          src="/logo-bikoinsights-dark.svg"
-          alt="Logo de Jakala BikoInsights"
-        />
+        <a className={styles.headerLogoLink} href="/" title="Vuelve al inicio">
+          <img
+            className={styles.heroLogo}
+            src="/logo-bikoinsights-dark.svg"
+            alt="Logo de Jakala BikoInsights"
+          />
+        </a>
 
         <nav>
           <ul className={styles.headerItems}>
