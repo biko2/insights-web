@@ -1,13 +1,19 @@
 @import "../../styles/mixins/colors.scss";
 @import "../../styles/mixins/titleFont.scss";
+@import "../../styles/mixins/media.scss";
 
 .wrapper {
-  width: 50%;
   padding-left: 32px;
-  margin-top: 128px;
-  margin-bottom: 128px;
+  margin-top: 96px;
+  margin-bottom: 96px;
 
   border-left: 4px solid $primary-blue;
+
+  @include media($desktop) {
+    width: 50%;
+    margin-top: 128px;
+    margin-bottom: 128px;
+  }
 
   p {
     margin: 0;
