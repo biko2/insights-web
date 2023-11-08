@@ -109,6 +109,23 @@ export const Article: React.FC<React.PropsWithChildren<Props>> = ({
           </p>
           <p className={styles.authorshipSecondary}>{authorshipSecondary}</p>
         </div>
+
+        <div className={styles.goToTopWrapper}>
+          <a
+            className={styles.goToTopLink}
+            href="#top"
+            title="Sube al inicio del artículo"
+          >
+            <img
+              width={24}
+              height={24}
+              src="/icons/go-to-top-arrow.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            TOP
+          </a>
+        </div>
       </main>
 
       <footer className={styles.footer}>

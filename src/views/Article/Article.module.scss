@@ -194,3 +194,27 @@
 .footerText {
   text-align: center;
 }
+
+.goToTopWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.goToTopLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  color: $secondary-grey-500;
+
+  &:link,
+  &:visited {
+    color: $secondary-grey-500;
+  }
+
+  &:focus {
+    outline: 2px solid $focus-outline;
+  }
+}
