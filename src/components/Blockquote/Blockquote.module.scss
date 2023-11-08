@@ -16,8 +16,10 @@
   }
 
   p {
-    /* sobrescribimos el margen que da el Paragraph */
-    margin-bottom: 16px !important;
+    &:not(:last-child) {
+      /* sobrescribimos el margen que da el Paragraph */
+      margin-bottom: 16px !important;
+    }
     width: 100%;
 
     color: $primary-blue;
