@@ -1,6 +1,7 @@
 @import "../../styles/mixins/colors.scss";
 @import "../../styles/mixins/titleFont.scss";
 @import "../../styles/mixins/media.scss";
+@import "../../styles/mixins/textFont.scss";
 
 .wrapper {
   padding-left: 32px;
@@ -36,6 +37,7 @@
 
   footer {
     color: $secondary-grey;
+    @include textFontS;
 
     &::before {
       content: "(";
