@@ -10,6 +10,8 @@ const blog = defineCollection({
       squareHeroImageUrl: z.string(),
       panoramicHeroImageUrl: z.string(),
       heroImageAlt: z.string(),
+      metaImageSrc: z.string(),
+      metaImageAlt: z.string(),
     }),
 });
 

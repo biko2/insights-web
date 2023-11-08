@@ -17,7 +17,13 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<Layout {...post.data}>
+<Layout
+  title={post.data.title}
+  description={post.data.description}
+  slug={post.data.slug}
+  metaImageSrc={post.data.metaImageSrc}
+  metaImageAlt={post.data.metaImageAlt}
+>
   <Article
     squareHeroImageUrl={post.data.squareHeroImageUrl}
     panoramicHeroImageUrl={post.data.panoramicHeroImageUrl}
