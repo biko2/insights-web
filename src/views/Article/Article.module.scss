@@ -11,14 +11,10 @@
   justify-content: space-between;
   padding-top: 24px;
   gap: 18px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 
   z-index: 100;
   background-color: $background-default;
-
-  @include media($tablet) {
-    margin-bottom: 0px;
-  }
 }
 
 .headerLogoLink {
