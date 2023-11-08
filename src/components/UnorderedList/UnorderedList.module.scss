@@ -3,7 +3,7 @@
 @import "../../styles/mixins/media.scss";
 
 .wrapper {
-  margin-bottom: 1em;
+  margin-bottom: 24px;
   padding-left: 24px;
 
   @include media($tablet) {
