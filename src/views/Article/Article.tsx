@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import containerStyles from '../components/container.module.scss';
-import styles from './Article.module.scss';
+import containerStyles from "../components/container.module.scss";
+import styles from "./Article.module.scss";
 
 interface Props {
   panoramicHeroImageUrl: string;
@@ -114,7 +114,7 @@ export const Article: React.FC<React.PropsWithChildren<Props>> = ({
       <footer className={styles.footer}>
         <div className={containerStyles.container}>
           <div className={styles.footerWrapper}>
-            <img src="icons/jakala.svg" alt="Logo de Jakala" />
+            <img src="/icons/jakala.svg" alt="Logo de Jakala" />
             <p className={styles.footerText}>
               BikoInsights es un documento sobre tendencias digitales elaborado
               por Jakala | Biko con carácter divulgativo.

@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import container from '../components/container.module.scss';
-import styles from './home.module.scss';
+import container from "../components/container.module.scss";
+import styles from "./home.module.scss";
 
 export const Home: React.FC = () => {
   return (
@@ -518,7 +518,7 @@ export const Home: React.FC = () => {
       <footer className={styles.footer}>
         <div className={container.container}>
           <div className={styles.footerWrapper}>
-            <img src="icons/jakala.svg" alt="Logo de Jakala" />
+            <img src="/icons/jakala.svg" alt="Logo de Jakala" />
             <p className={styles.footerText}>
               BikoInsights es un documento sobre tendencias digitales elaborado
               por Jakala | Biko con carácter divulgativo.
