@@ -28,6 +28,7 @@
     margin-right: auto;
   }
 
+  /* Markdown mete las imágenes en un tag p */
   &:has(img) {
     width: 100%;
   }
