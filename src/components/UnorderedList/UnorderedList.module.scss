@@ -25,16 +25,20 @@
   }
 
   li {
+    position: relative;
     padding-left: 24px;
 
-    @include textFontM;
+    @include textFontS;
     color: $secondary-grey;
 
     &:not(:last-child) {
       margin-bottom: 24px;
     }
 
-    &::marker {
+    &::before {
+      position: absolute;
+      left: -24px;
+      top: 2px;
       content: url("/icons/bullet-arrow.svg");
     }
   }
