@@ -4,13 +4,14 @@
 @import "../../styles/mixins/textFont.scss";
 
 .wrapper {
-  padding-left: 32px;
+  padding-left: 16px;
   margin-top: 96px;
   margin-bottom: 96px;
 
   border-left: 4px solid $primary-blue;
 
   @include media($desktop) {
+    padding-left: 32px;
     width: 50%;
     margin-top: 128px;
     margin-bottom: 128px;
