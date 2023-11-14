@@ -1,1 +1,0 @@
-export { MobileFirstResponsiveImage } from "./MobileFirstResponsiveImage";
