@@ -218,3 +218,92 @@
     outline: 2px solid $focus-outline;
   }
 }
+
+.callToActionWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  background-color: $jakala-primitive-color-primary-blue-900;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+
+  @include media($tablet) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+.callToActionMessage {
+  margin-bottom: 24px;
+
+  color: $background-default;
+  @include textFontS;
+}
+
+.callToActionLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  @include textFontS;
+  width: 100%;
+
+  @include media($tablet) {
+    width: fit-content;
+  }
+
+  padding: 24px;
+  background: $background-secondary-default;
+  border: none;
+  border-radius: 128px;
+  font-weight: bold;
+
+  color: $background-default;
+
+  transition: background 0.2s ease-in-out;
+
+  &:link,
+  &:visited {
+    color: $background-default;
+  }
+
+  &:hover {
+    background: $background-secondary-default-hover;
+  }
+
+  &:focus {
+    outline: 2px solid $focus-outline;
+  }
+}
+
+.detail {
+  margin-bottom: 32px;
+
+  @include textFontXS;
+
+  @include media($desktop) {
+    margin-bottom: 64px;
+  }
+}
+
+.link {
+  text-decoration: underline;
+
+  transition: color 0.2s ease-in-out;
+
+  &:link,
+  &:visited {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 2px solid $focus-outline;
+  }
+
+  &:hover {
+    color: $link-hover;
+  }
+}

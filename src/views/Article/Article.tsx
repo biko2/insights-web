@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import containerStyles from "../components/container.module.scss";
-import styles from "./Article.module.scss";
+import containerStyles from '../components/container.module.scss';
+import styles from './Article.module.scss';
 
 interface Props {
   panoramicHeroImageUrl: string;
@@ -109,6 +109,34 @@ export const Article: React.FC<React.PropsWithChildren<Props>> = ({
           </p>
           <p className={styles.authorshipSecondary}>{authorshipSecondary}</p>
         </div>
+
+        <div className={styles.callToActionWrapper}>
+          <p className={styles.callToActionMessage}>
+            Si lo prefieres, puedes descargarte la revista de BikoInsights #6 en
+            formato pdf.
+          </p>
+
+          <a
+            href="https://www.biko2.com/insights/BIKO-INSIGHTS-6-2023.pdf"
+            className={styles.callToActionLink}
+          >
+            Descargar BikoInsights #6
+          </a>
+        </div>
+
+        <p className={styles.detail}>
+          <img
+            className={styles.bulletpoint}
+            src="/icons/bullet-red.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          ¿Quieres una edición impresa de BikoInsigts #6?, envíanos un{" "}
+          <a className={styles.link} href="mailto:insightsmag@biko2.com">
+            email
+          </a>{" "}
+          y háznoslo saber.
+        </p>
 
         <div className={styles.goToTopWrapper}>
           <a
