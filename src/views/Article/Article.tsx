@@ -1,6 +1,6 @@
 import React from 'react';
 
-import containerStyles from '../components/container.module.scss';
+import containerStyles from '../_modules/container.module.scss';
 import styles from './Article.module.scss';
 
 interface Props {

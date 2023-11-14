@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import container from "../components/container.module.scss";
-import styles from "./home.module.scss";
+import containerStyles from '../_modules/container.module.scss';
+import styles from './home.module.scss';
 
 export const Home: React.FC = () => {
   return (
     <>
       <section className={styles.introSection}>
         <section className={styles.heroContainer}>
-          <div className={container.container}>
+          <div className={containerStyles.container}>
             <div className={styles.heroWrapper}>
               <header className={styles.header}>
                 <img
@@ -114,7 +114,7 @@ export const Home: React.FC = () => {
         </section>
 
         <section id="sumario" className={styles.summary}>
-          <div className={container.container}>
+          <div className={containerStyles.container}>
             <img
               className={`${styles.hexagon} ${styles.firstHexagon}`}
               src="/icons/white-hexagon.svg"
@@ -241,7 +241,7 @@ export const Home: React.FC = () => {
       </section>
 
       <section id="ediciones-anteriores">
-        <div className={container.container}>
+        <div className={containerStyles.container}>
           <h2 className={styles.collectionTitle}>
             ¿Te perdiste algún <br /> BikoInsights?
           </h2>
@@ -516,7 +516,7 @@ export const Home: React.FC = () => {
       </section>
 
       <footer className={styles.footer}>
-        <div className={container.container}>
+        <div className={containerStyles.container}>
           <div className={styles.footerWrapper}>
             <img src="/icons/jakala.svg" alt="Logo de Jakala" />
             <p className={styles.footerText}>
