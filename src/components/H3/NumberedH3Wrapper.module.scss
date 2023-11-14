@@ -50,14 +50,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 128px;
-  width: 108px;
+  height: 96px;
+  width: 81px;
 
   color: $background-default;
   @include titleFontXXL;
 
   background-image: url("/icons/red-hexagon.svg");
+  background-size: cover;
   background-repeat: no-repeat;
+
+  @include media($tablet) {
+    background-size: auto;
+    height: 128px;
+    width: 108px;
+  }
 
   @include media($largeTablet) {
     margin-bottom: 0;
