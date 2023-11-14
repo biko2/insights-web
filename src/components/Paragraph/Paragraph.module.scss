@@ -3,7 +3,7 @@
 @import "../../styles/mixins/media.scss";
 
 .content {
-  @include textFontM;
+  @include textFontS;
   color: $secondary-grey;
 
   &:not(:last-child) {
