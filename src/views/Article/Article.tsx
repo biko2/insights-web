@@ -120,7 +120,8 @@ export const Article: React.FC<React.PropsWithChildren<Props>> = ({
             href="https://www.biko2.com/insights/BIKO-INSIGHTS-6-2023.pdf"
             className={styles.callToActionLink}
           >
-            Descargar BikoInsights #6
+            Descargar BikoInsights #6{" "}
+            <img alt="" aria-hidden="true" src="/icons/cta-download.svg" />
           </a>
         </div>
 
