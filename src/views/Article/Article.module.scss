@@ -282,6 +282,7 @@
 .detail {
   margin-bottom: 32px;
 
+  color: $primary-blue;
   @include textFontXS;
 
   @include media($desktop) {
