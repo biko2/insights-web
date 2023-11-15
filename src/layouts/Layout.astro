@@ -1,12 +1,18 @@
 ---
 import "../styles/reset.scss";
 import "../styles/reboot.scss";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
+  description: string;
+  metaImageSrc: string;
+  metaImageAlt: string;
+  slug?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, metaImageAlt, metaImageSrc, slug } = Astro.props;
+const url = slug ? `https://insightsmag.io/${slug}` : "https://insightsmag.io";
 ---
 
 <!doctype html>
@@ -14,62 +20,50 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="title" content={title} />
-    <meta
-      name="description"
-      content="Es posible que empecemos a cansarnos de las promesas incumplidas pero nos negamos a tirar la toalla. Nuestro nuevo informe aporta algunas claves y respuestas para recuperar el entusiasmo por el Internet que vimos nacer."
-    />
-    <meta
-      property="og:image"
-      content="https://insightsmag.io/images/bikoinsights-social-media.png"
-    />
-    <meta
-      property="og:image:secure_url"
-      content="https://insightsmag.io/images/bikoinsights-social-media.png"
-    />
+    <meta name="description" content={description} />
+    <meta property="og:image" content={metaImageSrc} />
+    <meta property="og:image:secure_url" content={metaImageSrc} />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="BikoInsights #6 por Jakala Biko" />
+    <meta property="og:image:alt" content={metaImageAlt} />
     <meta property="og:title" content={title} />
-    <meta
-      property="og:description"
-      content="Es posible que empecemos a cansarnos de las promesas incumplidas pero nos negamos a tirar la toalla. Nuestro nuevo informe aporta algunas claves y respuestas para recuperar el entusiasmo por el Internet que vimos nacer."
-    />
-    <meta property="og:url" content="https://insightsmag.io" />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="canonical" href="https://insightsmag.io" />
+    <link rel="canonical" href={url} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
     <slot />
+    <style is:global>
+      @font-face {
+        font-family: "Raleway";
+        src: url("/fonts/Raleway-Bold.ttf") format("truetype");
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Raleway";
+        src: url("/fonts/Raleway-Medium.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Raleway", sans-serif;
+      }
+    </style>
   </body>
 </html>
-
-<style is:global>
-  @font-face {
-    font-family: "Raleway";
-    src: url("/fonts/Raleway-Bold.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Raleway";
-    src: url("/fonts/Raleway-Medium.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    font-family: "Raleway", sans-serif;
-  }
-</style>

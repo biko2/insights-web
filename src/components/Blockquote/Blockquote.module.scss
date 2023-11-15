@@ -1,0 +1,50 @@
+@import "../../styles/mixins/colors.scss";
+@import "../../styles/mixins/titleFont.scss";
+@import "../../styles/mixins/media.scss";
+@import "../../styles/mixins/textFont.scss";
+
+.wrapper {
+  padding-left: 16px;
+  margin-top: 96px;
+  margin-bottom: 96px;
+
+  border-left: 4px solid $primary-blue;
+
+  @include media($desktop) {
+    padding-left: 32px;
+    width: 50%;
+    margin-top: 128px;
+    margin-bottom: 128px;
+  }
+
+  p {
+    &:not(:last-child) {
+      /* sobrescribimos el margen que da el Paragraph */
+      margin-bottom: 16px !important;
+    }
+    width: 100%;
+
+    color: $primary-blue;
+    @include titleFontXL;
+    font-style: italic;
+
+    &::before {
+      content: "“";
+    }
+    &::after {
+      content: "”";
+    }
+  }
+
+  footer {
+    color: $secondary-grey;
+    @include textFontS;
+
+    &::before {
+      content: "(";
+    }
+    &::after {
+      content: ")";
+    }
+  }
+}

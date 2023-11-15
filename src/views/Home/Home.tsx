@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import container from "../components/container.module.scss";
-import styles from "./home.module.scss";
+import containerStyles from '../_modules/container.module.scss';
+import styles from './home.module.scss';
 
 export const Home: React.FC = () => {
   return (
     <>
       <section className={styles.introSection}>
         <section className={styles.heroContainer}>
-          <div className={container.container}>
+          <div className={containerStyles.container}>
             <div className={styles.heroWrapper}>
               <header className={styles.header}>
                 <img
@@ -114,7 +114,7 @@ export const Home: React.FC = () => {
         </section>
 
         <section id="sumario" className={styles.summary}>
-          <div className={container.container}>
+          <div className={containerStyles.container}>
             <img
               className={`${styles.hexagon} ${styles.firstHexagon}`}
               src="/icons/white-hexagon.svg"
@@ -179,12 +179,27 @@ export const Home: React.FC = () => {
                   <h3 className={styles.listTitle}>Editorial</h3>
                 </li>
                 <li className={styles.listBox}>
-                  <h3 className={styles.listTitle}>
-                    Paren las redes, que yo me bajo
-                  </h3>
-                  <p className={styles.listDescription}>
-                    Devolvamos las redes a su esencia para hacerlas mejores.
-                  </p>
+                  <a
+                    className={styles.listLink}
+                    href="/paren-las-redes-que-yo-me-bajo"
+                  >
+                    <div>
+                      <h3 className={styles.listTitle}>
+                        Paren las redes, que yo me bajo
+                      </h3>
+                      <p className={styles.listDescription}>
+                        Devolvamos las redes a su esencia para hacerlas mejores.
+                      </p>
+                    </div>
+
+                    <svg
+                      style={{ width: 44, height: 44 }}
+                      role="img"
+                      aria-label="Lee el artículo 'Paren las redes, que yo me bajo'"
+                    >
+                      <use xlinkHref={"/sprite.svg#jakala-arrow"} />
+                    </svg>
+                  </a>
                 </li>
                 <li className={styles.listBox}>
                   <h3 className={styles.listTitle}>
@@ -226,7 +241,7 @@ export const Home: React.FC = () => {
       </section>
 
       <section id="ediciones-anteriores">
-        <div className={container.container}>
+        <div className={containerStyles.container}>
           <h2 className={styles.collectionTitle}>
             ¿Te perdiste algún <br /> BikoInsights?
           </h2>
@@ -501,9 +516,9 @@ export const Home: React.FC = () => {
       </section>
 
       <footer className={styles.footer}>
-        <div className={container.container}>
+        <div className={containerStyles.container}>
           <div className={styles.footerWrapper}>
-            <img src="icons/jakala.svg" alt="Logo de Jakala" />
+            <img src="/icons/jakala.svg" alt="Logo de Jakala" />
             <p className={styles.footerText}>
               BikoInsights es un documento sobre tendencias digitales elaborado
               por Jakala | Biko con carácter divulgativo.

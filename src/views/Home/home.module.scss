@@ -375,10 +375,42 @@
 }
 
 .listBox {
-  padding: 28px 32px;
   background-color: $background-default;
   border-radius: 16px;
   @include textFontM;
+
+  &:not(:has(a)) {
+    /* 
+      Iremos incorporando artículos de forma gradual, por lo que se mantiene
+      este padding cuando no haya enlace a un artículo
+    */
+    padding: 28px 32px;
+  }
+}
+
+.listLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 32px;
+
+  > svg {
+    color: $background-secondary-default;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    > svg {
+      color: $background-secondary-default-hover;
+
+      transform: translateX(5px);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &:focus {
+    outline: 2px solid $focus-outline;
+  }
 }
 
 .listTitle {

@@ -10,6 +10,16 @@
   }
 }
 
+@mixin textFontL() {
+  font-family: "Raleway";
+  font-size: 22px;
+  line-height: 150%;
+
+  @include media($tablet) {
+    font-size: 28px;
+  }
+}
+
 @mixin textFontS() {
   font-family: "Raleway";
   font-size: 18px;
