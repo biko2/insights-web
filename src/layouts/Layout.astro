@@ -21,16 +21,17 @@ const url = slug ? `https://insightsmag.io/${slug}` : "https://insightsmag.io";
     <meta charset="UTF-8" />
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <meta name="og:image" content={metaImageSrc} />
-    <meta name="og:image:secure_url" content={metaImageSrc} />
-    <meta name="og:image:type" content="image/png" />
-    <meta name="og:image:width" content="1200" />
-    <meta name="og:image:height" content="630" />
-    <meta name="og:image:alt" content={metaImageAlt} />
-    <meta name="og:title" content={title} />
-    <meta name="og:description" content={description} />
-    <meta name="og:url" content={url} />
-    <meta name="og:type" content="website" />
+    <meta property="og:image" content={metaImageSrc} />
+    <meta property="og:image:secure_url" content={metaImageSrc} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={metaImageAlt} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="viewport" content="width=device-width" />
     <link rel="canonical" href={url} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
