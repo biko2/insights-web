@@ -1,9 +1,3 @@
----
-runme:
-  id: 01HFBJXTT9JR87EH3528990KDQ
-  version: v2.0
----
-
 # Biko Insights web
 
 ![by Biko2](https://raw.githubusercontent.com/biko2/biko-repo-bagdes/master/png/biko-bagge-pill.png)
@@ -15,7 +9,7 @@ Página web para los Biko Insights.
 
 Inside of your Astro project, you'll see the following folders and files:
 
-```text {"id":"01HFBJXTT9JR87EH35251CG5BX"}
+```text
 /
 ├── public/
 │   └── favicon.svg
