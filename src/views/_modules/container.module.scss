@@ -1,25 +1,26 @@
-@import "../../styles/mixins/media.scss";
+@import "../../styles/tools/mediaQueries.scss";
 
 .container {
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+
+  padding-left: var(--b-grid-mobile-lateral-gap);
+  padding-right: var(--b-grid-mobile-lateral-gap);
+  margin: 0 auto;
 
   @include media($tablet) {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: var(--b-grid-tablet-lateral-gap);
+    ;
+    padding-right: var(--b-grid-tablet-lateral-gap);
   }
 
   @include media($desktop) {
-    padding-left: 48px;
-    padding-right: 48px;
+    padding-left: var(--b-grid-laptop-lateral-gap);
+    padding-right: var(--b-grid-laptop-lateral-gap);
   }
 
   @include media($largeDesktop) {
     padding-left: 0;
     padding-right: 0;
-    width: 1416px;
+    width: var(--b-grid-max-container);
   }
 }

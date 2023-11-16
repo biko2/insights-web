@@ -1,0 +1,19 @@
+@import "../mediaQueries.scss";
+
+@mixin gridLayout {
+  display: grid;
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: var(--b-grid-mobile-gutter-gap);
+
+  @media #{$onlyTablet} {
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: var(--b-grid-gutter-gap);
+  }
+
+  @media #{$fromLaptop} {
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: var(--b-grid-gutter-gap);
+  }
+
+}

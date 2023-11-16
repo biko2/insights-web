@@ -1,19 +1,20 @@
 import React from 'react';
 
 import containerStyles from '../_modules/container.module.scss';
-import styles from './Article.module.scss';
+import styles from './ArticlePage.module.scss';
 
 interface Props {
   panoramicHeroImageUrl: string;
   squareHeroImageUrl: string;
   heroImageAlt: string;
+
   title: string;
   description: string;
   authorship: string;
   authorshipSecondary: string;
 }
 
-export const Article: React.FC<React.PropsWithChildren<Props>> = ({
+export const ArticlePage: React.FC<React.PropsWithChildren<Props>> = ({
   children,
   panoramicHeroImageUrl,
   squareHeroImageUrl,

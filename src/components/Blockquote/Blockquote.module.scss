@@ -1,14 +1,13 @@
-@import "../../styles/mixins/colors.scss";
-@import "../../styles/mixins/titleFont.scss";
-@import "../../styles/mixins/media.scss";
-@import "../../styles/mixins/textFont.scss";
+@import "../../styles/tools/mediaQueries.scss";
+@import "../../styles/tools/mixins/titleFont.scss";
+@import "../../styles/tools/mixins/textFont.scss";
 
 .wrapper {
   padding-left: 16px;
   margin-top: 96px;
   margin-bottom: 96px;
 
-  border-left: 4px solid $primary-blue;
+  border-left: 4px solid var(--primary-blue);
 
   @include media($desktop) {
     padding-left: 32px;
@@ -22,27 +21,30 @@
       /* sobrescribimos el margen que da el Paragraph */
       margin-bottom: 16px !important;
     }
+
     width: 100%;
 
-    color: $primary-blue;
+    color: var(--primary-blue);
     @include titleFontXL;
     font-style: italic;
 
     &::before {
       content: "“";
     }
+
     &::after {
       content: "”";
     }
   }
 
   footer {
-    color: $secondary-grey;
+    color: var(--secondary-grey);
     @include textFontS;
 
     &::before {
       content: "(";
     }
+
     &::after {
       content: ")";
     }

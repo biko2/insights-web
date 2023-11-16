@@ -1,8 +1,8 @@
-@import "../../styles/mixins/colors.scss";
-@import "../../styles/mixins/media.scss";
-@import "../../styles/mixins/displayFont.scss";
-@import "../../styles/mixins/textFont.scss";
-@import "../../styles/mixins/titleFont.scss";
+@import "../../styles/tools/mediaQueries.scss";
+@import "../../styles/tools/mixins/displayFont.scss";
+@import "../../styles/tools/mixins/titleFont.scss";
+@import "../../styles/tools/mixins/textFont.scss";
+
 
 .header {
   position: sticky;
@@ -14,22 +14,12 @@
   margin-bottom: 16px;
 
   z-index: 100;
-  background-color: $background-default;
+  background-color: var(--background-default);
 }
 
 .headerLogoLink {
   &:focus {
-    outline: 2px solid $focus-outline;
-  }
-}
-
-.heroLogo {
-  width: auto;
-  max-width: 100%;
-  height: 31px;
-
-  @include media($desktop) {
-    height: 42px;
+    outline: 2px solid var(--focus-outline);
   }
 }
 
@@ -49,21 +39,21 @@
   align-items: center;
   gap: 8px;
 
-  > svg {
+  >svg {
     transition: all 0.3s ease-in-out;
   }
 
   &:hover {
-    color: $background-secondary-default-hover;
+    color: var(--background-secondary-default-hover);
 
-    > svg {
+    >svg {
       transform: translateX(-5px);
       transition: all 0.3s ease-in-out;
     }
   }
 
   &:focus {
-    outline: 2px solid $focus-outline;
+    outline: 2px solid var(--focus-outline);
   }
 }
 
@@ -79,6 +69,16 @@
 
   @include media($tablet) {
     margin-bottom: 0;
+  }
+}
+
+.heroLogo {
+  width: auto;
+  max-width: 100%;
+  height: 31px;
+
+  @include media($desktop) {
+    height: 42px;
   }
 }
 
@@ -99,7 +99,7 @@
     margin-right: auto;
   }
 
-  @include media($largeTablet) {
+  @include media($laptop) {
     width: 66%;
   }
 
@@ -114,21 +114,21 @@
 
 .authorship {
   @include textFontXS;
-  color: $secondary-grey;
+  color: var(--secondary-grey);
 }
 
 .authorshipSecondary {
   margin-left: 20px;
 
   @include textFontXS;
-  color: $secondary-grey-500;
+  color: var(--secondary-grey-500);
 }
 
 .fullAuthorshipWrapper {
   margin-bottom: 96px;
 
   @include textFontXS;
-  color: $secondary-grey;
+  color: var(--secondary-grey);
 
   @include media($tablet) {
     width: 75%;
@@ -136,7 +136,7 @@
     margin-right: auto;
   }
 
-  @include media($largeTablet) {
+  @include media($laptop) {
     width: 66%;
   }
 
@@ -154,12 +154,12 @@
   margin-bottom: 12px;
 
   @include titleFontXXL;
-  color: $primary-blue;
+  color: var(--primary-blue);
 }
 
 .heroDescription {
   @include textFontL;
-  color: $secondary-grey;
+  color: var(--secondary-grey);
 }
 
 .wrapper {
@@ -179,8 +179,8 @@
   padding-top: 96px;
   padding-bottom: 24px;
 
-  background-color: $background-primary-default;
-  color: $background-default;
+  background-color: var(--background-primary-default);
+  color: var(--background-default);
 }
 
 .footerWrapper {
@@ -207,15 +207,15 @@
   align-items: center;
   gap: 8px;
 
-  color: $secondary-grey-500;
+  color: var(--secondary-grey-500);
 
   &:link,
   &:visited {
-    color: $secondary-grey-500;
+    color: var(--secondary-grey-500);
   }
 
   &:focus {
-    outline: 2px solid $focus-outline;
+    outline: 2px solid var(--focus-outline);
   }
 }
 
@@ -224,7 +224,7 @@
   flex-direction: column;
   align-items: center;
   border-radius: 16px;
-  background-color: $jakala-primitive-color-primary-blue-900;
+  background-color: var(--jakala-primitive-color-primary-blue-900);
   padding: 24px;
   margin-bottom: 48px;
 
@@ -238,7 +238,7 @@
 .callToActionMessage {
   margin-bottom: 24px;
 
-  color: $background-default;
+  color: var(--background-default);
   @include textFontS;
 }
 
@@ -256,33 +256,33 @@
   }
 
   padding: 24px;
-  background: $background-secondary-default;
+  background: var(--background-secondary-default);
   border: none;
   border-radius: 128px;
   font-weight: bold;
 
-  color: $background-default;
+  color: var(--background-default);
 
   transition: background 0.2s ease-in-out;
 
   &:link,
   &:visited {
-    color: $background-default;
+    color: var(--background-default);
   }
 
   &:hover {
-    background: $background-secondary-default-hover;
+    background: var(--background-secondary-default-hover);
   }
 
   &:focus {
-    outline: 2px solid $focus-outline;
+    outline: 2px solid var(--focus-outline);
   }
 }
 
 .detail {
   margin-bottom: 32px;
 
-  color: $primary-blue;
+  color: var(--primary-blue);
   @include textFontXS;
 
   @include media($desktop) {
@@ -301,10 +301,10 @@
   }
 
   &:focus {
-    outline: 2px solid $focus-outline;
+    outline: 2px solid var(--focus-outline);
   }
 
   &:hover {
-    color: $link-hover;
+    color: var(--link-hover);
   }
 }

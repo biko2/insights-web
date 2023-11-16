@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-import { Article } from "../views/Article/Article";
+import { ArticlePage } from "../views/ArticlePage/ArticlePage";
 import { blogTags } from "../components/blogTags";
 
 export async function getStaticPaths() {
@@ -24,7 +24,7 @@ const { Content } = await post.render();
   metaImageSrc={post.data.metaImageSrc}
   metaImageAlt={post.data.metaImageAlt}
 >
-  <Article
+  <ArticlePage
     squareHeroImageUrl={post.data.squareHeroImageUrl}
     panoramicHeroImageUrl={post.data.panoramicHeroImageUrl}
     heroImageAlt={post.data.heroImageAlt}
@@ -34,5 +34,6 @@ const { Content } = await post.render();
     authorshipSecondary={post.data.authorshipSecondary}
   >
     <Content components={blogTags} />
-  </Article>
+  </ArticlePage>
 </Layout>
+../views/ArticlePage/ArticlePage

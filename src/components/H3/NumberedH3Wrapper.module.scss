@@ -1,6 +1,6 @@
-@import "../../styles/mixins/titleFont.scss";
-@import "../../styles/mixins/colors.scss";
-@import "../../styles/mixins/media.scss";
+@import "../../styles/tools/mixins/titleFont.scss";
+
+@import "../../styles/tools/mediaQueries.scss";
 
 /**
   NOTA
@@ -35,7 +35,7 @@
     }
   }
 
-  @include media($largeTablet) {
+  @include media($laptop) {
     width: 100%;
 
     h3 {
@@ -53,7 +53,7 @@
   height: 96px;
   width: 81px;
 
-  color: $background-default;
+  color: var(--background-default);
   @include titleFontXXL;
 
   background-image: url("/icons/red-hexagon.svg");
@@ -66,7 +66,7 @@
     width: 108px;
   }
 
-  @include media($largeTablet) {
+  @include media($laptop) {
     margin-bottom: 0;
     position: absolute;
   }

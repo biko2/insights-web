@@ -1,10 +1,10 @@
-@import "../../styles/mixins/textFont.scss";
-@import "../../styles/mixins/colors.scss";
-@import "../../styles/mixins/media.scss";
+@import "../../styles/tools/mixins/textFont.scss";
+
+@import "../../styles/tools/mediaQueries.scss";
 
 .content {
   @include textFontS;
-  color: $secondary-grey;
+  color: var(--secondary-grey);
 
   &:not(:last-child) {
     margin-bottom: 1em;
@@ -16,7 +16,7 @@
     margin-right: auto;
   }
 
-  @include media($largeTablet) {
+  @include media($laptop) {
     width: 66%;
     margin-left: auto;
     margin-right: auto;

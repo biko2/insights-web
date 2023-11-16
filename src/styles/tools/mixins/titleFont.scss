@@ -1,34 +1,42 @@
-@import "./media.scss";
+@import "../../tools/mediaQueries.scss";
+@import '../../tools/functions.scss';
+;
 
 $xl: 96px, 88px, 48px;
 $l: 88px, 72px, 36px;
 
 @mixin titleFontXXL() {
   font-family: "Raleway";
-  font-size: 40px;
+  font-size: #{toRem(40)};
+  ;
   line-height: 125%;
 
   @include media($tablet) {
-    font-size: 48px;
+    font-size: #{toRem(48)};
+    ;
   }
 }
 
 @mixin titleFontXL() {
   font-family: "Raleway";
-  font-size: 32px;
+  font-size: #{toRem(32)};
+  ;
   line-height: 125%;
 
   @include media($tablet) {
-    font-size: 40px;
+    font-size: #{toRem(40)};
+    ;
   }
 }
 
 @mixin titleFontL() {
   font-family: "Raleway";
-  font-size: 24px;
+  font-size: #{toRem(24)};
+  ;
   line-height: 125%;
 
   @include media($tablet) {
-    font-size: 32px;
+    font-size: #{toRem(32)};
+    ;
   }
 }

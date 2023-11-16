@@ -1,13 +1,14 @@
-@import "../../styles/mixins/titleFont.scss";
-@import "../../styles/mixins/colors.scss";
-@import "../../styles/mixins/media.scss";
+@import "../../styles/tools/mixins/titleFont.scss";
+
+@import "../../styles/tools/mediaQueries.scss";
+
 
 .content {
   margin-top: 96px;
   margin-bottom: 24px;
 
   @include titleFontXL;
-  color: $primary-blue;
+  color: var(--primary-blue);
 
   @include media($desktop) {
     margin-top: 128px;

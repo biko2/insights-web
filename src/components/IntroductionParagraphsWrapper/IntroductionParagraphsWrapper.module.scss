@@ -1,6 +1,6 @@
-@import "../../styles/mixins/textFont.scss";
-@import "../../styles/mixins/colors.scss";
-@import "../../styles/mixins/media.scss";
+@import "../../styles/tools/mixins/textFont.scss";
+
+@import "../../styles/tools/mediaQueries.scss";
 
 .content {
   p {
