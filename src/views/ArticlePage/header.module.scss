@@ -1,0 +1,73 @@
+@import "../../styles/tools/mediaQueries.scss";
+@import '../../styles/tools/mixins/container.scss';
+@import '../../styles/tools/functions.scss';
+@import '../../styles/tools/mixins/outline.scss';
+
+
+.header {
+  @include container;
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-m);
+  padding-top: var(--space-l);
+  margin-bottom: var(--space-m);
+
+  z-index: 100;
+  background-color: var(--background-default);
+}
+
+.outlineLink {
+  &:focus {
+    @include outline;
+  }
+}
+
+.logo {
+  width: auto;
+  max-width: 100%;
+  height: #{toRem(31)};
+
+  @media #{$fromDesktop} {
+    height: #{toRem(42)};
+  }
+}
+
+.navMenu {
+  display: none;
+
+  @media #{$fromTablet} {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: var(--space-l);
+  }
+}
+
+.navMenuItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+
+  >svg {
+    width: #{toRem(24)};
+    height: #{toRem(24)};
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: var(--background-secondary-default-hover);
+
+    >svg {
+      transform: translateX(-5px);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &:focus {
+    @include outline;
+  }
+}

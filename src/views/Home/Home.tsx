@@ -1,6 +1,6 @@
 import React from 'react';
 
-import containerStyles from '../_modules/container.module.scss';
+import containerStyles from './container.module.scss';
 import styles from './home.module.scss';
 
 export const Home: React.FC = () => {

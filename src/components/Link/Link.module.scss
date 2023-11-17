@@ -1,4 +1,6 @@
-.wrapper {
+@import '../../styles/tools/mixins/outline.scss';
+
+wrapper {
   color: var(--background-secondary-default);
   text-decoration: underline;
 
@@ -11,7 +13,7 @@
   }
 
   &:focus {
-    outline: 2px solid var(--focus-outline);
+    @include outline;
   }
 
   &:hover {

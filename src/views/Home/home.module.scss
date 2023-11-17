@@ -2,6 +2,7 @@
 @import "../../styles/tools/mixins/displayFont.scss";
 @import "../../styles/tools/mixins/titleFont.scss";
 @import "../../styles/tools/mixins/textFont.scss";
+@import '../../styles/tools/mixins/outline.scss';
 
 .introSection {
   background-color: var(--background-primary-default);
@@ -58,7 +59,7 @@
   }
 
   &:focus {
-    outline: 2px solid var(--focus-outline);
+    @include outline;
   }
 
   &:hover {
@@ -188,7 +189,7 @@
   }
 
   &:focus {
-    outline: 2px solid var(--focus-outline);
+    @include outline;
   }
 }
 
@@ -248,7 +249,7 @@
   }
 
   &:focus {
-    outline: 2px solid var(--focus-outline);
+    @include outline;
   }
 }
 
@@ -404,7 +405,7 @@
   }
 
   &:focus {
-    outline: 2px solid var(--focus-outline);
+    @include outline;
   }
 }
 
@@ -606,6 +607,6 @@
   }
 
   &:focus {
-    outline: 2px solid var(--focus-outline);
+    @include outline;
   }
 }

@@ -1,0 +1,25 @@
+@import "../mediaQueries.scss";
+
+@mixin container {
+  position: relative;
+
+  padding-left: var(--grid-mobile-lateral-gap);
+  padding-right: var(--grid-mobile-lateral-gap);
+  margin: 0 auto;
+
+  @include media($tablet) {
+    padding-left: var(--grid-tablet-lateral-gap);
+    padding-right: var(--grid-tablet-lateral-gap);
+  }
+
+  @include media($desktop) {
+    padding-left: var(--grid-laptop-lateral-gap);
+    padding-right: var(--grid-laptop-lateral-gap);
+  }
+
+  @include media($largeDesktop) {
+    padding-left: 0;
+    padding-right: 0;
+    width: var(--grid-max-container);
+  }
+}

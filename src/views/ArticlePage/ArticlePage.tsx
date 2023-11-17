@@ -1,49 +1,46 @@
 import React from 'react';
 
-import containerStyles from '../_modules/container.module.scss';
-import styles from './ArticlePage.module.scss';
+import { classNames } from '../../utilities/classnames';
+import articlePage from './articlePage.module.scss';
+import footer from './footer.module.scss';
+import header from './header.module.scss';
+import hero from './hero.module.scss';
+
+const styles = { ...header, ...footer, ...hero, ...articlePage };
 
 interface Props {
-  panoramicHeroImageUrl: string;
-  squareHeroImageUrl: string;
+  heroImageUrl: string;
   heroImageAlt: string;
-
   title: string;
   description: string;
   authorship: string;
-  authorshipSecondary: string;
+  authorshipSubtitle: string;
 }
 
 export const ArticlePage: React.FC<React.PropsWithChildren<Props>> = ({
   children,
-  panoramicHeroImageUrl,
-  squareHeroImageUrl,
+  heroImageUrl,
   heroImageAlt,
   title,
   description,
   authorship,
-  authorshipSecondary,
+  authorshipSubtitle,
 }) => {
   return (
     <>
-      <header className={`${containerStyles.container} ${styles.header}`}>
-        <a className={styles.headerLogoLink} href="/" title="Vuelve al inicio">
+      <header className={styles.header}>
+        <a className={styles.outlineLink} href="/" title="Vuelve al inicio">
           <img
-            className={styles.heroLogo}
+            className={styles.logo}
             src="/logo-bikoinsights-dark.svg"
             alt="Logo de Jakala BikoInsights"
           />
         </a>
-
         <nav>
-          <ul className={styles.headerItems}>
+          <ul className={styles.navMenu}>
             <li>
-              <a href="/#sumario" className={styles.headerItem}>
-                <svg
-                  style={{ width: 24, height: 24 }}
-                  role="img"
-                  aria-hidden="true"
-                >
+              <a href="/#sumario" className={styles.navMenuItem}>
+                <svg role="img" aria-hidden="true">
                   <use xlinkHref={"/sprite.svg#arrow-left"} />
                 </svg>{" "}
                 Sumario
@@ -51,7 +48,7 @@ export const ArticlePage: React.FC<React.PropsWithChildren<Props>> = ({
             </li>
 
             <li>
-              <a href="/#ediciones-anteriores" className={styles.headerItem}>
+              <a href="/#ediciones-anteriores" className={styles.navMenuItem}>
                 Ediciones anteriores
               </a>
             </li>
@@ -59,88 +56,85 @@ export const ArticlePage: React.FC<React.PropsWithChildren<Props>> = ({
         </nav>
       </header>
 
-      <main className={containerStyles.container}>
-        <div className={styles.heroWrapper}>
-          <picture>
-            <source
-              height={797}
-              width={1416}
-              media="(min-width:1024px)"
-              srcSet={panoramicHeroImageUrl}
-            />
+      <main className={styles.mainContent}>
+        <section className={styles.hero}>
+          <picture className={styles.heroPicture}>
             <img
-              src={squareHeroImageUrl}
-              alt={heroImageAlt}
-              height={720}
-              width={720}
               className={styles.heroImage}
+              src={heroImageUrl}
+              alt={heroImageAlt}
             />
           </picture>
 
-          <div className={styles.heroContentWrapper}>
-            <div className={styles.heroAuthorshipWrapper}>
-              <p className={styles.authorship}>
-                <img
-                  className={styles.bulletpoint}
-                  src="/icons/bullet-red.svg"
-                  alt=""
-                  aria-hidden="true"
-                />
-                {authorship}
-              </p>
+          <div className={styles.heroContent}>
+            <div className={styles.heroAuthorship}>
+              <img
+                className="mr-s"
+                src="/icons/bullet-red.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              {authorship}
             </div>
 
             <h1 className={styles.heroTitle}>{title}</h1>
 
             <p className={styles.heroDescription}>{description}</p>
           </div>
-        </div>
+        </section>
 
-        <div className={styles.wrapper}>{children}</div>
+        <article className="mb-5xl mb-desktop-6xl">{children}</article>
 
-        <div className={styles.fullAuthorshipWrapper}>
-          <p className={styles.authorship}>
+        <section className={styles.articleFooter}>
+          <span className={styles.authorship}>
             <img
-              className={styles.bulletpoint}
+              className="mr-s"
               src="/icons/bullet-red.svg"
               alt=""
               aria-hidden="true"
             />
             {authorship}
-          </p>
-          <p className={styles.authorshipSecondary}>{authorshipSecondary}</p>
-        </div>
+          </span>
+          <span
+            className={classNames(
+              styles.authorship,
+              styles.authorship__subtitle
+            )}
+          >
+            {authorshipSubtitle}
+          </span>
+        </section>
 
-        <div className={styles.callToActionWrapper}>
-          <p className={styles.callToActionMessage}>
+        <section className={styles.banner}>
+          <p className="mb-l">
             Si lo prefieres, puedes descargarte la revista de BikoInsights #6 en
             formato pdf.
           </p>
 
           <a
             href="https://www.biko2.com/insights/BIKO-INSIGHTS-6-2023.pdf"
-            className={styles.callToActionLink}
+            className={styles.downloadLink}
           >
             Descargar BikoInsights #6{" "}
             <img alt="" aria-hidden="true" src="/icons/cta-download.svg" />
           </a>
-        </div>
+        </section>
 
-        <p className={styles.detail}>
+        <section className={styles.caption}>
           <img
-            className={styles.bulletpoint}
+            className="mr-s"
             src="/icons/bullet-red.svg"
             alt=""
             aria-hidden="true"
           />
           ¿Quieres una edición impresa de BikoInsigts #6?, envíanos un{" "}
-          <a className={styles.link} href="mailto:insightsmag@biko2.com">
+          <a className={styles.captioLink} href="mailto:insightsmag@biko2.com">
             email
           </a>{" "}
           y háznoslo saber.
-        </p>
+        </section>
 
-        <div className={styles.goToTopWrapper}>
+        <section className={styles.goToTop}>
           <a
             className={styles.goToTopLink}
             href="#top"
@@ -155,19 +149,15 @@ export const ArticlePage: React.FC<React.PropsWithChildren<Props>> = ({
             />
             TOP
           </a>
-        </div>
+        </section>
       </main>
 
       <footer className={styles.footer}>
-        <div className={containerStyles.container}>
-          <div className={styles.footerWrapper}>
-            <img src="/icons/jakala.svg" alt="Logo de Jakala" />
-            <p className={styles.footerText}>
-              BikoInsights es un documento sobre tendencias digitales elaborado
-              por Jakala | Biko con carácter divulgativo.
-            </p>
-          </div>
-        </div>
+        <img src="/icons/jakala.svg" alt="Logo de Jakala" />
+        <p className={styles.footerText}>
+          BikoInsights es un documento sobre tendencias digitales elaborado por
+          Jakala | Biko con carácter divulgativo.
+        </p>
       </footer>
     </>
   );

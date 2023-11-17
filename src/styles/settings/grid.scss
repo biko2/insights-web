@@ -2,29 +2,29 @@
 @import '../tools/mediaQueries.scss';
 
 :root {
-  --b-grid-max-container: #{toRem(1416)};
+  --grid-max-container: #{toRem(1416)};
 
-  --b-grid-mobile-lateral-gap: #{toRem(16)};
-  --b-grid-tablet-lateral-gap: #{toRem(24)};
-  --b-grid-laptop-lateral-gap: #{toRem(48)};
-  --b-grid-desktop-lateral-gap: #{toRem(48)};
+  --grid-mobile-lateral-gap: #{toRem(16)};
+  --grid-tablet-lateral-gap: #{toRem(24)};
+  --grid-laptop-lateral-gap: #{toRem(48)};
+  --grid-desktop-lateral-gap: #{toRem(48)};
 
-  --b-grid-full-container-desktop-lateral-gap: calc(calc(100vw - var(--b-grid-max-container)) / 2 + var(--b-grid-desktop-lateral-gap));
+  --grid-full-container-desktop-lateral-gap: calc(calc(100vw - var(--grid-max-container)) / 2 + var(--grid-desktop-lateral-gap));
 
-  --b-grid-mobile-gutter-gap: #{toRem(16)};
-  --b-grid-gutter-gap: #{toRem(24)};
+  --grid-mobile-gutter-gap: #{toRem(16)};
+  --grid-gutter-gap: #{toRem(24)};
 
-  --b-grid-lateral-gap: var(--b-grid-mobile-lateral-gap);
+  --grid-lateral-gap: var(--grid-mobile-lateral-gap);
 
   @media #{$fromTablet} {
-    --b-grid-lateral-gap: var(--b-grid-tablet-lateral-gap);
+    --grid-lateral-gap: var(--grid-tablet-lateral-gap);
   }
 
   @media #{$fromLaptop} {
-    --b-grid-lateral-gap: var(--b-grid-laptop-lateral-gap);
+    --grid-lateral-gap: var(--grid-laptop-lateral-gap);
   }
 
   @media #{$onlyDesktop} {
-    --b-grid-lateral-gap: var(--b-grid-full-container-desktop-lateral-gap);
+    --grid-lateral-gap: var(--grid-full-container-desktop-lateral-gap);
   }
 }
