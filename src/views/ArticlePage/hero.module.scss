@@ -37,8 +37,8 @@
 
     background-color: #ffffff;
 
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: var(--space-m);
+    border-bottom-right-radius: var(--space-m);
 
     @media #{$fromTablet} {
         position: absolute;

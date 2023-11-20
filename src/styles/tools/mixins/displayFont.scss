@@ -9,11 +9,11 @@ $l: 88px, 72px, 36px;
   font-size: #{toRem(48)};
   line-height: 100%;
 
-  @include media($tablet) {
+  @media #{$fromTablet} {
     font-size: #{toRem(88)};
   }
 
-  @include media($desktop) {
+  @media #{$fromDesktop} {
     font-size: #{toRem(96)};
   }
 }
@@ -23,12 +23,12 @@ $l: 88px, 72px, 36px;
   font-size: #{toRem(36)};
   line-height: 125%;
 
-  @include media($tablet) {
+  @media #{$fromTablet} {
     font-size: #{toRem(72)};
     line-height: 100%;
   }
 
-  @include media($desktop) {
+  @media #{$fromDesktop} {
     font-size: #{toRem(88)};
   }
 }

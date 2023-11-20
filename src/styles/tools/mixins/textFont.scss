@@ -4,46 +4,43 @@
 @mixin textFontM() {
   font-family: "Raleway";
   font-size: #{toRem(20)};
+  font-weight: 500;
   line-height: 150%;
 
-  @include media($tablet) {
+  @media #{$fromTablet} {
     font-size: #{toRem(24)};
-    ;
   }
 }
 
 @mixin textFontL() {
   font-family: "Raleway";
   font-size: #{toRem(22)};
-  ;
+  font-weight: 500;
   line-height: 150%;
 
-  @include media($tablet) {
+  @media #{$fromTablet} {
     font-size: #{toRem(28)};
-    ;
   }
 }
 
 @mixin textFontS() {
   font-family: "Raleway";
   font-size: #{toRem(18)};
-  ;
+  font-weight: 500;
   line-height: 150%;
 
-  @include media($tablet) {
+  @media #{$fromTablet} {
     font-size: #{toRem(20)};
-    ;
   }
 }
 
 @mixin textFontXS() {
   font-family: "Raleway";
   font-size: #{toRem(14)};
-  ;
+  font-weight: 500;
   line-height: 150%;
 
-  @include media($tablet) {
+  @media #{$fromTablet} {
     font-size: #{toRem(16)};
-    ;
   }
 }

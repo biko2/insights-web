@@ -11,9 +11,8 @@ $l: 88px, 72px, 36px;
   ;
   line-height: 125%;
 
-  @include media($tablet) {
+  @media #{$fromTablet} {
     font-size: #{toRem(48)};
-    ;
   }
 }
 
@@ -23,9 +22,8 @@ $l: 88px, 72px, 36px;
   ;
   line-height: 125%;
 
-  @include media($tablet) {
+  @media #{$fromTablet} {
     font-size: #{toRem(40)};
-    ;
   }
 }
 
@@ -35,8 +33,7 @@ $l: 88px, 72px, 36px;
   ;
   line-height: 125%;
 
-  @include media($tablet) {
+  @media #{$fromTablet} {
     font-size: #{toRem(32)};
-    ;
   }
 }
