@@ -1,25 +1,26 @@
 @import "../../styles/tools/mediaQueries.scss";
 @import "../../styles/tools/mixins/titleFont.scss";
 @import "../../styles/tools/mixins/textFont.scss";
+@import "../../styles/tools/functions.scss";
 
-.wrapper {
-  padding-left: 16px;
-  margin-top: 96px;
-  margin-bottom: 96px;
+.blockquote {
+  padding-left: var(--space-m);
+  grid-column: 1 / -1;
 
-  border-left: 4px solid var(--primary-blue);
+  border-left: #{toRem(4)} solid var(--primary-blue);
 
-  @include media($desktop) {
-    padding-left: 32px;
-    width: 50%;
-    margin-top: 128px;
-    margin-bottom: 128px;
+  @media #{$fromTablet} {
+    padding-left: var(--space-xl);
+  }
+
+  @media #{$fromDesktop} {
+    grid-column: 1 / 7;
   }
 
   p {
     &:not(:last-child) {
       /* sobrescribimos el margen que da el Paragraph */
-      margin-bottom: 16px !important;
+      margin-bottom: var(--space-m) !important;
     }
 
     width: 100%;

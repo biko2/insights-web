@@ -25,12 +25,12 @@ const { Content } = await post.render();
   metaImageAlt={post.data.metaImageAlt}
 >
   <ArticlePage
-    heroImageUrl={post.data.panoramicHeroImageUrl}
+    heroImageUrl={post.data.heroImageUrl}
     heroImageAlt={post.data.heroImageAlt}
     title={post.data.title}
     description={post.data.description}
     authorship={post.data.authorship}
-    authorshipSecondary={post.data.authorshipSecondary}
+    authorshipSubtitle={post.data.authorshipSubtitle}
   >
     <Content components={blogTags} />
   </ArticlePage>

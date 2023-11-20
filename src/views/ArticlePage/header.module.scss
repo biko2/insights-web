@@ -38,6 +38,7 @@
 
 .navMenu {
   display: none;
+  color: var(--primary-blue);
 
   @media #{$fromTablet} {
     display: flex;
@@ -47,7 +48,7 @@
   }
 }
 
-.navMenuItem {
+.navMenu_Item {
   display: flex;
   align-items: center;
   gap: var(--space-xs);
@@ -62,8 +63,8 @@
     color: var(--background-secondary-default-hover);
 
     >svg {
-      transform: translateX(-5px);
-      transition: all 0.3s ease-in-out;
+      transform: translateX(-#{toRem(5)});
+      transition: transform 0.3s ease-in-out;
     }
   }
 

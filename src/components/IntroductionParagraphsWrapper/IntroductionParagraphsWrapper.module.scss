@@ -1,9 +1,0 @@
-@import "../../styles/tools/mixins/textFont.scss";
-
-@import "../../styles/tools/mediaQueries.scss";
-
-.content {
-  p {
-    @include textFontM;
-  }
-}

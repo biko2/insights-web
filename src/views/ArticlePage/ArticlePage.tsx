@@ -39,7 +39,7 @@ export const ArticlePage: React.FC<React.PropsWithChildren<Props>> = ({
         <nav>
           <ul className={styles.navMenu}>
             <li>
-              <a href="/#sumario" className={styles.navMenuItem}>
+              <a href="/#sumario" className={styles.navMenu_Item}>
                 <svg role="img" aria-hidden="true">
                   <use xlinkHref={"/sprite.svg#arrow-left"} />
                 </svg>{" "}
@@ -83,7 +83,7 @@ export const ArticlePage: React.FC<React.PropsWithChildren<Props>> = ({
           </div>
         </section>
 
-        <article className="mb-5xl mb-desktop-6xl">{children}</article>
+        <article className={styles.articleContent}>{children}</article>
 
         <section className={styles.articleFooter}>
           <span className={styles.authorship}>

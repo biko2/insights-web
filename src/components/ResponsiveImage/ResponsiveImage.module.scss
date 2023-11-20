@@ -3,13 +3,8 @@
 .wrapper {
   display: block;
   width: 100%;
-  margin-top: 96px;
-  margin-bottom: 96px;
 
-  @include media($desktop) {
-    margin-top: 128px;
-    margin-bottom: 128px;
-  }
+  grid-column: 1 / -1;
 }
 
 .image {

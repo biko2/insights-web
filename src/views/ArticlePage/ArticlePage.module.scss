@@ -10,6 +10,19 @@
   @include container;
 }
 
+.articleContent {
+  @include gridLayout;
+
+  row-gap: var(--space-5xl);
+  margin-bottom: var(--space-5xl);
+
+  @media #{$fromDesktop} {
+    row-gap: var(--space-6xl);
+    margin-bottom: var(--space-6xl);
+  }
+
+}
+
 .articleFooter {
   @include gridLayout;
   margin-bottom: var(--space-5xl);
@@ -20,21 +33,21 @@
 }
 
 .authorship {
-  grid-column: 1 / -1;
-
   @include textFontXS;
   color: var(--secondary-grey);
 
+  grid-column: 1 / -1;
+
   @media #{$onlyTablet} {
-    grid-column: 2 / -1;
+    grid-column: 2 / 8;
   }
 
   @media #{$onlyLaptop} {
-    grid-column: 3 / -1;
+    grid-column: 3 / 11;
   }
 
   @media #{$fromDesktop} {
-    grid-column: 4 / -1;
+    grid-column: 4 / 11;
   }
 }
 
@@ -59,7 +72,7 @@
   color: var(--background-default);
   text-align: center;
 
-  @include media($tablet) {
+  @media #{$fromTablet} {
     padding: var(--space-4xl);
   }
 }

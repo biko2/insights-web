@@ -2,30 +2,12 @@
 
 @import "../../styles/tools/mediaQueries.scss";
 
-.content {
+.paragraph {
   @include textFontS;
   color: var(--secondary-grey);
 
   &:not(:last-child) {
-    margin-bottom: 1em;
-  }
-
-  @include media($tablet) {
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @include media($laptop) {
-    width: 66%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @include media($desktop) {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: var(--space-l);
   }
 
   /* Markdown mete las imágenes en un tag p */
