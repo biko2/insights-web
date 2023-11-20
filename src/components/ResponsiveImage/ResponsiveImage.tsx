@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { classNames } from '../../utilities/classnames';
 import styles from './ResponsiveImage.module.scss';
 
 interface Props {
@@ -22,7 +23,7 @@ export const ResponsiveImage: React.FC<Props> = ({
   alt,
 }) => {
   return (
-    <picture className={styles.wrapper}>
+    <picture className={classNames(styles.wrapper, "reveal-content")}>
       <source
         srcSet={desktopSrc}
         media="(min-width: 1024px)"

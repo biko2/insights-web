@@ -35,3 +35,25 @@ const { Content } = await post.render();
     <Content components={blogTags} />
   </ArticlePage>
 </Layout>
+
+<script type="text/javascript">
+  window.addEventListener("scroll", revealContent);
+
+  function revealContent() {
+    var reveals = document.querySelectorAll(".reveal-content");
+
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var revealTop = reveals[i].getBoundingClientRect().top;
+      var revealPoint = 150;
+
+      if (revealTop < windowHeight - revealPoint) {
+        reveals[i].style.transform = "translateY(0px)";
+        reveals[i].style.opacity = 1;
+      } else {
+        reveals[i].style.transform = "translateY(50px)";
+        reveals[i].style.opacity = 0;
+      }
+    }
+  }
+</script>

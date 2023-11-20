@@ -32,7 +32,8 @@ export const ImagesSection: React.FC<Props> = ({
     <section
       className={classNames(
         styles.imagesSection,
-        reverseContent && styles.image_container__reserveContent
+        reverseContent && styles.image_container__reserveContent,
+        "reveal-content"
       )}
     >
       <picture
