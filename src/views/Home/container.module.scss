@@ -3,23 +3,23 @@
 .container {
     position: relative;
 
-    padding-left: var(--b-grid-mobile-lateral-gap);
-    padding-right: var(--b-grid-mobile-lateral-gap);
+    padding-left: var(--grid-mobile-lateral-gap);
+    padding-right: var(--grid-mobile-lateral-gap);
     margin: 0 auto;
 
     @media #{$onlyTablet} {
-        padding-left: var(--b-grid-tablet-lateral-gap);
-        padding-right: var(--b-grid-tablet-lateral-gap);
+        padding-left: var(--grid-tablet-lateral-gap);
+        padding-right: var(--grid-tablet-lateral-gap);
     }
 
     @media #{$fromLaptop} {
-        padding-left: var(--b-grid-laptop-lateral-gap);
-        padding-right: var(--b-grid-laptop-lateral-gap);
+        padding-left: var(--grid-laptop-lateral-gap);
+        padding-right: var(--grid-laptop-lateral-gap);
     }
 
     @media #{$onlyDesktopLarge} {
         padding-left: 0;
         padding-right: 0;
-        width: var(--b-grid-max-container);
+        width: var(--grid-max-container);
     }
 }
