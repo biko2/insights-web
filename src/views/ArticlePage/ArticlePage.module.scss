@@ -8,6 +8,8 @@
 
 .mainContent {
   @include container;
+
+  overflow: hidden;
 }
 
 .articleContent {
