@@ -59,12 +59,11 @@ export const EditorialPage: React.FC<React.PropsWithChildren<Props>> = ({
 
       <main className={styles.mainContent}>
         <article className={styles.editorialContent}>
-          {/* <img
+          <img
             className={styles.editorialBackgroundImage}
             src="/images/bg-xlarge.jpg"
             alt="televisión alternativa"
-          /> */}
-
+          />
           <section className={styles.hero}>
             <div className={classNames(styles.heroAuthorship, "mb-m")}>
               <img
