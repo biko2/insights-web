@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./Link.module.scss";
+import styles from './Link.module.scss';
 
 interface Props {
   href: string;
@@ -11,7 +11,7 @@ export const Link: React.FC<React.PropsWithChildren<Props>> = ({
   href,
 }) => {
   return (
-    <a className={styles.wrapper} href={href} target="_blank">
+    <a className={styles.link} href={href} target="_blank">
       {children}
     </a>
   );

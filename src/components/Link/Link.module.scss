@@ -1,22 +1,22 @@
-@import "../../styles/mixins/colors.scss";
+@import '../../styles/tools/mixins/outline.scss';
 
-.wrapper {
-  color: $background-secondary-default;
+.link {
+  color: var(--background-secondary-default);
   text-decoration: underline;
 
   transition: color 0.2s ease-in-out;
 
   &:link,
   &:visited {
-    color: $background-secondary-default;
+    color: var(--background-secondary-default);
     text-decoration: underline;
   }
 
   &:focus {
-    outline: 2px solid $focus-outline;
+    @include outline;
   }
 
   &:hover {
-    color: $background-secondary-default-hover;
+    color: var(--background-secondary-default-hover);
   }
 }

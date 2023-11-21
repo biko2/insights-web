@@ -1,0 +1,15 @@
+@import "../../styles/tools/mixins/titleFont.scss";
+@import "../../styles/tools/mediaQueries.scss";
+
+.secondaryTitle {
+  grid-column: 1 / -1;
+
+  @include titleFontXL;
+  color: var(--primary-blue);
+
+  @media #{$fromDesktop} {
+    grid-column: 1 / 10;
+    padding-left: var(--space-xl);
+  }
+
+}

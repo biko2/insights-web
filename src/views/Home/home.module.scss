@@ -1,14 +1,15 @@
-@import "../../styles/mixins/colors.scss";
-@import "../../styles/mixins/media.scss";
-@import "../../styles/mixins/displayFont.scss";
-@import "../../styles/mixins/textFont.scss";
+@import "../../styles/tools/mediaQueries.scss";
+@import "../../styles/tools/mixins/displayFont.scss";
+@import "../../styles/tools/mixins/titleFont.scss";
+@import "../../styles/tools/mixins/textFont.scss";
+@import '../../styles/tools/mixins/outline.scss';
 
 .introSection {
-  background-color: $background-primary-default;
+  background-color: var(--background-primary-default);
 }
 
 .heroContainer {
-  color: $background-default;
+  color: var(--background-default);
   background: url("/images/bg-small.jpg") no-repeat;
   background-position: center;
   background-size: cover;
@@ -19,34 +20,28 @@
     background-size: cover;
   }
 
-  @include media($largeTablet) {
-    background: linear-gradient(
-        to right,
-        $background-primary-default 50%,
-        transparent 50%
-      ),
+  @include media($laptop) {
+    background: linear-gradient(to right,
+        var(--background-primary-default) 50%,
+        transparent 50%),
       url("/images/bg-medium.jpg") no-repeat;
     background-size: contain;
     background-position: right;
   }
 
   @include media($desktop) {
-    background: linear-gradient(
-        to right,
-        $background-primary-default 50%,
-        transparent 50%
-      ),
+    background: linear-gradient(to right,
+        var(--background-primary-default) 50%,
+        transparent 50%),
       url("/images/bg-2xlarge.jpg") no-repeat center center;
     background-size: contain;
     background-position: right;
   }
 
   @include media($largeDesktop) {
-    background: linear-gradient(
-        to right,
-        $background-primary-default 50%,
-        transparent 50%
-      ),
+    background: linear-gradient(to right,
+        var(--background-primary-default) 50%,
+        transparent 50%),
       url("/images/bg-2xlarge.jpg") no-repeat center center;
     background-size: contain;
     background-position: right;
@@ -64,18 +59,19 @@
   }
 
   &:focus {
-    outline: 2px solid $focus-outline;
+    @include outline;
   }
 
   &:hover {
-    color: $link-hover;
+    color: var(--link-hover);
   }
 }
 
 .heroWrapper {
   display: grid;
   grid-template-rows: auto 1fr;
-  padding-bottom: 32px;
+  padding-bottom: var(--space-xl);
+  ;
   min-height: 100dvh;
 
   @include media($tablet) {
@@ -100,9 +96,9 @@
     justify-content: center;
   }
 
-  @include media($largeTablet) {
-    padding-left: 96px;
-    padding-right: 96px;
+  @include media($laptop) {
+    padding-left: var(--space-5xl);
+    padding-right: var(--space-5xl);
   }
 }
 
@@ -118,8 +114,9 @@
     bottom: 2%;
     right: 5%;
 
-    > img {
-      margin-top: 32px;
+    >img {
+      margin-top: var(--space-xl);
+
     }
   }
 }
@@ -127,9 +124,10 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding-top: 24px;
+  padding-top: var(--space-l);
   gap: 18px;
-  margin-bottom: 32px;
+  margin-bottom: var(--space-xl);
+  ;
 
   @include media($tablet) {
     margin-bottom: 0px;
@@ -139,14 +137,15 @@
 .heroLead {
   @include displayFontL;
 
-  margin-bottom: 32px;
+  margin-bottom: var(--space-xl);
+  ;
   font-weight: bold;
 
   @include media($tablet) {
-    margin-bottom: 48px;
+    margin-bottom: var(--space-3xl);
   }
 
-  @include media($largeTablet) {
+  @include media($laptop) {
     width: 88%;
   }
 
@@ -156,11 +155,11 @@
 }
 
 .highlightHero {
-  color: $content-highlight;
+  color: var(--content-highlight);
 }
 
 .highlight {
-  color: $content-highlight;
+  color: var(--content-highlight);
   font-weight: bold;
 }
 
@@ -171,7 +170,7 @@
     display: flex;
     align-items: center;
     text-transform: uppercase;
-    gap: 24px;
+    gap: var(--space-l);
   }
 }
 
@@ -180,21 +179,21 @@
   align-items: center;
   gap: 8px;
 
-  > svg {
+  >svg {
     transition: all 0.3s ease-in-out;
   }
 
   &:hover {
-    color: $link-hover;
+    color: var(--link-hover);
 
-    > svg {
+    >svg {
       transform: translateY(5px);
       transition: all 0.3s ease-in-out;
     }
   }
 
   &:focus {
-    outline: 2px solid $focus-outline;
+    @include outline;
   }
 }
 
@@ -206,7 +205,7 @@
   @include media($tablet) {
     flex-direction: row;
     align-items: flex-start;
-    gap: 24px;
+    gap: var(--space-l);
   }
 
   @include media($desktop) {
@@ -232,29 +231,31 @@
   width: 100%;
 
   @include media($tablet) {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: var(--space-3xl);
+    margin-bottom: var(--space-3xl);
     width: fit-content;
   }
 
-  padding: 24px;
-  background: $background-secondary-default;
+  padding: var(--space-l);
+  background: var(--background-secondary-default);
   border: none;
-  border-radius: 128px;
+  border-radius: var(--space-6xl);
   font-weight: bold;
 
-  color: $background-default;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  color: var(--background-default);
+  margin-top: var(--space-xl);
+  ;
+  margin-bottom: var(--space-xl);
+  ;
 
   transition: background 0.2s ease-in-out;
 
   &:hover {
-    background: $background-secondary-default-hover;
+    background: var(--background-secondary-default-hover);
   }
 
   &:focus {
-    outline: 2px solid $focus-outline;
+    @include outline;
   }
 }
 
@@ -270,7 +271,7 @@
   position: relative;
   display: block;
   padding-top: 192px;
-  color: $background-default;
+  color: var(--background-default);
   @include textFontM;
   overflow-x: hidden;
 
@@ -299,14 +300,14 @@
 }
 
 .summaryFirstParagraph {
-  margin-bottom: 128px;
+  margin-bottom: var(--space-6xl);
 
   @include media($tablet) {
     margin-bottom: 156px;
     width: 70%;
   }
 
-  @include media($largeTablet) {
+  @include media($laptop) {
     width: 50%;
   }
 
@@ -326,11 +327,11 @@
 .summaryTitle {
   @include displayFontL;
 
-  margin-bottom: 48px;
+  margin-bottom: var(--space-3xl);
   text-transform: uppercase;
 
   @include media($tablet) {
-    margin-left: 96px;
+    margin-left: var(--space-5xl);
   }
 }
 
@@ -355,7 +356,7 @@
   display: flex;
   justify-content: flex-end;
 
-  padding-bottom: 96px;
+  padding-bottom: var(--space-5xl);
 
   z-index: 10;
 }
@@ -365,6 +366,7 @@
   flex-direction: column;
   gap: 4px;
   width: 100%;
+
   @include media($tablet) {
     width: 60%;
   }
@@ -375,8 +377,8 @@
 }
 
 .listBox {
-  background-color: $background-default;
-  border-radius: 16px;
+  background-color: var(--background-default);
+  border-radius: var(--space-m);
   @include textFontM;
 
   &:not(:has(a)) {
@@ -384,7 +386,8 @@
       Iremos incorporando artículos de forma gradual, por lo que se mantiene
       este padding cuando no haya enlace a un artículo
     */
-    padding: 28px 32px;
+    padding: 28px var(--space-xl);
+
   }
 }
 
@@ -392,16 +395,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px 32px;
+  padding: 28px var(--space-xl);
 
-  > svg {
-    color: $background-secondary-default;
+  >svg {
+    color: var(--background-secondary-default);
     transition: all 0.3s ease-in-out;
   }
 
   &:hover {
-    > svg {
-      color: $background-secondary-default-hover;
+    >svg {
+      color: var(--background-secondary-default-hover);
 
       transform: translateX(5px);
       transition: all 0.3s ease-in-out;
@@ -409,51 +412,55 @@
   }
 
   &:focus {
-    outline: 2px solid $focus-outline;
+    @include outline;
   }
 }
 
 .listTitle {
-  color: $background-primary-default;
+  color: var(--background-primary-default);
   text-transform: uppercase;
 }
 
 .listDescription {
   margin-top: 8px;
-  color: $content-body;
+  color: var(--content-body);
   @include textFontXS;
 }
 
 .collectionTitle {
-  margin-bottom: 32px;
-  margin-top: 96px;
+  margin-bottom: var(--space-xl);
+  ;
+  margin-top: var(--space-5xl);
 
-  color: $background-primary-default;
+  color: var(--background-primary-default);
 
   @include displayFontL;
-  @include media($largeTablet) {
-    margin-bottom: 48px;
-    margin-left: 96px;
+
+  @include media($laptop) {
+    margin-bottom: var(--space-3xl);
+    margin-left: var(--space-5xl);
   }
 }
 
 .collectionDescription {
-  margin-bottom: 32px;
+  margin-bottom: var(--space-xl);
+  ;
 
   @include textFontM;
-  @include media($largeTablet) {
-    margin-bottom: 48px;
-    margin-left: 96px;
+
+  @include media($laptop) {
+    margin-bottom: var(--space-3xl);
+    margin-left: var(--space-5xl);
   }
 }
 
 .collectionWrapper {
   display: grid;
   grid-template-columns: 1fr;
-  column-gap: 24px;
-  row-gap: 48px;
+  column-gap: var(--space-l);
+  row-gap: var(--space-3xl);
 
-  margin-bottom: 96px;
+  margin-bottom: var(--space-5xl);
 
   @include media($tablet) {
     grid-template-columns: 1fr 1fr;
@@ -465,8 +472,8 @@
 }
 
 .collectionItemImage {
-  margin-bottom: 24px;
-  border: 1px solid $background-medium;
+  margin-bottom: var(--space-l);
+  border: 1px solid var(--background-medium);
   width: 100%;
   height: auto;
 }
@@ -476,12 +483,12 @@
   align-items: center;
   justify-content: space-between;
 
-  padding-bottom: 24px;
+  padding-bottom: var(--space-l);
 
-  color: $background-primary-default;
+  color: var(--background-primary-default);
   text-transform: uppercase;
 
-  border-bottom: 2px solid $background-primary-default;
+  border-bottom: 2px solid var(--background-primary-default);
 }
 
 .collectionItemTitleContent {
@@ -492,32 +499,32 @@
 }
 
 .collectionDate {
-  color: $content-light-body;
+  color: var(--content-light-body);
 }
 
 .collectionItemListTitle {
   @include textFontS;
-  padding-top: 24px;
+  padding-top: var(--space-l);
   margin-bottom: 8px;
-  color: $background-primary-default;
+  color: var(--background-primary-default);
 }
 
 .collectionItemListDescription {
   @include textFontXS;
-  color: $content-body;
-  padding-bottom: 16px;
+  color: var(--content-body);
+  padding-bottom: var(--space-m);
 
-  border-bottom: 2px solid $border;
+  border-bottom: 2px solid var(--border);
 }
 
 .footer {
   @include textFontXS;
 
-  padding-top: 96px;
-  padding-bottom: 24px;
+  padding-top: var(--space-5xl);
+  padding-bottom: var(--space-l);
 
-  background-color: $background-primary-default;
-  color: $background-default;
+  background-color: var(--background-primary-default);
+  color: var(--background-default);
 }
 
 .footerWrapper {
@@ -525,7 +532,8 @@
   flex-direction: column;
   align-items: center;
 
-  gap: 32px;
+  gap: var(--space-xl);
+  ;
 }
 
 .footerText {
@@ -550,7 +558,7 @@
   top: 17%;
   left: 80%;
 
-  @include media($largeTablet) {
+  @include media($laptop) {
     left: 45%;
   }
 }
@@ -580,11 +588,11 @@
   height: 56px;
 
   @include media($tablet) {
-    height: 96px;
+    height: var(--space-5xl);
   }
 
   @include media($desktop) {
-    height: 128px;
+    height: var(--space-6xl);
   }
 
   z-index: -1;
@@ -595,20 +603,20 @@
 }
 
 .download {
-  color: $background-secondary-default;
+  color: var(--background-secondary-default);
 
   transition: color 0.2s ease-in-out;
 
   &:link,
   &:visited {
-    color: $background-secondary-default;
+    color: var(--background-secondary-default);
   }
 
   &:hover {
-    color: $background-secondary-default-hover;
+    color: var(--background-secondary-default-hover);
   }
 
   &:focus {
-    outline: 2px solid $focus-outline;
+    @include outline;
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import containerStyles from '../_modules/container.module.scss';
+import containerStyles from '../Layout/Container.module.scss';
 import styles from './home.module.scss';
 
 export const Home: React.FC = () => {
@@ -176,7 +176,16 @@ export const Home: React.FC = () => {
             <div className={styles.listWrapper}>
               <ul className={`${styles.list} ${styles.reveal} reveal`}>
                 <li className={styles.listBox}>
-                  <h3 className={styles.listTitle}>Editorial</h3>
+                  <a className={styles.listLink} href="/editorial">
+                    <h3 className={styles.listTitle}>Editorial</h3>
+                    <svg
+                      style={{ width: 44, height: 44 }}
+                      role="img"
+                      aria-label="Lee la editorial del 6 Insights'"
+                    >
+                      <use xlinkHref={"/sprite.svg#jakala-arrow"} />
+                    </svg>
+                  </a>
                 </li>
                 <li className={styles.listBox}>
                   <a
@@ -202,13 +211,28 @@ export const Home: React.FC = () => {
                   </a>
                 </li>
                 <li className={styles.listBox}>
-                  <h3 className={styles.listTitle}>
-                    Más allá del ciberespacio
-                  </h3>
-                  <p className={styles.listDescription}>
-                    Un repaso de la cultura digital para poder ampliar los
-                    horizontes o crearlos nuevos.
-                  </p>
+                  <a
+                    className={styles.listLink}
+                    href="/mas-alla-del-ciberespacio"
+                  >
+                    <div>
+                      <h3 className={styles.listTitle}>
+                        Más allá del ciberespacio
+                      </h3>
+                      <p className={styles.listDescription}>
+                        Un repaso de la cultura digital para poder ampliar los
+                        horizontes o crearlos nuevos.
+                      </p>
+                    </div>
+
+                    <svg
+                      style={{ width: 44, height: 44 }}
+                      role="img"
+                      aria-label="Lee el artículo 'Paren las redes, que yo me bajo'"
+                    >
+                      <use xlinkHref={"/sprite.svg#jakala-arrow"} />
+                    </svg>
+                  </a>
                 </li>
                 <li className={styles.listBox}>
                   <h3 className={styles.listTitle}>

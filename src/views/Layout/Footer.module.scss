@@ -1,0 +1,21 @@
+@import "../../styles/tools/mixins/textFont.scss";
+@import '../../styles/tools/mixins/container.scss';
+
+.footer {
+  @include container;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+
+  @include textFontXS;
+
+  padding-top: var(--space-5xl);
+  padding-bottom: var(--space-l);
+
+  color: var(--background-default);
+  background-color: var(--background-primary-default);
+  text-align: center;
+}
