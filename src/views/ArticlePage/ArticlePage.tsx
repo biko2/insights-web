@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { classNames } from '../../utilities/classnames';
-import articlePage from './articlePage.module.scss';
+import articlePage from './ArticlePage.module.scss';
 import footer from './footer.module.scss';
 import header from './header.module.scss';
 import hero from './hero.module.scss';
