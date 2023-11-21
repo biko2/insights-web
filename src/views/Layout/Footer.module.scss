@@ -2,7 +2,7 @@
 @import '../../styles/tools/mixins/container.scss';
 
 .footer {
-  @include container;
+  @include fullWidthContainerLateralPadding;
 
   display: flex;
   justify-content: center;

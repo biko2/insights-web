@@ -5,7 +5,7 @@
 
 
 .header {
-  @include container;
+  @include fullWidthContainerLateralPadding;
 
   position: sticky;
   top: 0;

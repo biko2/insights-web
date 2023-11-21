@@ -9,7 +9,7 @@
   --grid-laptop-lateral-gap: #{toRem(48)};
   --grid-desktop-lateral-gap: #{toRem(48)};
 
-  --grid-full-container-desktop-lateral-gap: calc(calc(100vw - var(--grid-max-container)) / 2 + var(--grid-desktop-lateral-gap));
+  --grid-full-container-desktop-lateral-gap: calc(((100vw - var(--grid-max-container))/ 2) + var(--grid-desktop-lateral-gap));
 
   --grid-mobile-gutter-gap: #{toRem(16)};
   --grid-gutter-gap: #{toRem(24)};
