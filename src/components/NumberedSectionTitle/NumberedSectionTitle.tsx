@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './numberedSectionTitle.module.scss';
+import styles from './NumberedSectionTitle.module.scss';
 
 interface Props {
   number: number;
