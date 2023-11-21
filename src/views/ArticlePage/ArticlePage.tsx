@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { classNames } from '../../utilities/classnames';
-import bottomPage from '../Layout/bottomPage.module.scss';
-import footer from '../Layout/footer.module.scss';
-import header from '../Layout/header.module.scss';
-import articlePage from './articlePage.module.scss';
-import hero from './hero.module.scss';
+import bottomPage from '../Layout/BottomPage.module.scss';
+import footer from '../Layout/Footer.module.scss';
+import header from '../Layout/Header.module.scss';
+import articlePage from './ArticlePage.module.scss';
+import hero from './Hero.module.scss';
 
 const styles = {
   ...header,
