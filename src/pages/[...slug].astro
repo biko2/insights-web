@@ -2,6 +2,8 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import { ArticlePage } from "../views/ArticlePage/ArticlePage";
+import { EditorialPage } from "../views/EditorialPage/EditorialPage";
+
 import { blogTags } from "../components/blogTags";
 
 export async function getStaticPaths() {
@@ -24,16 +26,27 @@ const { Content } = await post.render();
   metaImageSrc={post.data.metaImageSrc}
   metaImageAlt={post.data.metaImageAlt}
 >
-  <ArticlePage
-    heroImageUrl={post.data.heroImageUrl}
-    heroImageAlt={post.data.heroImageAlt}
-    title={post.data.title}
-    description={post.data.description}
-    authorship={post.data.authorship}
-    authorshipSubtitle={post.data.authorshipSubtitle}
-  >
-    <Content components={blogTags} />
-  </ArticlePage>
+  { post.data.type === "editorial" ?  
+    <EditorialPage
+      title={post.data.title}
+      authorship={post.data.authorship}
+      authorshipSubtitle={post.data.authorshipSubtitle}
+    >
+      <Content components={blogTags} />
+    </EditorialPage>
+    : 
+    <ArticlePage
+        heroImageUrl={post.data.heroImageUrl}
+        heroImageAlt={post.data.heroImageAlt}
+        title={post.data.title}
+        description={post.data.description}
+        authorship={post.data.authorship}
+        authorshipSubtitle={post.data.authorshipSubtitle}
+      >
+        <Content components={blogTags} />
+      </ArticlePage>
+  }
+
 </Layout>
 
 <script type="text/javascript">

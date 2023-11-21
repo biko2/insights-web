@@ -4,32 +4,26 @@ import { classNames } from '../../utilities/classnames';
 import bottomPage from '../Layout/bottomPage.module.scss';
 import footer from '../Layout/footer.module.scss';
 import header from '../Layout/header.module.scss';
-import articlePage from './articlePage.module.scss';
-import hero from './hero.module.scss';
+import hero from './editorialHero.module.scss';
+import editorialPage from './editorialPage.module.scss';
 
 const styles = {
   ...header,
   ...footer,
   ...bottomPage,
   ...hero,
-  ...articlePage,
+  ...editorialPage,
 };
 
 interface Props {
-  heroImageUrl: string;
-  heroImageAlt: string;
   title: string;
-  description: string;
   authorship: string;
   authorshipSubtitle: string;
 }
 
-export const ArticlePage: React.FC<React.PropsWithChildren<Props>> = ({
+export const EditorialPage: React.FC<React.PropsWithChildren<Props>> = ({
   children,
-  heroImageUrl,
-  heroImageAlt,
   title,
-  description,
   authorship,
   authorshipSubtitle,
 }) => {
@@ -64,17 +58,15 @@ export const ArticlePage: React.FC<React.PropsWithChildren<Props>> = ({
       </header>
 
       <main className={styles.mainContent}>
-        <section className={styles.hero}>
-          <picture className={styles.heroPicture}>
-            <img
-              className={styles.heroImage}
-              src={heroImageUrl}
-              alt={heroImageAlt}
-            />
-          </picture>
+        <article className={styles.editorialContent}>
+          {/* <img
+            className={styles.editorialBackgroundImage}
+            src="/images/bg-xlarge.jpg"
+            alt="televisión alternativa"
+          /> */}
 
-          <div className={styles.heroContent}>
-            <div className={styles.heroAuthorship}>
+          <section className={styles.hero}>
+            <div className={classNames(styles.heroAuthorship, "mb-m")}>
               <img
                 className="mr-s"
                 src="/icons/bullet-red.svg"
@@ -85,32 +77,25 @@ export const ArticlePage: React.FC<React.PropsWithChildren<Props>> = ({
             </div>
 
             <h1 className={styles.heroTitle}>{title}</h1>
+          </section>
 
-            <p className={styles.heroDescription}>{description}</p>
-          </div>
-        </section>
+          {children}
 
-        <article className={styles.articleContent}>{children}</article>
-
-        <section className={styles.articleFooter}>
-          <span className={styles.authorship}>
-            <img
-              className="mr-s"
-              src="/icons/bullet-red.svg"
-              alt=""
-              aria-hidden="true"
-            />
-            {authorship}
-          </span>
-          <span
-            className={classNames(
-              styles.authorship,
-              styles.authorship__subtitle
-            )}
-          >
-            {authorshipSubtitle}
-          </span>
-        </section>
+          <section className={styles.authorship}>
+            <div>
+              <img
+                className="mr-s"
+                src="/icons/bullet-red.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              {authorship}
+            </div>
+            <span className={styles.authorship_subtitle}>
+              {authorshipSubtitle}
+            </span>
+          </section>
+        </article>
 
         <section className={styles.banner}>
           <p className="mb-l">

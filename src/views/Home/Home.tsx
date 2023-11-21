@@ -176,7 +176,16 @@ export const Home: React.FC = () => {
             <div className={styles.listWrapper}>
               <ul className={`${styles.list} ${styles.reveal} reveal`}>
                 <li className={styles.listBox}>
-                  <h3 className={styles.listTitle}>Editorial</h3>
+                  <a className={styles.listLink} href="/editorial">
+                    <h3 className={styles.listTitle}>Editorial</h3>
+                    <svg
+                      style={{ width: 44, height: 44 }}
+                      role="img"
+                      aria-label="Lee la editorial del 6 Insights'"
+                    >
+                      <use xlinkHref={"/sprite.svg#jakala-arrow"} />
+                    </svg>
+                  </a>
                 </li>
                 <li className={styles.listBox}>
                   <a
