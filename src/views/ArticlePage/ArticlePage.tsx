@@ -2,9 +2,9 @@ import React from 'react';
 
 import { classNames } from '../../utilities/classnames';
 import articlePage from './ArticlePage.module.scss';
-import footer from './footer.module.scss';
-import header from './header.module.scss';
-import hero from './hero.module.scss';
+import footer from './Footer.module.scss';
+import header from './Header.module.scss';
+import hero from './Hero.module.scss';
 
 const styles = { ...header, ...footer, ...hero, ...articlePage };
 

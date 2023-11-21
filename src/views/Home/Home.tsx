@@ -1,7 +1,7 @@
 import React from 'react';
 
-import containerStyles from './container.module.scss';
-import styles from './home.module.scss';
+import containerStyles from './Container.module.scss';
+import styles from './Home.module.scss';
 
 export const Home: React.FC = () => {
   return (
