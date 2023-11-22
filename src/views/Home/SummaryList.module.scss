@@ -79,13 +79,11 @@
     color: var(--background-primary-default);
 
     text-transform: uppercase;
-
-    &:not(:last-child) {
-        margin-bottom: var(--space-xs);
-    }
 }
 
 .summaryList_Description {
+    margin-top: var(--space-xs);
+
     @include textFontXS;
     color: var(--content-body);
 }
