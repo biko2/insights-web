@@ -30,7 +30,7 @@ export const Home: React.FC = () => {
                           role="img"
                           aria-hidden="true"
                         >
-                          <use xlinkHref={"/sprite.svg#arrow-down"} />
+                          <use xlinkHref={"/public/sprite.svg#arrow-down"} />
                         </svg>
                       </a>
                     </li>
