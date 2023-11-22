@@ -1,15 +1,13 @@
-import { Blockquote } from "./Blockquote";
-import { H2 } from "./H2";
-import { H3 } from "./H3";
-import { Link } from "./Link";
-import { Paragraph } from "./Paragraph";
-import { UnorderedList } from "./UnorderedList";
+import { Blockquote } from './Blockquote';
+import { ItemList } from './ItemList';
+import { Link } from './Link';
+import { Paragraph } from './Paragraph';
+import { SecondaryTitle } from './SecondaryTitle';
 
 export const blogTags = {
-  p: Paragraph,
-  h2: H2,
-  h3: H3,
-  blockquote: Blockquote,
-  ul: UnorderedList,
+  h2: SecondaryTitle,
   a: Link,
+  p: Paragraph,
+  blockquote: Blockquote,
+  ul: ItemList,
 };

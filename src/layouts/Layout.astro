@@ -1,6 +1,5 @@
 ---
-import "../styles/reset.scss";
-import "../styles/reboot.scss";
+import '../styles/cssConfig.scss'
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
@@ -40,30 +39,31 @@ const url = slug ? `https://insightsmag.io/${slug}` : "https://insightsmag.io";
   </head>
   <body>
     <slot />
-    <style is:global>
-      @font-face {
-        font-family: "Raleway";
-        src: url("/fonts/Raleway-Bold.ttf") format("truetype");
-        font-weight: bold;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Raleway";
-        src: url("/fonts/Raleway-Medium.ttf") format("truetype");
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        font-family: "Raleway", sans-serif;
-      }
-    </style>
   </body>
 </html>
+
+<style is:global>
+  @font-face {
+    font-family: "Raleway";
+    src: url("/fonts/Raleway-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Raleway";
+    src: url("/fonts/Raleway-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Raleway", sans-serif;
+  }
+</style>

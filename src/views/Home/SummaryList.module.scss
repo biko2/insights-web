@@ -1,0 +1,89 @@
+@import "../../styles/tools/mediaQueries.scss";
+@import "../../styles/tools/mixins/textFont.scss";
+@import '../../styles/tools/mixins/outline.scss';
+@import '../../styles/tools/mixins/gridLayout.scss';
+
+
+.summaryListWrapper {
+    @include gridLayout;
+}
+
+.summaryList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xxs);
+
+    grid-column: 1 / -1;
+
+    @media #{$onlyTablet} {
+        grid-column: 3 / -1;
+    }
+
+    @media #{$onlyLaptop} {
+        grid-column: 6 / -1;
+    }
+
+    @media #{$fromDesktop} {
+        grid-column: 8 / -1;
+    }
+}
+
+.summaryList_Box {
+    background-color: var(--background-default);
+    border-radius: var(--space-m);
+    @include textFontM;
+
+    &:not(:has(a)) {
+        padding: var(--space-l) var(--space-xl);
+    }
+}
+
+.summaryList_Link {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: var(--space-l);
+    padding-right: var(--space-5xl);
+    padding-bottom: var(--space-l);
+    padding-left: var(--space-xl);
+
+    >svg {
+        position: absolute;
+        top: 0;
+        right: var(--space-l);
+        bottom: 0;
+        margin: auto;
+
+        color: var(--background-secondary-default);
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        >svg {
+            color: var(--background-secondary-default-hover);
+
+            transform: translateX(5px);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &:focus {
+        @include outline;
+    }
+}
+
+.summaryList_Title {
+    color: var(--background-primary-default);
+
+    text-transform: uppercase;
+}
+
+.summaryList_Description {
+    margin-top: var(--space-xs);
+
+    @include textFontXS;
+    color: var(--content-body);
+}

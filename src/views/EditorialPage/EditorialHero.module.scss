@@ -1,0 +1,29 @@
+@import "../../styles/tools/mediaQueries.scss";
+@import "../../styles/tools/mixins/titleFont.scss";
+@import "../../styles/tools/mixins/textFont.scss";
+@import "../../styles/tools/mixins/paragraphLayout.scss";
+
+.hero {
+    @include paragraphLayout;
+
+    margin-top: var(--space-5xl);
+
+    @media #{$fromLaptop} {
+        margin-top: var(--space-6xl);
+    }
+
+}
+
+.heroAuthorship {
+    @include textFontXS;
+    color: var(--secondary-grey);
+
+    margin-bottom: var(--space-3xl);
+}
+
+.heroTitle {
+    margin-bottom: var(--space-s);
+
+    @include titleFontXXL;
+    color: var(--primary-blue);
+}

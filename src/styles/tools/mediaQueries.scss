@@ -1,0 +1,38 @@
+// Hemos visto que .98 es una solución standard para no romper los estilos en las décimas de pixel entre un mediaquerie y otro.
+// OJO! Tienen que ser unidades fraccionarias, .99 no funciona
+// https://stackoverflow.com/questions/70120238/do-i-consider-decimal-point-of-px-in-media-query
+$mobileMax: 767.98px;
+
+$tabletMin: 768px;
+$tabletMax: 1023.98px;
+
+$laptopMin: 1024px;
+$laptopMax: 1439.98px;
+
+$desktopMin: 1440px;
+$desktopMax: 1919.98px;
+
+$desktopLargeMin: 1920px;
+
+$onlyMobile: 'only screen and (max-width: ' + $mobileMax + ')';
+$onlyTablet: 'only screen and (min-width: ' + $tabletMin + ') AND (max-width: ' + $tabletMax + ')';
+$onlyLaptop: 'only screen and (min-width: ' + $laptopMin + ') AND (max-width: ' + $laptopMax + ')';
+$onlyDesktop: 'only screen and (min-width: ' + $desktopMin + ') AND (max-width: ' + $desktopMax + ')';
+$onlyDesktopLarge: 'only screen and (min-width: ' + $desktopLargeMin + ')';
+
+$fromTablet: 'only screen and (min-width: ' + $tabletMin + ')';
+$fromLaptop: 'only screen and (min-width: ' + $laptopMin + ')';
+$fromDesktop: 'only screen and (min-width: ' + $desktopMin + ')';
+
+// Pendiente de migrar por las anteriores mediaquieries que están más nutridas 
+//y se utilizan de manera más nativa sin necesidad de usar @include de Sass
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1440px;
+$largeDesktop: 1920px;
+
+@mixin media($viewport) {
+    @media (min-width: $viewport) {
+        @content;
+    }
+}

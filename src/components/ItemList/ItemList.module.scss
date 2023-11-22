@@ -1,0 +1,23 @@
+@import "../../styles/tools/mixins/textFont.scss";
+@import "../../styles/tools/mediaQueries.scss";
+@import "../../styles/tools/functions.scss";
+
+.itemList {
+  padding-left: var(--space-l);
+
+  li {
+    position: relative;
+    padding-left: var(--space-l);
+    margin-bottom: var(--space-l);
+
+    @include textFontS;
+    color: var(--secondary-grey);
+
+    &::before {
+      position: absolute;
+      left: calc(var(--space-l) * -1);
+      top: #{toRem(2)};
+      content: url("/public/icons/item-arrow.svg");
+    }
+  }
+}
