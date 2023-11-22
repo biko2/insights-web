@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import { classNames } from '../../utilities/classnames';
-import bottomPage from '../Layout/BottomPage.module.scss';
-import footer from '../Layout/Footer.module.scss';
-import header from '../Layout/Header.module.scss';
-import hero from './EditorialHero.module.scss';
-import editorialPage from './EditorialPage.module.scss';
+import { classNames } from "../../utilities/classnames";
+import bottomPage from "../Layout/BottomPage.module.scss";
+import footer from "../Layout/Footer.module.scss";
+import header from "../Layout/Header.module.scss";
+import hero from "./EditorialHero.module.scss";
+import editorialPage from "./EditorialPage.module.scss";
 
 const styles = {
   ...header,
@@ -49,7 +49,7 @@ export const EditorialPage: React.FC<React.PropsWithChildren<Props>> = ({
             </li>
 
             <li>
-              <a href="/#ediciones-anteriores" className={styles.navMenuItem}>
+              <a href="/#ediciones-anteriores" className={styles.navMenu_Item}>
                 Ediciones anteriores
               </a>
             </li>

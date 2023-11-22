@@ -58,7 +58,7 @@
     text-decoration: underline;
   }
 
-  &:focus {
+  &:focus-visible {
     @include outline;
   }
 
@@ -191,7 +191,7 @@
     }
   }
 
-  &:focus {
+  &:focus-visible {
     @include outline;
   }
 }
@@ -253,7 +253,7 @@
     background: var(--background-secondary-default-hover);
   }
 
-  &:focus {
+  &:focus-visible {
     @include outline;
   }
 }
@@ -539,7 +539,7 @@
     color: var(--background-secondary-default-hover);
   }
 
-  &:focus {
+  &:focus-visible {
     @include outline;
   }
 }

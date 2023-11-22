@@ -74,11 +74,11 @@
 
     transition: background 0.2s ease-in-out;
 
-    &:focus {
-        &:focus {
-            @include outline;
-        }
+
+    &:focus-visible {
+        @include outline;
     }
+
 
     &:link,
     &:visited {
@@ -111,7 +111,7 @@
 
     transition: color 0.2s ease-in-out;
 
-    &:focus {
+    &:focus-visible {
         @include outline;
     }
 
@@ -145,7 +145,7 @@
         color: var(--secondary-grey-500);
     }
 
-    &:focus {
+    &:focus-visible {
         @include outline;
     }
 }

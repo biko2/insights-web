@@ -12,7 +12,7 @@
     text-decoration: underline;
   }
 
-  &:focus {
+  &:focus-visible {
     @include outline;
   }
 

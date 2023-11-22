@@ -21,7 +21,7 @@
 }
 
 .outlineLink {
-  &:focus {
+  &:focus-visible {
     @include outline;
   }
 }
@@ -68,7 +68,7 @@
     }
   }
 
-  &:focus {
+  &:focus-visible {
     @include outline;
   }
 }
