@@ -26,4 +26,7 @@
             fill="currentColor" />
     </symbol>
 
+    <symbol id="item-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.5294 5.49902H17.6471V7.59902H19.7647V9.69902H21.8824V11.099H24V13.199H21.8824V15.299H19.7647V17.399H17.6471V19.499H15.5294V15.299H0V9.69902H15.5294V5.49902Z" fill="white"/>
+    </symbol>
 </svg>

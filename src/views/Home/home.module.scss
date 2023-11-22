@@ -269,9 +269,13 @@
 
 .summary {
   position: relative;
+
   display: block;
   padding-top: 192px;
+  padding-bottom: var(--space-5xl);
+
   color: var(--background-default);
+
   @include textFontM;
   overflow-x: hidden;
 
@@ -349,82 +353,6 @@
   @include media($largeDesktop) {
     width: 40%;
   }
-}
-
-.listWrapper {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-
-  padding-bottom: var(--space-5xl);
-
-  z-index: 10;
-}
-
-.list {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  width: 100%;
-
-  @include media($tablet) {
-    width: 60%;
-  }
-
-  @include media($desktop) {
-    width: 40%;
-  }
-}
-
-.listBox {
-  background-color: var(--background-default);
-  border-radius: var(--space-m);
-  @include textFontM;
-
-  &:not(:has(a)) {
-    /* 
-      Iremos incorporando artículos de forma gradual, por lo que se mantiene
-      este padding cuando no haya enlace a un artículo
-    */
-    padding: 28px var(--space-xl);
-
-  }
-}
-
-.listLink {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 28px var(--space-xl);
-
-  >svg {
-    color: var(--background-secondary-default);
-    transition: all 0.3s ease-in-out;
-  }
-
-  &:hover {
-    >svg {
-      color: var(--background-secondary-default-hover);
-
-      transform: translateX(5px);
-      transition: all 0.3s ease-in-out;
-    }
-  }
-
-  &:focus {
-    @include outline;
-  }
-}
-
-.listTitle {
-  color: var(--background-primary-default);
-  text-transform: uppercase;
-}
-
-.listDescription {
-  margin-top: 8px;
-  color: var(--content-body);
-  @include textFontXS;
 }
 
 .collectionTitle {
@@ -596,10 +524,6 @@
   }
 
   z-index: -1;
-}
-
-.reveal {
-  transition: all 1s ease;
 }
 
 .download {

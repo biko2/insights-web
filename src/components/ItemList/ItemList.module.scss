@@ -17,7 +17,7 @@
       position: absolute;
       left: calc(var(--space-l) * -1);
       top: #{toRem(2)};
-      content: url("/icons/bullet-arrow.svg");
+      content: url("/public/icons/item-arrow.svg");
     }
   }
 }
