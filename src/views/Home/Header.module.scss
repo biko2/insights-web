@@ -7,8 +7,10 @@
 .header {
   @include fullWidthContainerLateralPadding;
 
-  position: sticky;
+  position: absolute;
   top: 0;
+  right: 0;
+  left: 0;
 
   display: flex;
   justify-content: space-between;
@@ -17,13 +19,7 @@
   margin-bottom: var(--space-m);
 
   z-index: 100;
-  background-color: var(--background-default);
-}
-
-.outlineLink {
-  &:focus-visible {
-    @include outline;
-  }
+  background-color: transparent;
 }
 
 .logo {
@@ -38,7 +34,7 @@
 
 .navMenu {
   display: none;
-  color: var(--primary-blue);
+  color: var(--background-default);
 
   @media #{$fromTablet} {
     display: flex;
@@ -46,10 +42,6 @@
     text-transform: uppercase;
     gap: var(--space-l);
   }
-}
-
-.navMenu__home {
-  color: var(--background-default);
 }
 
 .navMenu_Item {
@@ -64,25 +56,15 @@
   }
 
   &:hover {
-    color: var(--background-secondary-default-hover);
+    color: var(--link-hover);
 
     >svg {
-      transform: translateX(-#{toRem(5)});
+      transform: translateY(5px);
       transition: transform 0.3s ease-in-out;
     }
   }
 
   &:focus-visible {
     @include outline;
-  }
-}
-
-.navMenu_Item__home {
-  &:hover {
-    color: var(--link-hover);
-
-    >svg {
-      transform: translateY(5px);
-    }
   }
 }
