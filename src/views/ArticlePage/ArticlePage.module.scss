@@ -3,6 +3,7 @@
 @import '../../styles/tools/mixins/gridLayout.scss';
 
 .mainContent {
+  position: relative;
   @include container;
 
   overflow: hidden;
