@@ -60,7 +60,7 @@
 
 .heroAuthorship {
     @include textFontXS;
-    color: var(--secondary-grey);
+    color: var(--secondary-grey) !important;
 
     margin-bottom: var(--space-3xl);
 

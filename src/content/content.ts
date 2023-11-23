@@ -1,4 +1,4 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z } from "astro:content";
 
 const blog = defineCollection({
   schema: () =>
@@ -11,6 +11,7 @@ const blog = defineCollection({
       heroImageAlt: z.string(),
       metaImageSrc: z.string(),
       metaImageAlt: z.string(),
+      audioSrc: z.string(),
       type: z.string(),
     }),
 });
