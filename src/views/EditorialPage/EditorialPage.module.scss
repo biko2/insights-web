@@ -55,6 +55,11 @@
   color: var(--background-default);
 }
 
+.editorialFooter__subtitle {
+  margin-left:#{toRem(20)};
+  color: var(--background-medium);
+}
+
 .editorialBackgroundImage {
   position: absolute;
   right: 0;

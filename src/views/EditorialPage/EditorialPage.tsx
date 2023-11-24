@@ -80,7 +80,7 @@ export const EditorialPage: React.FC<React.PropsWithChildren<Props>> = ({
           <span
             className={classNames(
               styles.authorship,
-              styles.authorship__subtitle
+              styles.editorialFooter__subtitle
             )}
           >
             {authorshipSubtitle}
