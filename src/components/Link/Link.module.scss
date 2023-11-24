@@ -1,0 +1,22 @@
+@import '../../styles/tools/mixins/outline.scss';
+
+.link {
+  color: var(--background-secondary-default);
+  text-decoration: underline;
+
+  transition: color 0.2s ease-in-out;
+
+  &:link,
+  &:visited {
+    color: var(--background-secondary-default);
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    @include outline;
+  }
+
+  &:hover {
+    color: var(--background-secondary-default-hover);
+  }
+}

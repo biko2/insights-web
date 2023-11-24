@@ -1,6 +1,7 @@
 # Biko Insights web
 
 ![by Biko2](https://raw.githubusercontent.com/biko2/biko-repo-bagdes/master/png/biko-bagge-pill.png)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6562c6f2-00a6-4195-938b-a30b7b6a0d72/deploy-status)](https://app.netlify.com/sites/idyllic-muffin-bb5ec0/deploys)
 ![by Salmoncrafters.dev](https://raw.githubusercontent.com/biko2/biko-repo-bagdes/master/png/salmoncrafters.dev.png)
 
 Página web para los Biko Insights.

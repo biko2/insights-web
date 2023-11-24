@@ -1,0 +1,6 @@
+@import "../../styles/tools/mixins/textFont.scss";
+@import "../../styles/tools/mixins/paragraphLayout.scss";
+
+.articleSection {
+  @include paragraphLayout;
+}

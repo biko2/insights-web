@@ -1,0 +1,15 @@
+@mixin paragraphLayout {
+    grid-column: 1 / -1;
+
+    @media #{$onlyTablet} {
+        grid-column: 2 / 8;
+    }
+
+    @media #{$onlyLaptop} {
+        grid-column: 3 / 11;
+    }
+
+    @media #{$fromDesktop} {
+        grid-column: 4 / 10;
+    }
+}

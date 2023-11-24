@@ -1,0 +1,63 @@
+@import "../mediaQueries.scss";
+
+@mixin container {
+  position: relative;
+
+  padding-left: var(--grid-mobile-lateral-gap);
+  padding-right: var(--grid-mobile-lateral-gap);
+  margin: 0 auto;
+
+  @media #{$onlyTablet} {
+    padding-left: var(--grid-tablet-lateral-gap);
+    padding-right: var(--grid-tablet-lateral-gap);
+  }
+
+  @media #{$fromLaptop} {
+    padding-left: var(--grid-laptop-lateral-gap);
+    padding-right: var(--grid-laptop-lateral-gap);
+  }
+
+  @media #{$onlyDesktopLarge} {
+    max-width: var(--grid-max-container);
+  }
+}
+
+@mixin fullWidthContainer {
+  margin-left: calc(var(--grid-mobile-lateral-gap) * -1);
+  margin-right: calc(var(--grid-mobile-lateral-gap) * -1);
+
+  @media #{$fromTablet} {
+    margin-left: calc(var(--grid-tablet-lateral-gap) * -1);
+    margin-right: calc(var(--grid-tablet-lateral-gap) * -1);
+  }
+
+  @media #{$fromLaptop} {
+    margin-left: calc(var(--grid-laptop-lateral-gap) * -1);
+    margin-right: calc(var(--grid-laptop-lateral-gap) * -1);
+  }
+
+  @media #{$onlyDesktopLarge} {
+    margin-left: calc(var(--grid-full-container-desktop-lateral-gap) * -1);
+    margin-right: calc(var(--grid-full-container-desktop-lateral-gap) * -1);
+  }
+}
+
+@mixin fullWidthContainerLateralPadding {
+  padding-left: var(--grid-mobile-lateral-gap);
+  padding-right: var(--grid-mobile-lateral-gap);
+
+  @media #{$fromTablet} {
+    padding-left: var(--grid-tablet-lateral-gap);
+    padding-right: var(--grid-tablet-lateral-gap);
+  }
+
+  @media #{$fromLaptop} {
+    padding-left: var(--grid-laptop-lateral-gap);
+    padding-right: var(--grid-laptop-lateral-gap);
+  }
+
+  @media #{$onlyDesktopLarge} {
+    padding-left: var(--grid-full-container-desktop-lateral-gap);
+    padding-right: var(--grid-full-container-desktop-lateral-gap);
+  }
+}

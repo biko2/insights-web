@@ -1,4 +1,8 @@
 {
-  "recommendations": ["astro-build.astro-vscode", "mike-co.import-sorter"],
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "mike-co.import-sorter",
+    "unifiedjs.vscode-mdx"
+  ],
   "unwantedRecommendations": []
 }

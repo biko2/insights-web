@@ -1,0 +1,15 @@
+@import '../tools/functions.scss';
+
+:root {
+    --space-xxs: #{toRem(4)};
+    --space-xs: #{toRem(8)};
+    --space-s: #{toRem(12)};
+    --space-m: #{toRem(16)};
+    --space-l: #{toRem(24)};
+    --space-xl: #{toRem(32)};
+    --space-2xl: #{toRem(40)};
+    --space-3xl: #{toRem(48)};
+    --space-4xl: #{toRem(64)};
+    --space-5xl: #{toRem(96)};
+    --space-6xl: #{toRem(128)};
+}

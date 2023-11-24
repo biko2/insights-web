@@ -1,0 +1,76 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import { ArticlePage } from "../views/ArticlePage/ArticlePage";
+import { EditorialPage } from "../views/EditorialPage/EditorialPage";
+
+import { blogTags } from "../components/blogTags";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+type Props = CollectionEntry<"blog">;
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout
+  title={post.data.title}
+  description={post.data.description}
+  slug={post.data.slug}
+  metaImageSrc={post.data.metaImageSrc}
+  metaImageAlt={post.data.metaImageAlt}
+>
+  { post.data.type === "editorial" ?  
+    <EditorialPage
+      client:load
+      title={post.data.title}
+      authorship={post.data.authorship}
+      authorshipSubtitle={post.data.authorshipSubtitle}
+      audioSrc={post.data.audioSrc}
+    >
+      <Content components={blogTags} />
+    </EditorialPage>
+    : 
+    <ArticlePage 
+        client:load
+        heroImageUrl={post.data.heroImageUrl}
+        heroImageAlt={post.data.heroImageAlt}
+        title={post.data.title}
+        description={post.data.description}
+        authorship={post.data.authorship}
+        authorshipSubtitle={post.data.authorshipSubtitle}
+        audioSrc={post.data.audioSrc}
+      >
+        <Content components={blogTags} />
+      </ArticlePage>
+  }
+
+</Layout>
+
+<script type="text/javascript">
+  window.addEventListener("scroll", revealContent);
+
+  function revealContent() {
+    var reveals = document.querySelectorAll(".reveal-content");
+
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var revealTop = reveals[i].getBoundingClientRect().top;
+      var revealPoint = 150;
+
+      if (revealTop < windowHeight - revealPoint) {
+        reveals[i].style.transform = "translateY(0px)";
+        reveals[i].style.opacity = 1;
+      } else {
+        reveals[i].style.transform = "translateY(50px)";
+        reveals[i].style.opacity = 0;
+      }
+    }
+  }
+</script>

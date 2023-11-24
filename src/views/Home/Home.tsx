@@ -1,14 +1,17 @@
 import React from "react";
 
-import container from "../components/container.module.scss";
-import styles from "./home.module.scss";
+import containerStyles from "../Layout/Container.module.scss";
+import home from "./home.module.scss";
+import summaryList from "./SummaryList.module.scss";
+
+const styles = { ...home, ...summaryList };
 
 export const Home: React.FC = () => {
   return (
     <>
       <section className={styles.introSection}>
         <section className={styles.heroContainer}>
-          <div className={container.container}>
+          <div className={containerStyles.container}>
             <div className={styles.heroWrapper}>
               <header className={styles.header}>
                 <img
@@ -114,7 +117,7 @@ export const Home: React.FC = () => {
         </section>
 
         <section id="sumario" className={styles.summary}>
-          <div className={container.container}>
+          <div className={containerStyles.container}>
             <img
               className={`${styles.hexagon} ${styles.firstHexagon}`}
               src="/icons/white-hexagon.svg"
@@ -145,7 +148,7 @@ export const Home: React.FC = () => {
               alt=""
               aria-hidden="true"
             />
-            <div className={`${styles.summaryWrapper} ${styles.reveal} reveal`}>
+            <div className={`${styles.summaryWrapper} reveal-content`}>
               <p className={styles.summaryFirstParagraph}>
                 Ya está disponible la{" "}
                 <span className={styles.highlight}>sexta edición</span> de{" "}
@@ -158,13 +161,11 @@ export const Home: React.FC = () => {
             </div>
 
             <div className={styles.summaryBackgroundWrapper}>
-              <h2 className={`${styles.summaryTitle} ${styles.reveal} reveal`}>
+              <h2 className={`${styles.summaryTitle} reveal-content`}>
                 Sumario
               </h2>
 
-              <p
-                className={`${styles.summarySecondParagraph} ${styles.reveal} reveal`}
-              >
+              <p className={`${styles.summarySecondParagraph} reveal-content`}>
                 En esta edición nos movemos entre la esperanza y el aburrimiento
                 tecnológico. Es posible que empecemos a cansarnos de las
                 promesas incumplidas pero nos negamos a tirar la toalla, nuestro
@@ -173,48 +174,74 @@ export const Home: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.listWrapper}>
-              <ul className={`${styles.list} ${styles.reveal} reveal`}>
-                <li className={styles.listBox}>
-                  <h3 className={styles.listTitle}>Editorial</h3>
+            <div className={styles.summaryListWrapper}>
+              <ul className={`${styles.summaryList} reveal-content`}>
+                <li className={styles.summaryList_Box}>
+                  <a className={styles.summaryList_Link} href="/editorial">
+                    <h3 className={styles.summaryList_Title}>Editorial</h3>
+                    <svg
+                      style={{ width: 44, height: 44 }}
+                      role="img"
+                      aria-label="Lee la editorial del 6 Insights'"
+                    >
+                      <use xlinkHref={"/sprite.svg#jakala-arrow"} />
+                    </svg>
+                  </a>
                 </li>
-                <li className={styles.listBox}>
-                  <h3 className={styles.listTitle}>
-                    Paren las redes, que yo me bajo
-                  </h3>
-                  <p className={styles.listDescription}>
-                    Devolvamos las redes a su esencia para hacerlas mejores.
-                  </p>
+                <li className={styles.summaryList_Box}>
+                  <div>
+                    <h3 className={styles.summaryList_Title}>
+                      Paren las redes, que yo me bajo
+                    </h3>
+                    <p className={styles.summaryList_Description}>
+                      Devolvamos las redes a su esencia para hacerlas mejores.
+                    </p>
+                  </div>
                 </li>
-                <li className={styles.listBox}>
-                  <h3 className={styles.listTitle}>
-                    Más allá del ciberespacio
-                  </h3>
-                  <p className={styles.listDescription}>
-                    Un repaso de la cultura digital para poder ampliar los
-                    horizontes o crearlos nuevos.
-                  </p>
+                <li className={styles.summaryList_Box}>
+                  <a
+                    className={styles.summaryList_Link}
+                    href="/mas-alla-del-ciberespacio"
+                  >
+                    <div>
+                      <h3 className={styles.summaryList_Title}>
+                        Más allá del ciberespacio
+                      </h3>
+                      <p className={styles.summaryList_Description}>
+                        Un repaso de la cultura digital para poder ampliar los
+                        horizontes o crearlos nuevos.
+                      </p>
+                    </div>
+
+                    <svg
+                      style={{ width: 44, height: 44 }}
+                      role="img"
+                      aria-label="Lee el artículo 'Paren las redes, que yo me bajo'"
+                    >
+                      <use xlinkHref={"/sprite.svg#jakala-arrow"} />
+                    </svg>
+                  </a>
                 </li>
-                <li className={styles.listBox}>
-                  <h3 className={styles.listTitle}>
+                <li className={styles.summaryList_Box}>
+                  <h3 className={styles.summaryList_Title}>
                     Nostalgia para combatir el aburrimiento
                   </h3>
                 </li>
-                <li className={styles.listBox}>
-                  <h3 className={styles.listTitle}>
+                <li className={styles.summaryList_Box}>
+                  <h3 className={styles.summaryList_Title}>
                     Complejidad, evolución y el fin del ciclo del internet de
                     los pioneros
                   </h3>
-                  <p className={styles.listDescription}>
+                  <p className={styles.summaryList_Description}>
                     En 2023, internet ya no es ese lugar de 25 años atrás, sino
                     un commodity de una complejidad extrema.
                   </p>
                 </li>
-                <li className={styles.listBox}>
-                  <h3 className={styles.listTitle}>
+                <li className={styles.summaryList_Box}>
+                  <h3 className={styles.summaryList_Title}>
                     Automatizando las tareas sucias, peligrosas y aburridas
                   </h3>
-                  <p className={styles.listDescription}>
+                  <p className={styles.summaryList_Description}>
                     Cuestiones a considerar para que la automatización aumente
                     nuestra autonomía.
                   </p>
@@ -226,7 +253,7 @@ export const Home: React.FC = () => {
       </section>
 
       <section id="ediciones-anteriores">
-        <div className={container.container}>
+        <div className={containerStyles.container}>
           <h2 className={styles.collectionTitle}>
             ¿Te perdiste algún <br /> BikoInsights?
           </h2>
@@ -282,7 +309,7 @@ export const Home: React.FC = () => {
                   </p>
                 </li>
                 <li>
-                  <h4 className={styles.collectionItemListTitle}>
+                  <h4 className={styles.collectionItemsListTitle}>
                     Una empresa que crea escuela
                   </h4>
                   <p className={styles.collectionItemListDescription}>
@@ -501,9 +528,9 @@ export const Home: React.FC = () => {
       </section>
 
       <footer className={styles.footer}>
-        <div className={container.container}>
+        <div className={containerStyles.container}>
           <div className={styles.footerWrapper}>
-            <img src="icons/jakala.svg" alt="Logo de Jakala" />
+            <img src="/icons/jakala.svg" alt="Logo de Jakala" />
             <p className={styles.footerText}>
               BikoInsights es un documento sobre tendencias digitales elaborado
               por Jakala | Biko con carácter divulgativo.

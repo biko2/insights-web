@@ -1,0 +1,17 @@
+@import "../../styles/tools/mixins/textFont.scss";
+
+@import "../../styles/tools/mediaQueries.scss";
+
+.paragraph {
+  @include textFontS;
+  color: var(--secondary-grey);
+
+  &:not(:last-child) {
+    margin-bottom: var(--space-l);
+  }
+
+  /* Markdown mete las imágenes en un tag p */
+  &:has(img) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,53 @@
+@import "../../styles/tools/mediaQueries.scss";
+@import "../../styles/tools/mixins/titleFont.scss";
+@import "../../styles/tools/mixins/textFont.scss";
+@import "../../styles/tools/functions.scss";
+
+.blockquote {
+  padding-left: var(--space-m);
+  grid-column: 1 / -1;
+
+  border-left: #{toRem(4)} solid var(--blockquote-border);
+
+  @media #{$fromTablet} {
+    padding-left: var(--space-xl);
+  }
+
+  @media #{$fromDesktop} {
+    grid-column: 1 / 7;
+  }
+
+  p {
+    &:not(:last-child) {
+      /* sobrescribimos el margen que da el Paragraph */
+      margin-bottom: var(--space-m) !important;
+    }
+
+    width: 100%;
+
+    color: var(--primary-blue);
+    @include titleFontXL;
+    font-style: italic;
+
+    &::before {
+      content: "“";
+    }
+
+    &::after {
+      content: "”";
+    }
+  }
+
+  footer {
+    color: var(--secondary-grey);
+    @include textFontS;
+
+    &::before {
+      content: "(";
+    }
+
+    &::after {
+      content: ")";
+    }
+  }
+}

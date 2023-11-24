@@ -1,0 +1,137 @@
+@import "../../styles/tools/mediaQueries.scss";
+@import "../../styles/tools/mixins/textFont.scss";
+@import "../../styles/tools/functions.scss";
+
+.imagesSection {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-3xl);
+
+  grid-column: 1 / -1;
+
+  @media #{$fromLaptop} {
+    flex-direction: row;
+    grid-column: 2 / 12;
+  }
+}
+
+.image_container {
+  position: relative;
+
+  display: block;
+  width: 100%;
+}
+
+.image_container__big {
+  @media #{$fromTablet} {
+    max-width: #{toRem(530)};
+  }
+}
+
+.image_container__small {
+  @media #{$fromTablet} {
+    max-width: #{toRem(335)};
+  }
+}
+
+.image_container__top {
+  width: 100%;
+
+  @media #{$fromTablet} {
+    align-self: flex-start
+  }
+
+  @media #{$fromLaptop} {
+    margin-bottom: #{toRem(200)}; // Forzando un margin queda la imagen más abajo para tener el efecto del diseño.
+  }
+}
+
+.image_container__bottom {
+  width: 100%;
+
+  @media #{$fromTablet} {
+    align-self: flex-end
+  }
+
+  @media #{$fromLaptop} {
+    margin-top: #{toRem(200)};
+    ; // Forzando un margin queda la imagen más abajo para tener el efecto del diseño.
+  }
+}
+
+.image_container__biggerSpacing {
+  @media #{$fromLaptop} {
+    margin-top: #{toRem(600)};
+    ; // Forzando un margin queda la imagen más abajo para tener el efecto del diseño.
+  }
+}
+
+.image_container__reserveContent {
+  @media #{$onlyMobile} {
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
+  }
+
+  @media #{$onlyTablet} {
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
+  }
+}
+
+.image {
+  height: auto;
+  width: 100%;
+}
+
+.caption {
+  margin-top: var(--space-l);
+  @include textFontXS;
+}
+
+.neuromanteBackgroundImage {
+  @media #{$onlyMobile} {
+    display: none;
+  }
+
+  position: absolute;
+  top: -9%;
+  right: 0;
+  bottom: 0;
+  left: -3%;
+
+  z-index: -1;
+
+  width: 115%;
+}
+
+.mirrorshadesBackgroundImage {
+  @media #{$onlyMobile} {
+    display: none;
+  }
+
+  position: absolute;
+  top: -6%;
+  left: -9%;
+
+  z-index: -1;
+
+  width: 115%;
+}
+
+.revolutionBackgroundImage {
+  @media #{$onlyMobile} {
+    display: none;
+  }
+
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 10%;
+
+  z-index: -1;
+
+  width: 100%;
+}
