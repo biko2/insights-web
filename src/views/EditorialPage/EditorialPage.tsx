@@ -40,7 +40,13 @@ export const EditorialPage: React.FC<React.PropsWithChildren<Props>> = ({
             alt="televisión alternativa"
           />
           <section className={styles.hero}>
-            <div className={classNames(styles.heroAuthorship, "mb-m")}>
+            <div
+              className={classNames(
+                styles.heroAuthorship,
+                styles.editorialhero__authorship,
+                "mb-m"
+              )}
+            >
               <img
                 className="mr-s"
                 src="/icons/bullet-red.svg"
@@ -54,22 +60,32 @@ export const EditorialPage: React.FC<React.PropsWithChildren<Props>> = ({
           </section>
 
           {children}
-
-          <section className={styles.authorship}>
-            <div>
-              <img
-                className="mr-s"
-                src="/icons/bullet-red.svg"
-                alt=""
-                aria-hidden="true"
-              />
-              {authorship}
-            </div>
-            <span className={styles.authorship_subtitle}>
-              {authorshipSubtitle}
-            </span>
-          </section>
         </article>
+
+        <section className={styles.editorialFooter}>
+          <span
+            className={classNames(
+              styles.authorship,
+              styles.editorialFooter__authorship
+            )}
+          >
+            <img
+              className="mr-s"
+              src="/icons/bullet-red.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            {authorship}
+          </span>
+          <span
+            className={classNames(
+              styles.authorship,
+              styles.authorship__subtitle
+            )}
+          >
+            {authorshipSubtitle}
+          </span>
+        </section>
 
         <section className={styles.banner}>
           <p className="mb-l">
