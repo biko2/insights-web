@@ -32,7 +32,7 @@
 }
 
 .editorialhero__authorship {
-  color: var(--secondary-grey-500) !important;
+  color: var(--background-medium) !important;
 }
 
 .editorialFooter {
@@ -43,9 +43,11 @@
 
   @include gridLayout;
   padding-bottom: var(--space-5xl);
+  margin-bottom: var(--space-5xl);
 
   @media #{$fromDesktop} {
     padding-bottom: var(--space-6xl);
+    margin-bottom: var(--space-6xl);
   }
 }
 
