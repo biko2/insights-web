@@ -1,6 +1,7 @@
 # Biko Insights web
 
 ![by Biko2](https://raw.githubusercontent.com/biko2/biko-repo-bagdes/master/png/biko-bagge-pill.png)
+![by Salmoncrafters.dev](https://raw.githubusercontent.com/biko2/biko-repo-bagdes/master/png/salmoncrafters.dev.png)
 
 Página web para los Biko Insights.
 
