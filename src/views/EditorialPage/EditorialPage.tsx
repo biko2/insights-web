@@ -94,7 +94,10 @@ export const EditorialPage: React.FC<React.PropsWithChildren<Props>> = ({
             aria-hidden="true"
           />
           ¿Quieres una edición impresa de BikoInsigts #6?, envíanos un{" "}
-          <a className={styles.captio_link} href="mailto:insightsmag@biko2.com">
+          <a
+            className={styles.caption_link}
+            href="mailto:insightsmag@biko2.com"
+          >
             email
           </a>{" "}
           y háznoslo saber.
