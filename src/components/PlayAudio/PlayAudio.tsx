@@ -29,7 +29,7 @@ export const PlayAudio: React.FC<Props> = ({ src }) => {
             onClick={handlePlayAudio}
           >
             <svg role="img" aria-label="Escucha los articulos de la edición">
-              <use xlinkHref={"/sprite.svg#download"} />
+              <use xlinkHref={"/sprite.svg#speaker-button"} />
             </svg>
           </button>
         </>
