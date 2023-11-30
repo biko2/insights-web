@@ -3,12 +3,11 @@ import React from "react";
 import { classNames } from "../../utilities/classnames";
 import bottomPage from "../Layout/BottomPage.module.scss";
 import footer from "../Layout/Footer.module.scss";
-import header from "../Layout/Header.module.scss";
+import { Header } from "../Layout/Header/Header";
 import hero from "./EditorialHero.module.scss";
 import editorialPage from "./EditorialPage.module.scss";
 
 const styles = {
-  ...header,
   ...footer,
   ...bottomPage,
   ...hero,
@@ -19,6 +18,7 @@ interface Props {
   title: string;
   authorship: string;
   authorshipSubtitle: string;
+  audioSrc: string;
 }
 
 export const EditorialPage: React.FC<React.PropsWithChildren<Props>> = ({
@@ -26,36 +26,11 @@ export const EditorialPage: React.FC<React.PropsWithChildren<Props>> = ({
   title,
   authorship,
   authorshipSubtitle,
+  audioSrc,
 }) => {
   return (
     <>
-      <header className={styles.header}>
-        <a className={styles.outlineLink} href="/" title="Vuelve al inicio">
-          <img
-            className={styles.logo}
-            src="/logo-bikoinsights-dark.svg"
-            alt="Logo de Jakala BikoInsights"
-          />
-        </a>
-        <nav>
-          <ul className={styles.navMenu}>
-            <li>
-              <a href="/#sumario" className={styles.navMenu_Item}>
-                <svg role="img" aria-hidden="true">
-                  <use xlinkHref={"/sprite.svg#arrow-left"} />
-                </svg>{" "}
-                Sumario
-              </a>
-            </li>
-
-            <li>
-              <a href="/#ediciones-anteriores" className={styles.navMenu_Item}>
-                Ediciones anteriores
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Header audioSrc={audioSrc} />
 
       <main className={styles.mainContent}>
         <article className={styles.editorialContent}>
@@ -65,7 +40,13 @@ export const EditorialPage: React.FC<React.PropsWithChildren<Props>> = ({
             alt="televisión alternativa"
           />
           <section className={styles.hero}>
-            <div className={classNames(styles.heroAuthorship, "mb-m")}>
+            <div
+              className={classNames(
+                styles.heroAuthorship,
+                styles.editorialhero__authorship,
+                "mb-m"
+              )}
+            >
               <img
                 className="mr-s"
                 src="/icons/bullet-red.svg"
@@ -79,22 +60,32 @@ export const EditorialPage: React.FC<React.PropsWithChildren<Props>> = ({
           </section>
 
           {children}
-
-          <section className={styles.authorship}>
-            <div>
-              <img
-                className="mr-s"
-                src="/icons/bullet-red.svg"
-                alt=""
-                aria-hidden="true"
-              />
-              {authorship}
-            </div>
-            <span className={styles.authorship_subtitle}>
-              {authorshipSubtitle}
-            </span>
-          </section>
         </article>
+
+        <section className={styles.editorialFooter}>
+          <span
+            className={classNames(
+              styles.authorship,
+              styles.editorialFooter__authorship
+            )}
+          >
+            <img
+              className="mr-s"
+              src="/icons/bullet-red.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            {authorship}
+          </span>
+          <span
+            className={classNames(
+              styles.authorship,
+              styles.editorialFooter__subtitle
+            )}
+          >
+            {authorshipSubtitle}
+          </span>
+        </section>
 
         <section className={styles.banner}>
           <p className="mb-l">
@@ -119,7 +110,10 @@ export const EditorialPage: React.FC<React.PropsWithChildren<Props>> = ({
             aria-hidden="true"
           />
           ¿Quieres una edición impresa de BikoInsigts #6?, envíanos un{" "}
-          <a className={styles.captio_link} href="mailto:insightsmag@biko2.com">
+          <a
+            className={styles.caption_link}
+            href="mailto:insightsmag@biko2.com"
+          >
             email
           </a>{" "}
           y háznoslo saber.

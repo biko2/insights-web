@@ -1,0 +1,79 @@
+@import '../../styles/tools/mixins/outline.scss';
+@import "../../styles/tools/mixins/textFont.scss";
+@import "../../styles/tools/functions.scss";
+@import "../../styles/tools/mediaQueries.scss";
+
+.playAudio {
+    display: none;
+
+    @media #{$fromTablet} {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-xs);
+
+        padding: var(--space-s) var(--space-l);
+
+        width: fit-content;
+
+        background-color: var(--background-default);
+        border:#{toRem(2)} solid var(--background-secondary-default);
+        border-radius: var(--space-6xl);
+
+        @include textFontXS;
+        transition: color ease-in-out 0.2s;
+        color: var(--background-secondary-default);
+        font-weight: 700;
+
+        >svg {
+            width: var(--space-l);
+            height: var(--space-l);
+        }
+
+        cursor: pointer;
+
+        &:hover {
+            transition: color ease-in-out 0.2s;
+            border:#{toRem(2)} solid var(--background-secondary-default-hover);
+            color: var(--background-secondary-default-hover);
+
+            >svg {
+                color: var(--background-secondary-default-hover);
+            }
+        }
+
+        &:focus-visible {
+            @include outline;
+        }
+    }
+}
+
+.playAudio__mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    appearance: none;
+    border: none;
+    background-color: transparent;
+
+    >svg {
+        width: #{toRem(44)};
+        height: #{toRem(44)};
+        color: var(--background-secondary-default);
+    }
+
+    &:hover {
+        >svg {
+            color: var(--background-secondary-default-hover);
+        }
+    }
+
+    @media #{$fromTablet} {
+        display: none;
+    }
+}
+
+.audioContainer {
+    height: var(--space-3xl);
+}

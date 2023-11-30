@@ -28,20 +28,24 @@ const { Content } = await post.render();
 >
   { post.data.type === "editorial" ?  
     <EditorialPage
+      client:load
       title={post.data.title}
       authorship={post.data.authorship}
       authorshipSubtitle={post.data.authorshipSubtitle}
+      audioSrc={post.data.audioSrc}
     >
       <Content components={blogTags} />
     </EditorialPage>
     : 
-    <ArticlePage
+    <ArticlePage 
+        client:load
         heroImageUrl={post.data.heroImageUrl}
         heroImageAlt={post.data.heroImageAlt}
         title={post.data.title}
         description={post.data.description}
         authorship={post.data.authorship}
         authorshipSubtitle={post.data.authorshipSubtitle}
+        audioSrc={post.data.audioSrc}
       >
         <Content components={blogTags} />
       </ArticlePage>

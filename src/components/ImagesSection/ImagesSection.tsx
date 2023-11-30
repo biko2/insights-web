@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import { classNames } from '../../utilities/classnames';
-import { Link } from '../Link';
-import styles from './ImagesSection.module.scss';
+import { classNames } from "../../utilities/classnames";
+import { Link } from "../Link";
+import styles from "./ImagesSection.module.scss";
 
 interface Image {
   src: string;
@@ -78,7 +78,7 @@ export const ImagesSection: React.FC<Props> = ({
         {backgroundImage === "neuromante" && (
           <img
             className={styles.neuromanteBackgroundImage}
-            src="/images/mas-alla-del-ciberespacio/bg-neuromante.webp"
+            src="/images/mas-alla-del-ciberespacio/bg-neuromante.gif"
             alt={leftImage.alt}
           ></img>
         )}
@@ -86,7 +86,7 @@ export const ImagesSection: React.FC<Props> = ({
         {backgroundImage === "mirrorshades" && (
           <img
             className={styles.mirrorshadesBackgroundImage}
-            src="/images/mas-alla-del-ciberespacio/bg-mirrorshades.webp"
+            src="/images/mas-alla-del-ciberespacio/bg-mirrorshades.gif"
             alt={leftImage.alt}
           ></img>
         )}
@@ -99,7 +99,7 @@ export const ImagesSection: React.FC<Props> = ({
       {backgroundImage === "revolution" && (
         <img
           className={styles.revolutionBackgroundImage}
-          src="/images/mas-alla-del-ciberespacio/bg-revolution.webp"
+          src="/images/mas-alla-del-ciberespacio/bg-revolution.gif"
           alt={leftImage.alt}
         ></img>
       )}

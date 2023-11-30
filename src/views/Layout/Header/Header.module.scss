@@ -1,0 +1,109 @@
+@import "../../../styles/tools/mediaQueries.scss";
+@import '../../../styles/tools/mixins/container.scss';
+@import '../../../styles/tools/functions.scss';
+@import '../../../styles/tools/mixins/outline.scss';
+@import "../../../styles/tools/mixins/textFont.scss";
+
+
+.header {
+  @include fullWidthContainerLateralPadding;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+  background-color: var(--background-default);
+}
+
+.outlineLink {
+  &:focus-visible {
+    @include outline;
+  }
+}
+
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-m);
+  padding-top: var(--space-l);
+}
+
+.logo {
+  width: auto;
+  max-width: 100%;
+  height: #{toRem(31)};
+
+  @media #{$fromDesktop} {
+    height: #{toRem(42)};
+  }
+}
+
+.navMenu {
+  display: none;
+  color: var(--primary-blue);
+
+  @media #{$fromTablet} {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: var(--space-l);
+  }
+}
+
+.navMenu__home {
+  color: var(--background-default);
+}
+
+.navMenu_Item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+
+  >svg {
+    width: #{toRem(24)};
+    height: #{toRem(24)};
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: var(--background-secondary-default-hover);
+
+    >svg {
+      transform: translateX(-#{toRem(5)});
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  &:focus-visible {
+    @include outline;
+  }
+}
+
+.navMenu_Item__home {
+  &:hover {
+    color: var(--link-hover);
+
+    >svg {
+      transform: translateY(5px);
+    }
+  }
+}
+
+.subHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-xs);
+
+  padding-top: var(--space-s);
+  padding-bottom: var(--space-s);
+
+  height: #{toRem(80)};
+
+  background-color: var(--background-default);
+}
+
+.subHeader_caption {
+  @include textFontXS;
+  color: var(--primary-blue);
+}
