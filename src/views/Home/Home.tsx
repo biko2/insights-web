@@ -301,7 +301,7 @@ export const Home: React.FC = () => {
                     </p>
                   </li>
                   <li>
-                    <h4 className={styles.collectionItemsListTitle}>
+                    <h4 className={styles.collectionItemListTitle}>
                       Una empresa que crea escuela
                     </h4>
                     <p className={styles.collectionItemListDescription}>
