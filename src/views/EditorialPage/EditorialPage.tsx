@@ -30,7 +30,7 @@ export const EditorialPage: React.FC<React.PropsWithChildren<Props>> = ({
 }) => {
   return (
     <>
-      <Header audioSrc={audioSrc} />
+      <Header audioSrc={audioSrc} isEditorial />
 
       <main className={styles.mainContent}>
         <article className={styles.editorialContent}>

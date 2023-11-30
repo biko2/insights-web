@@ -5,9 +5,10 @@ import styles from "./Header.module.scss";
 
 interface Props {
   audioSrc: string;
+  isEditorial?: boolean;
 }
 
-export const Header: React.FC<Props> = ({ audioSrc }) => {
+export const Header: React.FC<Props> = ({ audioSrc, isEditorial }) => {
   const [openModal, setOpenModal] = useState(false);
 
   const handleOpenModal = () => {
@@ -48,7 +49,7 @@ export const Header: React.FC<Props> = ({ audioSrc }) => {
         <span className={styles.subHeader_caption}>
           BikoInsights Edición #6
         </span>
-        <PlayAudio src={audioSrc} />
+        <PlayAudio src={audioSrc} isEditorial={isEditorial} />
       </section>
     </header>
   );

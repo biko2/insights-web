@@ -4,9 +4,10 @@ import styles from "./PlayAudio.module.scss";
 
 interface Props {
   src: string;
+  isEditorial?: boolean;
 }
 
-export const PlayAudio: React.FC<Props> = ({ src }) => {
+export const PlayAudio: React.FC<Props> = ({ src, isEditorial }) => {
   const [playAudio, setPlayAudio] = useState(false);
 
   const handlePlayAudio = () => {
@@ -18,7 +19,7 @@ export const PlayAudio: React.FC<Props> = ({ src }) => {
       {!playAudio ? (
         <>
           <button className={styles.playAudio} onClick={handlePlayAudio}>
-            Escuchar artículo
+            {isEditorial ? "Escuchar editorial" : "Escuchar artículo"}
             <svg className="m-l-s" role="img" aria-hidden="true">
               <use xlinkHref={"/sprite.svg#speaker"} />
             </svg>
