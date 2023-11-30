@@ -10,7 +10,7 @@
 
     position: relative;
 
-    padding-top: 192px;
+    padding-top: var(--space-5xl);
     padding-bottom: var(--space-5xl);
 
     color: var(--background-default);
@@ -22,124 +22,98 @@
     z-index: 10;
 }
 
-.summaryWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
+.summaryIntro {
 
-.summaryBackgroundWrapper {
-    position: relative;
+    margin-bottom: var(--space-l);
 
-    z-index: 1;
+    grid-column: 1 / -1;
+
+    @media #{$onlyTablet} {
+        grid-column: 3 / -1;
+    }
+
+    @media #{$onlyLaptop} {
+        grid-column: 7 / -1;
+    }
+
+    @media #{$fromDesktop} {
+        grid-column: 7 / 12;
+    }
 }
 
 .summaryImage {
     position: absolute;
-    top: 29%;
+    top: 30%;
     left: 50%;
     height: auto;
     width: auto;
 
     transform: translateX(-50%);
     z-index: -2;
-
-    @include media($tablet) {
-        top: 32%;
-    }
-}
-
-.summaryFirstParagraph {
-    margin-bottom: var(--space-6xl);
-
-    @include media($tablet) {
-        margin-bottom: 156px;
-        width: 70%;
-    }
-
-    @include media($laptop) {
-        width: 50%;
-    }
-
-    @include media($largeDesktop) {
-        margin-bottom: 192px;
-    }
-
-    z-index: 10;
 }
 
 .summaryTitle {
-    @include displayFontL;
 
+    grid-column: 1 / -1;
     margin-bottom: var(--space-3xl);
+
+    @include displayFontL;
     text-transform: uppercase;
 
-    @include media($tablet) {
-        margin-left: var(--space-5xl);
+    @media #{$fromTablet} {
+        grid-column: 2 / -1;
     }
 }
 
-.summarySecondParagraph {
-    margin-bottom: 36px;
+.summaryContent {
+    margin-bottom: var(--space-2xl);
 
-    @include media($tablet) {
-        width: 55%;
+    grid-column: 1 / -1;
+
+    @media #{$onlyTablet} {
+        grid-column: 1 / 6;
     }
 
-    @include media($desktop) {
-        width: 50%;
+    @media #{$onlyLaptop} {
+        grid-column: 1 / 7;
     }
 
-    @include media($largeDesktop) {
-        width: 40%;
+    @media #{$fromDesktop} {
+        grid-column: 1 / 6;
     }
 }
 
 .hexagon {
-    position: absolute;
-    height: 56px;
+    height: #{toRem(56)};
 
-    @include media($tablet) {
+    @media #{$fromTablet} {
         height: var(--space-5xl);
     }
 
-    @include media($desktop) {
+    @media #{$fromDesktop} {
         height: var(--space-6xl);
     }
 
-    z-index: -1;
 }
 
-.firstHexagon {
-    top: -7%;
-    left: 10%;
+.hexagon__top_left {
+    grid-column: 1 / -1;
 }
 
-.secondHexagon {
-    top: 17%;
-    left: 80%;
+.hexagon__top_right {
+    grid-column: 4 / -1;
 
-    @include media($laptop) {
-        left: 45%;
+    @media #{$onlyTablet} {
+        grid-column: 7 / -1;
     }
-}
 
-.thirdHexagon {
-    display: none;
-
-    @include media($tablet) {
-        display: block;
-        top: 72%;
-        left: 15%;
+    @media #{$onlyLaptop} {
+        grid-column: 5 / -1;
+        margin-left: var(--space-3xl);
     }
-}
 
-.fourthHexagon {
-    display: none;
-
-    @include media($desktop) {
-        display: block;
-        top: 90%;
-        left: 45%;
+    @media #{$fromDesktop} {
+        grid-column: 5 / -1;
+        margin-left: var(--space-4xl);
     }
 }

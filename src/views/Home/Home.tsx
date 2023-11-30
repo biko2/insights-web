@@ -112,28 +112,33 @@ export const Home: React.FC = () => {
         </section>
 
         <section id="sumario" className={styles.summary}>
-          {/* <div className={styles.container}> */}
           <img
-            className={`${styles.hexagon} ${styles.firstHexagon}`}
+            className={classNames(
+              styles.hexagon,
+              styles.hexagon__top_left,
+              "mb-xl"
+            )}
             src="/icons/white-hexagon.svg"
             alt=""
             aria-hidden="true"
           />
+          <p className={classNames(styles.summaryIntro, "reveal-content")}>
+            Ya está disponible la{" "}
+            <span className={styles.highlightedText}>sexta edición</span> de{" "}
+            <span className={styles.highlightedText}>BikoInsights</span>, el
+            documento que contiene nuestra visión sobre lo que se está moviendo
+            (y sobre lo que creemos que se moverá) en el entorno digital. En
+            cada entrega tratamos distintos temas relacionados con tecnología,
+            software, experimentación digital...
+          </p>
           <img
-            className={`${styles.hexagon} ${styles.secondHexagon}`}
+            className={classNames(
+              styles.hexagon,
+              styles.hexagon__top_right,
+              "mb-2xl",
+              "mb-desktop-3xl"
+            )}
             src="/icons/red-hexagon.svg"
-            alt=""
-            aria-hidden="true"
-          />
-          <img
-            className={`${styles.hexagon} ${styles.thirdHexagon}`}
-            src="/icons/red-hexagon.svg"
-            alt=""
-            aria-hidden="true"
-          />
-          <img
-            className={`${styles.hexagon} ${styles.fourthHexagon}`}
-            src="/icons/white-hexagon.svg"
             alt=""
             aria-hidden="true"
           />
@@ -143,31 +148,36 @@ export const Home: React.FC = () => {
             alt=""
             aria-hidden="true"
           />
-          <div className={`${styles.summaryWrapper} reveal-content`}>
-            <p className={styles.summaryFirstParagraph}>
-              Ya está disponible la{" "}
-              <span className={styles.highlightedText}>sexta edición</span> de{" "}
-              <span className={styles.highlightedText}>BikoInsights</span>, el
-              documento que contiene nuestra visión sobre lo que se está
-              moviendo (y sobre lo que creemos que se moverá) en el entorno
-              digital. En cada entrega tratamos distintos temas relacionados con
-              tecnología, software, experimentación digital...
-            </p>
-          </div>
+          <h2 className={classNames(styles.summaryTitle, "reveal-content")}>
+            Sumario
+          </h2>
 
-          <div className={styles.summaryBackgroundWrapper}>
-            <h2 className={`${styles.summaryTitle} reveal-content`}>Sumario</h2>
-
-            <p className={`${styles.summarySecondParagraph} reveal-content`}>
-              En esta edición nos movemos entre la esperanza y el aburrimiento
-              tecnológico. Es posible que empecemos a cansarnos de las promesas
-              incumplidas pero nos negamos a tirar la toalla, nuestro nuevo
-              informe aporta algunas claves y respuestas para recuperar el
-              entusiasmo por el Internet que vimos nacer.
-            </p>
-          </div>
-
+          <p className={classNames(styles.summaryContent, "reveal-content")}>
+            En esta edición nos movemos entre la esperanza y el aburrimiento
+            tecnológico. Es posible que empecemos a cansarnos de las promesas
+            incumplidas pero nos negamos a tirar la toalla, nuestro nuevo
+            informe aporta algunas claves y respuestas para recuperar el
+            entusiasmo por el Internet que vimos nacer.
+          </p>
           <div className={styles.summaryListWrapper}>
+            <img
+              className={classNames(
+                styles.hexagon,
+                styles.hexagon__bottom_left
+              )}
+              src="/icons/red-hexagon.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <img
+              className={classNames(
+                styles.hexagon,
+                styles.hexagon__bottom_right
+              )}
+              src="/icons/white-hexagon.svg"
+              alt=""
+              aria-hidden="true"
+            />
             <ul className={`${styles.summaryList} reveal-content`}>
               <li className={styles.summaryList_Box}>
                 <a className={styles.summaryList_Link} href="/editorial">
@@ -241,7 +251,6 @@ export const Home: React.FC = () => {
               </li>
             </ul>
           </div>
-          {/* </div> */}
         </section>
 
         <section id="ediciones-anteriores">
