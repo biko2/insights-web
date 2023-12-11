@@ -111,13 +111,17 @@
   flex-direction: column;
   gap: var(--space-s);
 
-  @include media($tablet) {
+  margin-bottom: var(--space-xl);
+
+  @media #{$fromTablet} {
     flex-direction: row;
     align-items: flex-start;
     gap: var(--space-l);
+
+    margin-bottom: var(--space-3xl);
   }
 
-  @include media($desktop) {
+  @media #{$fromDesktop} {
     align-items: center;
   }
 }
@@ -137,8 +141,6 @@
   gap: var(--space-xs);
 
   padding: var(--space-l);
-  margin-top: var(--space-xl);
-  margin-bottom: var(--space-xl);
 
   width: 100%;
 
@@ -162,8 +164,6 @@
 
   @media #{$fromTablet} {
     width: fit-content;
-    margin-top: var(--space-3xl);
-    margin-bottom: var(--space-3xl);
   }
 }
 

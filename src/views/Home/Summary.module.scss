@@ -3,6 +3,7 @@
 @import "../../styles/tools/mixins/textFont.scss";
 @import "../../styles/tools/mixins/gridLayout.scss";
 @import "../../styles/tools/mixins/container.scss";
+@import "../../styles/tools/functions.scss";
 
 .summary {
     @include gridLayout;
@@ -81,6 +82,14 @@
     @media #{$fromDesktop} {
         grid-column: 1 / 6;
     }
+}
+
+.actionsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: var(--space-5xl);
 }
 
 .hexagon {

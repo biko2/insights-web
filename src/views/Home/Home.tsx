@@ -75,7 +75,11 @@ export const Home: React.FC = () => {
 
               <a
                 href="https://www.biko2.com/insights/BIKO-INSIGHTS-6-2023.pdf"
-                className={styles.insight_download}
+                className={classNames(
+                  styles.insight_download,
+                  "mb-mobile-xl",
+                  "mb-3xl"
+                )}
                 target="_blank"
               >
                 Descargar BikoInsights #6
@@ -251,282 +255,268 @@ export const Home: React.FC = () => {
               </li>
             </ul>
           </div>
+
+          <div className={styles.actionsWrapper}>
+            <a
+              href="https://www.biko2.com/insights/BIKO-INSIGHTS-6-2023.pdf"
+              className={styles.insight_download}
+              target="_blank"
+            >
+              Descargar BikoInsights #6
+              <img alt="" aria-hidden="true" src="/icons/cta-download.svg" />
+            </a>
+          </div>
         </section>
 
-        <section id="ediciones-anteriores">
-          <div className={styles.container}>
-            <h2 className={styles.collectionTitle}>
-              ¿Te perdiste algún <br /> BikoInsights?
-            </h2>
-            <p className={styles.collectionDescription}>
-              No te preocupes, aquí tienes las ediciones anteriores:
-            </p>
-            <div className={styles.collectionWrapper}>
-              <div>
-                <img
-                  className={styles.collectionItemImage}
-                  src="/images/img-biko-insights-5.webp"
-                  alt="Captura del sumario del BikoInsights #5"
-                  width={735}
-                  height={518}
-                />
+        <section id="ediciones-anteriores" className={styles.collection}>
+          <h2 className={styles.collection_title}>
+            ¿Te perdiste algún <br /> BikoInsights?
+          </h2>
+          <p className={styles.collection_description}>
+            No te preocupes, aquí tienes las ediciones anteriores:
+          </p>
 
-                <div className={styles.collectionItemTitle}>
-                  <h3 className={styles.collectionItemTitleContent}>
-                    BikoInsights #5{" "}
-                    <span className={styles.collectionDate}>2022</span>
-                  </h3>
+          <div className={styles.collection_item}>
+            <img
+              className={styles.item_image}
+              src="/images/img-biko-insights-5.webp"
+              alt="Captura del sumario del BikoInsights #5"
+              width={735}
+              height={518}
+            />
 
-                  <DownlandLink
-                    to="https://www.biko2.com/insights/BIKO-INSIGHTS-5-2022.pdf"
-                    edition={5}
-                  />
-                </div>
-                <ul>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      La automatización paternalista
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      Un artículo de Ujué Agudo y Karlos G. Liberal.
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      Entrevista a Luis Montero
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      Una entrevista de Bikolabs Laboratorio de especulación en
-                      Biko
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      NFT y criptomonedas. El Blockchain desembarca en el mundo
-                      del arte.
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      Un artículo de Diego Cenzano.
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      Una empresa que crea escuela
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      Un artículo de Aritz Suescun y Pablo Albizu.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <img
-                  className={styles.collectionItemImage}
-                  src="/images/img-biko-insights-4.webp"
-                  alt="Captura del sumario del BikoInsights #4"
-                  width={735}
-                  height={518}
-                />
-                <div className={styles.collectionItemTitle}>
-                  <h3 className={styles.collectionItemTitleContent}>
-                    BikoInsights #4{" "}
-                    <span className={styles.collectionDate}>2021</span>
-                  </h3>
+            <div className={styles.item_title}>
+              <h3 className={styles.item_titleContent}>
+                BikoInsights #5 <span className={styles.item_date}>2022</span>
+              </h3>
 
-                  <DownlandLink
-                    to="https://www.biko2.com/insights/BIKO-INSIGHTS-4-2021.pdf"
-                    edition={4}
-                  />
-                </div>
-                <ul>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      La gestión de contenidos en la era Jamstack
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      El reto de Biko de integrar un CMS como Drupal en
-                      arquitecturas Jamstack.
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      ¿Hacia la singularidad o hacia un nuevo invierno en la IA?
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      Una entrevista de Radio3.
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      Claves para hacer frente a la desinformación
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      El mayor peligro somos nosotros mismos.
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      Sociocracia 3.0
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      Un año de recorrido en Biko.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <img
-                  className={styles.collectionItemImage}
-                  src="/images/img-biko-insights-3.webp"
-                  alt="Captura del sumario del BikoInsights #3"
-                  width={735}
-                  height={518}
-                />
-                <div className={styles.collectionItemTitle}>
-                  <h3 className={styles.collectionItemTitleContent}>
-                    BikoInsights #3{" "}
-                    <span className={styles.collectionDate}>2020</span>
-                  </h3>
-
-                  <DownlandLink
-                    to="https://www.biko2.com/insights/BIKO-INSIGHTS-3-2020.pdf"
-                    edition={3}
-                  />
-                </div>
-                <ul>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      Gestión de contenidos moderna
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      Un cambio de paradigma.
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      Estrategia digital
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      Qué podemos aprender de los museos.
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      Open Space
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      La autoorganización como motor del cambio.
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      Narrativa de la convivencia
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      En las relaciones humano-inteligencia artificial.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <img
-                  className={styles.collectionItemImage}
-                  src="/images/img-biko-insights-2.webp"
-                  alt="Captura del sumario del BikoInsights #2"
-                  width={735}
-                  height={518}
-                />
-                <div className={styles.collectionItemTitle}>
-                  <h3 className={styles.collectionItemTitleContent}>
-                    BikoInsights #2{" "}
-                    <span className={styles.collectionDate}>2019</span>
-                  </h3>
-
-                  <DownlandLink
-                    to="https://www.biko2.com/insights/BIKO-INSIGHTS-2-2019.pdf"
-                    edition={2}
-                  />
-                </div>
-                <ul>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      Movidos por el sonido
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      Cuando las ondas sonoras construyen interfaces de usuario.
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      Narrativas metafóricas
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      En el extrarradio de la palabra.
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      Machine learning
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      La responsabilidad de la predicción.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <img
-                  className={styles.collectionItemImage}
-                  src="/images/img-biko-insights-1.webp"
-                  alt="Captura del sumario del BikoInsights #1"
-                  width={735}
-                  height={518}
-                />
-                <div className={styles.collectionItemTitle}>
-                  <h3 className={styles.collectionItemTitleContent}>
-                    BikoInsights #1{" "}
-                    <span className={styles.collectionDate}>2018</span>
-                  </h3>
-
-                  <DownlandLink
-                    to="https://www.biko2.com/insights/BIKO-INSIGHTS-1-2018.pdf"
-                    edition={1}
-                  />
-                </div>
-                <ul>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>React</h4>
-                    <p className={styles.collectionItemListDescription}>
-                      El desarrollo por componentes.
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      Marketing automation
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      Saber más para conocer mejor.
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      Adopta un científico
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      La metodología científica desde la perspectiva de negocio.
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className={styles.collectionItemListTitle}>
-                      Immersive Web
-                    </h4>
-                    <p className={styles.collectionItemListDescription}>
-                      Las interfaces mutan.
-                    </p>
-                  </li>
-                </ul>
-              </div>
+              <DownlandLink
+                to="https://www.biko2.com/insights/BIKO-INSIGHTS-5-2022.pdf"
+                edition={5}
+              />
             </div>
+            <ul>
+              <li>
+                <h4 className={styles.item_listTitle}>
+                  La automatización paternalista
+                </h4>
+                <p className={styles.item_listDescription}>
+                  Un artículo de Ujué Agudo y Karlos G. Liberal.
+                </p>
+              </li>
+              <li>
+                <h4 className={styles.item_listTitle}>
+                  Entrevista a Luis Montero
+                </h4>
+                <p className={styles.item_listDescription}>
+                  Una entrevista de Bikolabs Laboratorio de especulación en Biko
+                </p>
+              </li>
+              <li>
+                <h4 className={styles.item_listTitle}>
+                  NFT y criptomonedas. El Blockchain desembarca en el mundo del
+                  arte.
+                </h4>
+                <p className={styles.item_listDescription}>
+                  Un artículo de Diego Cenzano.
+                </p>
+              </li>
+              <li>
+                <h4 className={styles.item_listTitle}>
+                  Una empresa que crea escuela
+                </h4>
+                <p className={styles.item_listDescription}>
+                  Un artículo de Aritz Suescun y Pablo Albizu.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.collection_item}>
+            <img
+              className={styles.item_image}
+              src="/images/img-biko-insights-4.webp"
+              alt="Captura del sumario del BikoInsights #4"
+              width={735}
+              height={518}
+            />
+            <div className={styles.item_title}>
+              <h3 className={styles.item_titleContent}>
+                BikoInsights #4 <span className={styles.item_date}>2021</span>
+              </h3>
+
+              <DownlandLink
+                to="https://www.biko2.com/insights/BIKO-INSIGHTS-4-2021.pdf"
+                edition={4}
+              />
+            </div>
+            <ul>
+              <li>
+                <h4 className={styles.item_listTitle}>
+                  La gestión de contenidos en la era Jamstack
+                </h4>
+                <p className={styles.item_listDescription}>
+                  El reto de Biko de integrar un CMS como Drupal en
+                  arquitecturas Jamstack.
+                </p>
+              </li>
+              <li>
+                <h4 className={styles.item_listTitle}>
+                  ¿Hacia la singularidad o hacia un nuevo invierno en la IA?
+                </h4>
+                <p className={styles.item_listDescription}>
+                  Una entrevista de Radio3.
+                </p>
+              </li>
+              <li>
+                <h4 className={styles.item_listTitle}>
+                  Claves para hacer frente a la desinformación
+                </h4>
+                <p className={styles.item_listDescription}>
+                  El mayor peligro somos nosotros mismos.
+                </p>
+              </li>
+              <li>
+                <h4 className={styles.item_listTitle}>Sociocracia 3.0</h4>
+                <p className={styles.item_listDescription}>
+                  Un año de recorrido en Biko.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.collection_item}>
+            <img
+              className={styles.item_image}
+              src="/images/img-biko-insights-3.webp"
+              alt="Captura del sumario del BikoInsights #3"
+              width={735}
+              height={518}
+            />
+            <div className={styles.item_title}>
+              <h3 className={styles.item_titleContent}>
+                BikoInsights #3 <span className={styles.item_date}>2020</span>
+              </h3>
+
+              <DownlandLink
+                to="https://www.biko2.com/insights/BIKO-INSIGHTS-3-2020.pdf"
+                edition={3}
+              />
+            </div>
+            <ul>
+              <li>
+                <h4 className={styles.item_listTitle}>
+                  Gestión de contenidos moderna
+                </h4>
+                <p className={styles.item_listDescription}>
+                  Un cambio de paradigma.
+                </p>
+              </li>
+              <li>
+                <h4 className={styles.item_listTitle}>Estrategia digital</h4>
+                <p className={styles.item_listDescription}>
+                  Qué podemos aprender de los museos.
+                </p>
+              </li>
+              <li>
+                <h4 className={styles.item_listTitle}>Open Space</h4>
+                <p className={styles.item_listDescription}>
+                  La autoorganización como motor del cambio.
+                </p>
+              </li>
+              <li>
+                <h4 className={styles.item_listTitle}>
+                  Narrativa de la convivencia
+                </h4>
+                <p className={styles.item_listDescription}>
+                  En las relaciones humano-inteligencia artificial.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.collection_item}>
+            <img
+              className={styles.item_image}
+              src="/images/img-biko-insights-2.webp"
+              alt="Captura del sumario del BikoInsights #2"
+              width={735}
+              height={518}
+            />
+            <div className={styles.item_title}>
+              <h3 className={styles.item_titleContent}>
+                BikoInsights #2 <span className={styles.item_date}>2019</span>
+              </h3>
+
+              <DownlandLink
+                to="https://www.biko2.com/insights/BIKO-INSIGHTS-2-2019.pdf"
+                edition={2}
+              />
+            </div>
+            <ul>
+              <li>
+                <h4 className={styles.item_listTitle}>Movidos por el sonido</h4>
+                <p className={styles.item_listDescription}>
+                  Cuando las ondas sonoras construyen interfaces de usuario.
+                </p>
+              </li>
+              <li>
+                <h4 className={styles.item_listTitle}>
+                  Narrativas metafóricas
+                </h4>
+                <p className={styles.item_listDescription}>
+                  En el extrarradio de la palabra.
+                </p>
+              </li>
+              <li>
+                <h4 className={styles.item_listTitle}>Machine learning</h4>
+                <p className={styles.item_listDescription}>
+                  La responsabilidad de la predicción.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.collection_item}>
+            <img
+              className={styles.item_image}
+              src="/images/img-biko-insights-1.webp"
+              alt="Captura del sumario del BikoInsights #1"
+              width={735}
+              height={518}
+            />
+            <div className={styles.item_title}>
+              <h3 className={styles.item_titleContent}>
+                BikoInsights #1 <span className={styles.item_date}>2018</span>
+              </h3>
+
+              <DownlandLink
+                to="https://www.biko2.com/insights/BIKO-INSIGHTS-1-2018.pdf"
+                edition={1}
+              />
+            </div>
+            <ul>
+              <li>
+                <h4 className={styles.item_listTitle}>React</h4>
+                <p className={styles.item_listDescription}>
+                  El desarrollo por componentes.
+                </p>
+              </li>
+              <li>
+                <h4 className={styles.item_listTitle}>Marketing automation</h4>
+                <p className={styles.item_listDescription}>
+                  Saber más para conocer mejor.
+                </p>
+              </li>
+              <li>
+                <h4 className={styles.item_listTitle}>Adopta un científico</h4>
+                <p className={styles.item_listDescription}>
+                  La metodología científica desde la perspectiva de negocio.
+                </p>
+              </li>
+              <li>
+                <h4 className={styles.item_listTitle}>Immersive Web</h4>
+                <p className={styles.item_listDescription}>
+                  Las interfaces mutan.
+                </p>
+              </li>
+            </ul>
           </div>
         </section>
       </main>
