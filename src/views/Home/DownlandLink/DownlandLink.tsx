@@ -1,4 +1,4 @@
-import styles from "./downlandLink.module.scss";
+import styles from "./DownlandLink.module.scss";
 
 export const DownlandLink: React.FC<{ to: string; edition: number }> = ({
   to,
