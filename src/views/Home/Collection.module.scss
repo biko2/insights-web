@@ -1,0 +1,116 @@
+@import "../../styles/tools/mediaQueries.scss";
+@import "../../styles/tools/mixins/displayFont.scss";
+@import "../../styles/tools/mixins/textFont.scss";
+@import "../../styles/tools/mixins/gridLayout.scss";
+@import "../../styles/tools/mixins/container.scss";
+@import "../../styles/tools/functions.scss";
+
+.collection {
+    @include gridLayout;
+    @include container;
+
+    padding-top: var(--space-5xl);
+    padding-bottom: var(--space-5xl);
+}
+
+.collection_title {
+    grid-column: 1 / -1;
+
+    margin-bottom: var(--space-xl);
+
+    @include displayFontL;
+    color: var(--background-primary-default);
+
+    @media #{$fromTablet} {
+        margin-bottom: var(--space-3xl);
+    }
+
+    @media #{$fromLaptop} {
+        grid-column: 2 / -1;
+    }
+}
+
+.collection_description {
+    grid-column: 1 / -1;
+    margin-bottom: var(--space-xl);
+
+    @include textFontM;
+
+    @media #{$fromTablet} {
+        margin-bottom: var(--space-3xl);
+    }
+
+    @media #{$fromLaptop} {
+        grid-column: 2 / -1;
+    }
+}
+
+.collection_item {
+
+    grid-column: 1 / -1;
+    margin-bottom: var(--space-3xl);
+
+    @media #{$onlyMobile} {
+        margin-bottom: var(--space-xl);
+    }
+
+    @media #{$onlyTablet} {
+        grid-column: span 4;
+    }
+
+    @media #{$onlyLaptop} {
+        grid-column: span 6;
+    }
+
+    @media #{$fromDesktop} {
+        grid-column: span 4;
+    }
+}
+
+.item_image {
+    width: 100%;
+    height: auto;
+
+    margin-bottom: var(--space-l);
+    border: #{toRem(1)} solid var(--background-medium);
+}
+
+.item_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: var(--space-l);
+    border-bottom: #{toRem(2)} solid var(--background-primary-default);
+
+    color: var(--background-primary-default);
+    text-transform: uppercase;
+}
+
+.item_titleContent {
+    display: flex;
+    gap: var(--space-s);
+
+    @include textFontM;
+}
+
+.item_date {
+    color: var(--content-light-body);
+}
+
+.item_listTitle {
+    padding-top: var(--space-l);
+    margin-bottom: var(--space-xs);
+
+    @include textFontS;
+    color: var(--background-primary-default);
+}
+
+.item_listDescription {
+    padding-bottom: var(--space-m);
+
+    border-bottom: #{toRem(2)} solid var(--border);
+
+    @include textFontXS;
+    color: var(--content-body);
+}

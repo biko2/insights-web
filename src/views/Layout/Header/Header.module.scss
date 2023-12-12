@@ -50,6 +50,10 @@
   }
 }
 
+.navMenu__home {
+  color: var(--background-default);
+}
+
 .navMenu_Item {
   display: flex;
   align-items: center;
@@ -72,6 +76,16 @@
 
   &:focus-visible {
     @include outline;
+  }
+}
+
+.navMenu_Item__home {
+  &:hover {
+    color: var(--link-hover);
+
+    >svg {
+      transform: translateY(5px);
+    }
   }
 }
 

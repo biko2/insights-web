@@ -1,0 +1,70 @@
+@import "../../styles/tools/mediaQueries.scss";
+@import '../../styles/tools/mixins/container.scss';
+@import '../../styles/tools/functions.scss';
+@import '../../styles/tools/mixins/outline.scss';
+
+
+.header {
+  @include fullWidthContainerLateralPadding;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-m);
+  padding-top: var(--space-l);
+  margin-bottom: var(--space-m);
+
+  z-index: 100;
+  background-color: transparent;
+}
+
+.logo {
+  width: auto;
+  max-width: 100%;
+  height: #{toRem(31)};
+
+  @media #{$fromDesktop} {
+    height: #{toRem(42)};
+  }
+}
+
+.navMenu {
+  display: none;
+  color: var(--background-default);
+
+  @media #{$fromTablet} {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: var(--space-l);
+  }
+}
+
+.navMenu_Item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+
+  >svg {
+    width: #{toRem(24)};
+    height: #{toRem(24)};
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: var(--link-hover);
+
+    >svg {
+      transform: translateY(5px);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  &:focus-visible {
+    @include outline;
+  }
+}

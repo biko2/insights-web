@@ -3,114 +3,68 @@
 @import "../../styles/tools/mixins/titleFont.scss";
 @import "../../styles/tools/mixins/textFont.scss";
 @import '../../styles/tools/mixins/outline.scss';
+@import "../../styles/tools/mixins/gridLayout.scss";
+@import "../../styles/tools/mixins/container.scss";
 
-.introSection {
+.introductionSection {
   background-color: var(--background-primary-default);
 }
 
-.heroContainer {
+.hero {
+  @include gridLayout;
+  @include fullWidthContainerLateralPadding;
+
+  padding-top: var(--space-5xl);
+
+  min-height: 100dvh;
+  width: 100%;
+
   color: var(--background-default);
-  background: url("/images/bg-small.jpg") no-repeat;
+
+  background: url("/images/bg-medium.jpg") no-repeat;
   background-position: center;
   background-size: cover;
 
-  @include media($tablet) {
-    background: url("/images/bg-medium.jpg") no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  @include media($laptop) {
+  @media #{$fromLaptop} {
     background: linear-gradient(to right,
         var(--background-primary-default) 50%,
         transparent 50%),
       url("/images/bg-medium.jpg") no-repeat;
-    background-size: contain;
     background-position: right;
-  }
-
-  @include media($desktop) {
-    background: linear-gradient(to right,
-        var(--background-primary-default) 50%,
-        transparent 50%),
-      url("/images/bg-2xlarge.jpg") no-repeat center center;
     background-size: contain;
-    background-position: right;
-  }
-
-  @include media($largeDesktop) {
-    background: linear-gradient(to right,
-        var(--background-primary-default) 50%,
-        transparent 50%),
-      url("/images/bg-2xlarge.jpg") no-repeat center center;
-    background-size: contain;
-    background-position: right;
   }
 }
 
-.link {
-  text-decoration: underline;
+.hero_content {
+  grid-column: 1 / -1;
 
-  transition: color 0.2s ease-in-out;
-
-  &:link,
-  &:visited {
-    text-decoration: underline;
-  }
-
-  &:focus-visible {
-    @include outline;
-  }
-
-  &:hover {
-    color: var(--link-hover);
-  }
-}
-
-.heroWrapper {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  padding-bottom: var(--space-xl);
-  ;
-  min-height: 100dvh;
-
-  @include media($tablet) {
-    padding-bottom: 0;
-  }
-}
-
-.heroLogo {
-  width: auto;
-  max-width: 100%;
-  height: 31px;
-
-  @include media($desktop) {
-    height: 42px;
-  }
-}
-
-.heroContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  @include media($laptop) {
-    padding-left: var(--space-5xl);
-    padding-right: var(--space-5xl);
+  min-height: calc(100vh - var(--space-6xl)); // Es necesario restar el padding que hemos dejado para la cabecera.
+
+  @media #{$fromLaptop} {
+    grid-column: 2 / 10;
+  }
+
+  @media #{$fromDesktop} {
+    grid-column: 2 / 9;
   }
 }
 
-.scrollText {
+.scrollPage {
   display: none;
 
-  @include media($tablet) {
-    display: flex;
-
+  @media #{$fromTablet} {
     position: absolute;
-    @include textFontS;
-    text-transform: uppercase;
     bottom: 2%;
     right: 5%;
+
+    display: flex;
+
+    @include textFontS;
+    text-transform: uppercase;
 
     >img {
       margin-top: var(--space-xl);
@@ -119,76 +73,32 @@
   }
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding-top: var(--space-l);
-  gap: 18px;
-  margin-bottom: var(--space-xl);
-  ;
-
-  @include media($tablet) {
-    margin-bottom: 0px;
-  }
-}
-
-.heroLead {
+.pageTitle {
   @include displayFontL;
 
   margin-bottom: var(--space-xl);
-  ;
-  font-weight: bold;
+  font-weight: 700;
 
-  @include media($tablet) {
+  @media #{$fromTablet} {
     margin-bottom: var(--space-3xl);
   }
-
-  @include media($laptop) {
-    width: 88%;
-  }
-
-  @include media($desktop) {
-    width: 70%;
-  }
 }
 
-.highlightHero {
-  color: var(--content-highlight);
+.caption {
+  @include textFontXS;
 }
 
-.highlight {
-  color: var(--content-highlight);
-  font-weight: bold;
-}
+.link {
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
 
-.headerItems {
-  display: none;
-
-  @include media($tablet) {
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-
-    gap: var(--space-l);
-  }
-}
-
-.headerItem {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  >svg {
-    transition: all 0.3s ease-in-out;
+  &:link,
+  &:visited {
+    text-decoration: underline;
   }
 
   &:hover {
     color: var(--link-hover);
-
-    >svg {
-      transform: translateY(5px);
-      transition: all 0.3s ease-in-out;
-    }
   }
 
   &:focus-visible {
@@ -196,56 +106,51 @@
   }
 }
 
-.flexbox {
+.insight_info {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--space-s);
 
-  @include media($tablet) {
+  margin-bottom: var(--space-xl);
+
+  @media #{$fromTablet} {
     flex-direction: row;
     align-items: flex-start;
     gap: var(--space-l);
+
+    margin-bottom: var(--space-3xl);
   }
 
-  @include media($desktop) {
+  @media #{$fromDesktop} {
     align-items: center;
   }
 }
 
-.insightNumber {
+.insight_number {
   @include displayFontXL;
 }
 
-.insight {
+.insight_title {
   @include textFontM;
 }
 
-.callToAction {
+.insight_download {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-
-  @include textFontS;
-  width: 100%;
-
-  @include media($tablet) {
-    margin-top: var(--space-3xl);
-    margin-bottom: var(--space-3xl);
-    width: fit-content;
-  }
+  gap: var(--space-xs);
 
   padding: var(--space-l);
+
+  width: 100%;
+
   background: var(--background-secondary-default);
   border: none;
   border-radius: var(--space-6xl);
-  font-weight: bold;
 
+  @include textFontS;
+  font-weight: bold;
   color: var(--background-default);
-  margin-top: var(--space-xl);
-  ;
-  margin-bottom: var(--space-xl);
-  ;
 
   transition: background 0.2s ease-in-out;
 
@@ -256,290 +161,12 @@
   &:focus-visible {
     @include outline;
   }
-}
 
-.detail {
-  @include textFontXS;
-}
-
-.bulletpoint {
-  margin-right: 12px;
-}
-
-.summary {
-  position: relative;
-
-  display: block;
-  padding-top: 192px;
-  padding-bottom: var(--space-5xl);
-
-  color: var(--background-default);
-
-  @include textFontM;
-  overflow-x: hidden;
-
-  z-index: 10;
-}
-
-.summaryImage {
-  position: absolute;
-  top: 29%;
-  left: 50%;
-  transform: translateX(-50%);
-  height: auto;
-  width: auto;
-
-  z-index: -2;
-
-  @include media($tablet) {
-    top: 32%;
+  @media #{$fromTablet} {
+    width: fit-content;
   }
 }
 
-.summaryWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.summaryFirstParagraph {
-  margin-bottom: var(--space-6xl);
-
-  @include media($tablet) {
-    margin-bottom: 156px;
-    width: 70%;
-  }
-
-  @include media($laptop) {
-    width: 50%;
-  }
-
-  @include media($largeDesktop) {
-    margin-bottom: 192px;
-  }
-
-  z-index: 10;
-}
-
-.summaryBackgroundWrapper {
-  position: relative;
-
-  z-index: 1;
-}
-
-.summaryTitle {
-  @include displayFontL;
-
-  margin-bottom: var(--space-3xl);
-  text-transform: uppercase;
-
-  @include media($tablet) {
-    margin-left: var(--space-5xl);
-  }
-}
-
-.summarySecondParagraph {
-  margin-bottom: 36px;
-
-  @include media($tablet) {
-    width: 55%;
-  }
-
-  @include media($desktop) {
-    width: 50%;
-  }
-
-  @include media($largeDesktop) {
-    width: 40%;
-  }
-}
-
-.collectionTitle {
-  margin-bottom: var(--space-xl);
-  ;
-  margin-top: var(--space-5xl);
-
-  color: var(--background-primary-default);
-
-  @include displayFontL;
-
-  @include media($laptop) {
-    margin-bottom: var(--space-3xl);
-    margin-left: var(--space-5xl);
-  }
-}
-
-.collectionDescription {
-  margin-bottom: var(--space-xl);
-  ;
-
-  @include textFontM;
-
-  @include media($laptop) {
-    margin-bottom: var(--space-3xl);
-    margin-left: var(--space-5xl);
-  }
-}
-
-.collectionWrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  column-gap: var(--space-l);
-  row-gap: var(--space-3xl);
-
-  margin-bottom: var(--space-5xl);
-
-  @include media($tablet) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @include media($desktop) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-.collectionItemImage {
-  margin-bottom: var(--space-l);
-  border: 1px solid var(--background-medium);
-  width: 100%;
-  height: auto;
-}
-
-.collectionItemTitle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding-bottom: var(--space-l);
-
-  color: var(--background-primary-default);
-  text-transform: uppercase;
-
-  border-bottom: 2px solid var(--background-primary-default);
-}
-
-.collectionItemTitleContent {
-  display: flex;
-  gap: 12px;
-
-  @include textFontM;
-}
-
-.collectionDate {
-  color: var(--content-light-body);
-}
-
-.collectionItemListTitle {
-  @include textFontS;
-  padding-top: var(--space-l);
-  margin-bottom: 8px;
-  color: var(--background-primary-default);
-}
-
-.collectionItemListDescription {
-  @include textFontXS;
-  color: var(--content-body);
-  padding-bottom: var(--space-m);
-
-  border-bottom: 2px solid var(--border);
-}
-
-.footer {
-  @include textFontXS;
-
-  padding-top: var(--space-5xl);
-  padding-bottom: var(--space-l);
-
-  background-color: var(--background-primary-default);
-  color: var(--background-default);
-}
-
-.footerWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: var(--space-xl);
-  ;
-}
-
-.footerText {
-  text-align: center;
-}
-
-.insightLink {
-  display: inline;
-  vertical-align: bottom;
-
-  &:hover {
-    color: #bf0808;
-  }
-}
-
-.firstHexagon {
-  top: -7%;
-  left: 10%;
-}
-
-.secondHexagon {
-  top: 17%;
-  left: 80%;
-
-  @include media($laptop) {
-    left: 45%;
-  }
-}
-
-.thirdHexagon {
-  display: none;
-
-  @include media($tablet) {
-    display: block;
-    top: 72%;
-    left: 15%;
-  }
-}
-
-.fourthHexagon {
-  display: none;
-
-  @include media($desktop) {
-    display: block;
-    top: 90%;
-    left: 45%;
-  }
-}
-
-.hexagon {
-  position: absolute;
-  height: 56px;
-
-  @include media($tablet) {
-    height: var(--space-5xl);
-  }
-
-  @include media($desktop) {
-    height: var(--space-6xl);
-  }
-
-  z-index: -1;
-}
-
-.download {
-  color: var(--background-secondary-default);
-
-  transition: color 0.2s ease-in-out;
-
-  &:link,
-  &:visited {
-    color: var(--background-secondary-default);
-  }
-
-  &:hover {
-    color: var(--background-secondary-default-hover);
-  }
-
-  &:focus-visible {
-    @include outline;
-  }
+.highlightedText {
+  color: var(--content-highlight);
 }

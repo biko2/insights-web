@@ -1,0 +1,128 @@
+@import "../../styles/tools/mediaQueries.scss";
+@import "../../styles/tools/mixins/displayFont.scss";
+@import "../../styles/tools/mixins/textFont.scss";
+@import "../../styles/tools/mixins/gridLayout.scss";
+@import "../../styles/tools/mixins/container.scss";
+@import "../../styles/tools/functions.scss";
+
+.summary {
+    @include gridLayout;
+    @include fullWidthContainerLateralPadding;
+
+    position: relative;
+
+    padding-top: var(--space-5xl);
+    padding-bottom: var(--space-5xl);
+
+    color: var(--background-default);
+    background-color: var(--background-primary-default);
+
+    @include textFontM;
+
+    overflow-x: hidden;
+    z-index: 10;
+}
+
+.summaryIntro {
+
+    margin-bottom: var(--space-l);
+
+    grid-column: 1 / -1;
+
+    @media #{$onlyTablet} {
+        grid-column: 3 / -1;
+    }
+
+    @media #{$onlyLaptop} {
+        grid-column: 7 / -1;
+    }
+
+    @media #{$fromDesktop} {
+        grid-column: 7 / 12;
+    }
+}
+
+.summaryImage {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    height: auto;
+    width: auto;
+
+    transform: translateX(-50%);
+    z-index: -2;
+}
+
+.summaryTitle {
+
+    grid-column: 1 / -1;
+    margin-bottom: var(--space-3xl);
+
+    @include displayFontL;
+    text-transform: uppercase;
+
+    @media #{$fromTablet} {
+        grid-column: 2 / -1;
+    }
+}
+
+.summaryContent {
+    margin-bottom: var(--space-2xl);
+
+    grid-column: 1 / -1;
+
+    @media #{$onlyTablet} {
+        grid-column: 1 / 6;
+    }
+
+    @media #{$onlyLaptop} {
+        grid-column: 1 / 7;
+    }
+
+    @media #{$fromDesktop} {
+        grid-column: 1 / 6;
+    }
+}
+
+.actionsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: var(--space-5xl);
+}
+
+.hexagon {
+    height: #{toRem(56)};
+
+    @media #{$fromTablet} {
+        height: var(--space-5xl);
+    }
+
+    @media #{$fromDesktop} {
+        height: var(--space-6xl);
+    }
+
+}
+
+.hexagon__top_left {
+    grid-column: 1 / -1;
+}
+
+.hexagon__top_right {
+    grid-column: 4 / -1;
+
+    @media #{$onlyTablet} {
+        grid-column: 7 / -1;
+    }
+
+    @media #{$onlyLaptop} {
+        grid-column: 5 / -1;
+        margin-left: var(--space-3xl);
+    }
+
+    @media #{$fromDesktop} {
+        grid-column: 5 / -1;
+        margin-left: var(--space-4xl);
+    }
+}
