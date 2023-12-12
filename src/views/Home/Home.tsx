@@ -276,7 +276,7 @@ export const Home: React.FC = () => {
             No te preocupes, aquí tienes las ediciones anteriores:
           </p>
 
-          <div className={styles.collection_item}>
+          <article className={styles.collection_item}>
             <img
               className={styles.item_image}
               src="/images/img-biko-insights-5.webp"
@@ -330,8 +330,8 @@ export const Home: React.FC = () => {
                 </p>
               </li>
             </ul>
-          </div>
-          <div className={styles.collection_item}>
+          </article>
+          <article className={styles.collection_item}>
             <img
               className={styles.item_image}
               src="/images/img-biko-insights-4.webp"
@@ -382,8 +382,8 @@ export const Home: React.FC = () => {
                 </p>
               </li>
             </ul>
-          </div>
-          <div className={styles.collection_item}>
+          </article>
+          <article className={styles.collection_item}>
             <img
               className={styles.item_image}
               src="/images/img-biko-insights-3.webp"
@@ -431,8 +431,8 @@ export const Home: React.FC = () => {
                 </p>
               </li>
             </ul>
-          </div>
-          <div className={styles.collection_item}>
+          </article>
+          <article className={styles.collection_item}>
             <img
               className={styles.item_image}
               src="/images/img-biko-insights-2.webp"
@@ -472,8 +472,8 @@ export const Home: React.FC = () => {
                 </p>
               </li>
             </ul>
-          </div>
-          <div className={styles.collection_item}>
+          </article>
+          <article className={styles.collection_item}>
             <img
               className={styles.item_image}
               src="/images/img-biko-insights-1.webp"
@@ -517,7 +517,7 @@ export const Home: React.FC = () => {
                 </p>
               </li>
             </ul>
-          </div>
+          </article>
         </section>
       </main>
 
