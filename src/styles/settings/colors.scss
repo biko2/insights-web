@@ -1,22 +1,26 @@
 :root {
-    --background-default: #ffffff;
-    --background-medium: #b5b5b5;
-    --background-primary-default: #040066;
-    --background-primary-medium: #040ab2;
-    --background-secondary-default: #f00a0a;
-    --background-secondary-default-hover: #bf0808;
-    --link-hover: #a3c4ff;
+  --background-default: #ffffff;
+  --background-medium: #b5b5b5;
+  --background-primary-default: #040066;
+  --background-primary-medium: #040ab2;
+  --background-secondary-default: #f00a0a;
+  --background-secondary-default-hover: #bf0808;
+  --link-hover: #a3c4ff;
 
-    --secondary-grey: #2e2e2e;
-    --secondary-grey-500: #828282;
-    --primary-blue: #040066;
+  --secondary-grey: #2e2e2e;
+  --secondary-grey-500: #828282;
+  --primary-blue: #040066;
 
-    --content-highlight: #ff8982;
-    --content-body: #3e3e3e;
-    --content-light-body: #696969;
+  --content-highlight: #ff8982;
+  --content-body: #3e3e3e;
+  --content-light-body: #696969;
 
-    --border: #e8e8e8;
-    --focus-outline: #3c82ff;
+  --border: #e8e8e8;
+  --focus-outline: #3c82ff;
 
-    --jakala-primitive-color-primary-blue-900: #020033;
+  --jakala-primitive-color-primary-blue-900: #020033;
+
+  --background-dark: #1c1c1c;
+  --jakala-primitive-color-primary-blue-50: #f0f5ff;
+  --secondary-grey-jakala-global-color-secondary-grey-50: #f5f5f5;
 }

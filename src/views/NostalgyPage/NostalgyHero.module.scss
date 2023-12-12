@@ -1,0 +1,82 @@
+@import "../../styles/tools/mediaQueries.scss";
+@import "../../styles/tools/mixins/titleFont.scss";
+@import "../../styles/tools/mixins/textFont.scss";
+@import "../../styles/tools/mixins/gridLayout.scss";
+
+.hero {
+  position: relative;
+  @include gridLayout;
+
+  margin-bottom: var(--space-5xl);
+
+  @media #{$fromDesktop} {
+    margin-bottom: var(--space-6xl);
+  }
+}
+
+.heroPicture {
+  grid-column: 1 / -1;
+}
+
+.heroImage {
+  // TO DO: Faltaría poner el cropped de las esquinas!!
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 1/1;
+  object-fit: cover;
+
+  @media #{$fromLaptop} {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+}
+
+.heroContent {
+  grid-column: 1 / -1;
+
+  background-color: var(--background-dark);
+
+  border-bottom-left-radius: var(--space-m);
+  border-bottom-right-radius: var(--space-m);
+
+  @media #{$fromTablet} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    grid-column: 2 / 8;
+    padding: var(--space-3xl);
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media #{$fromLaptop} {
+    grid-column: 3 / 11;
+  }
+}
+
+.heroAuthorship {
+  @include textFontXS;
+  color: var(--background-medium);
+
+  margin-bottom: var(--space-3xl);
+
+  @media #{$onlyMobile} {
+    margin-top: var(--space-3xl);
+  }
+}
+
+.heroTitle {
+  margin-bottom: var(--space-s);
+
+  @include titleFontXXL;
+  color: var(--jakala-primitive-color-primary-blue-50);
+}
+
+.heroDescription {
+  @include textFontL;
+  color: var(--secondary-grey);
+}
