@@ -7,6 +7,8 @@
   @include container;
 
   overflow: hidden;
+
+  background-color: var(--background-dark);
 }
 
 .articleContent {
@@ -17,11 +19,15 @@
   row-gap: var(--space-5xl);
   margin-bottom: var(--space-5xl);
 
-  color: white;
-
   @media #{$fromDesktop} {
     row-gap: var(--space-6xl);
     margin-bottom: var(--space-6xl);
+  }
+
+  * {
+    color: var(
+      --secondary-grey-jakala-global-color-secondary-grey-50
+    ) !important;
   }
 }
 
@@ -31,5 +37,17 @@
 
   @media #{$fromDesktop} {
     margin-bottom: var(--space-6xl);
+  }
+}
+
+.bottomLinks {
+  @include container;
+
+  padding-top: var(--space-5xl);
+
+  background-color: white;
+
+  @media #{$fromDesktop} {
+    padding-top: var(--space-6xl);
   }
 }

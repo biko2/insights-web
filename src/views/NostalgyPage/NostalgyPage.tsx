@@ -88,7 +88,8 @@ export const NostalgyPage: React.FC<React.PropsWithChildren<Props>> = ({
             {authorshipSubtitle}
           </span>
         </section>
-
+      </main>
+      <div className={styles.bottomLinks}>
         <section className={styles.banner}>
           <p className="mb-l">
             Si lo prefieres, puedes descargarte la revista de BikoInsights #6 en
@@ -137,7 +138,7 @@ export const NostalgyPage: React.FC<React.PropsWithChildren<Props>> = ({
             TOP
           </a>
         </section>
-      </main>
+      </div>
 
       <footer className={styles.footer}>
         <img src="/icons/jakala.svg" alt="Logo de Jakala" />
