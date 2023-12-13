@@ -1,0 +1,9 @@
+@import "../../styles/tools/mediaQueries.scss";
+
+.spacing {
+  height: 72px;
+
+  @media #{$fromDesktop} {
+    height: 104px;
+  }
+}
