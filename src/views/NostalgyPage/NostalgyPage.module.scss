@@ -1,6 +1,7 @@
 @import "../../styles/tools/mediaQueries.scss";
 @import "../../styles/tools/mixins/container.scss";
 @import "../../styles/tools/mixins/gridLayout.scss";
+@import "../../styles/tools/functions.scss";
 
 .mainContent {
   position: relative;
@@ -45,9 +46,18 @@
 
   padding-top: var(--space-5xl);
 
-  background-color: white;
+  background-color: var(--background-default);
 
   @media #{$fromDesktop} {
     padding-top: var(--space-6xl);
   }
+}
+
+.nostalgy_authorship {
+  color: var(--background-default);
+}
+.nostalgy_authorship__subtitle {
+  margin-left: #{toRem(20)};
+
+  color: var(--background-medium);
 }

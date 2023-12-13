@@ -70,7 +70,12 @@ export const NostalgyPage: React.FC<React.PropsWithChildren<Props>> = ({
         <article className={styles.articleContent}>{children}</article>
 
         <section className={styles.articleFooter}>
-          <span className={styles.authorship}>
+          <span
+            className={classNames(
+              styles.authorship,
+              styles.nostalgy_authorship
+            )}
+          >
             <img
               className="mr-s"
               src="/icons/bullet-red.svg"
@@ -82,7 +87,7 @@ export const NostalgyPage: React.FC<React.PropsWithChildren<Props>> = ({
           <span
             className={classNames(
               styles.authorship,
-              styles.authorship__subtitle
+              styles.nostalgy_authorship__subtitle
             )}
           >
             {authorshipSubtitle}
