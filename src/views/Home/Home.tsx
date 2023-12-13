@@ -230,9 +230,22 @@ export const Home: React.FC = () => {
                 </a>
               </li>
               <li className={styles.summaryList_Box}>
-                <h3 className={styles.summaryList_Title}>
-                  Nostalgia para combatir el aburrimiento
-                </h3>
+                <a
+                  className={styles.summaryList_Link}
+                  href="/nostalgia-para-combatir-el-aburrimiento"
+                >
+                  <h3 className={styles.summaryList_Title}>
+                    Nostalgia para combatir el aburrimiento
+                  </h3>
+
+                  <svg
+                    style={{ width: 44, height: 44 }}
+                    role="img"
+                    aria-label="Lee el artículo 'Nostalgia para combatir el aburrimiento'"
+                  >
+                    <use xlinkHref={"/sprite.svg#jakala-arrow"} />
+                  </svg>
+                </a>
               </li>
               <li className={styles.summaryList_Box}>
                 <h3 className={styles.summaryList_Title}>
