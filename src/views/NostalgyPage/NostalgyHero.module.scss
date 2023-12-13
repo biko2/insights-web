@@ -69,6 +69,7 @@
 
 .heroTitle {
   margin-bottom: var(--space-s);
+  max-width: #{toRem(366)};
 
   @include titleFontXXL;
   color: var(--jakala-primitive-color-primary-blue-50);
