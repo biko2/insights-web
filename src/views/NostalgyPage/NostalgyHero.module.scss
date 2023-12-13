@@ -74,6 +74,12 @@
   color: var(--jakala-primitive-color-primary-blue-50);
 }
 
+.heroTitleImage {
+  @media #{$onlyMobile} {
+    width: #{toRem(302)};
+  }
+}
+
 .heroDescription {
   @include textFontL;
   color: var(--secondary-grey);

@@ -61,7 +61,15 @@ export const NostalgyPage: React.FC<React.PropsWithChildren<Props>> = ({
               {authorship}
             </div>
 
-            <h1 className={styles.heroTitle}>{title}</h1>
+            <h1 className={styles.heroTitle}>
+              <img
+                className={styles.heroTitleImage}
+                src="/images/nostalgia-para-combatir/nostalgia.svg"
+                alt="Palabra: nostalgia"
+              />
+              <br />
+              {title}
+            </h1>
 
             <p className={styles.heroDescription}>{description}</p>
           </div>
