@@ -2,16 +2,12 @@
 @import "../../styles/tools/mixins/titleFont.scss";
 @import "../../styles/tools/mixins/textFont.scss";
 @import "../../styles/tools/mixins/gridLayout.scss";
+@import "../../styles/tools/mixins/container.scss";
 
 .hero {
   position: relative;
+
   @include gridLayout;
-
-  margin-bottom: var(--space-5xl);
-
-  @media #{$fromDesktop} {
-    margin-bottom: var(--space-6xl);
-  }
 }
 
 .heroPicture {

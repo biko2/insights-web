@@ -41,68 +41,71 @@ export const NostalgyPage: React.FC<React.PropsWithChildren<Props>> = ({
       <Header audioSrc={audioSrc} />
 
       <main className={styles.mainContent}>
-        <section className={styles.hero}>
-          <picture className={styles.heroPicture}>
-            <img
-              className={styles.heroImage}
-              src={heroImageUrl}
-              alt={heroImageAlt}
-            />
-          </picture>
+        <div className={styles.wrapper}>
+          <article className={styles.articleContent}>
+            <section className={styles.hero}>
+              <picture className={styles.heroPicture}>
+                <img
+                  className={styles.heroImage}
+                  src={heroImageUrl}
+                  alt={heroImageAlt}
+                />
+              </picture>
 
-          <div className={styles.heroContent}>
-            <div className={styles.heroAuthorship}>
-              <img
-                className="mr-s"
-                src="/icons/bullet-red.svg"
-                alt=""
-                aria-hidden="true"
-              />
-              {authorship}
-            </div>
+              <div className={styles.heroContent}>
+                <div className={styles.heroAuthorship}>
+                  <img
+                    className="mr-s"
+                    src="/icons/bullet-red.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  {authorship}
+                </div>
 
-            <h1 className={styles.heroTitle}>
-              <img
-                className={styles.heroTitleImage}
-                src="/images/nostalgia-para-combatir/nostalgia.svg"
-                alt="Palabra: nostalgia"
-              />
-              <br />
-              {title}
-            </h1>
+                <h1 className={styles.heroTitle}>
+                  <img
+                    className={styles.heroTitleImage}
+                    src="/images/nostalgia-para-combatir/nostalgia.svg"
+                    alt="Palabra: nostalgia"
+                  />
+                  <br />
+                  {title}
+                </h1>
 
-            <p className={styles.heroDescription}>{description}</p>
-          </div>
-        </section>
+                <p className={styles.heroDescription}>{description}</p>
+              </div>
+            </section>
 
-        <article className={styles.articleContent}>{children}</article>
+            {children}
 
-        <section className={styles.articleFooter}>
-          <span
-            className={classNames(
-              styles.authorship,
-              styles.nostalgy_authorship
-            )}
-          >
-            <img
-              className="mr-s"
-              src="/icons/bullet-red.svg"
-              alt=""
-              aria-hidden="true"
-            />
-            {authorship}
-          </span>
-          <span
-            className={classNames(
-              styles.authorship,
-              styles.nostalgy_authorship__subtitle
-            )}
-          >
-            {authorshipSubtitle}
-          </span>
-        </section>
-      </main>
-      <div className={styles.bottomLinks}>
+            <section className={styles.articleFooter}>
+              <span
+                className={classNames(
+                  styles.authorship,
+                  styles.nostalgy_authorship
+                )}
+              >
+                <img
+                  className="mr-s"
+                  src="/icons/bullet-red.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                {authorship}
+              </span>
+              <span
+                className={classNames(
+                  styles.authorship,
+                  styles.nostalgy_authorship__subtitle
+                )}
+              >
+                {authorshipSubtitle}
+              </span>
+            </section>
+          </article>
+        </div>
+
         <section className={styles.banner}>
           <p className="mb-l">
             Si lo prefieres, puedes descargarte la revista de BikoInsights #6 en
@@ -151,7 +154,7 @@ export const NostalgyPage: React.FC<React.PropsWithChildren<Props>> = ({
             TOP
           </a>
         </section>
-      </div>
+      </main>
 
       <footer className={styles.footer}>
         <img src="/icons/jakala.svg" alt="Logo de Jakala" />
