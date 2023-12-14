@@ -8,6 +8,13 @@
   position: relative;
 
   @include gridLayout;
+  @include container;
+
+  margin-bottom: var(--space-5xl);
+
+  @media #{$fromDesktop} {
+    margin-bottom: var(--space-6xl);
+  }
 }
 
 .heroPicture {

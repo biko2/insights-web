@@ -42,41 +42,49 @@ export const NostalgyPage: React.FC<React.PropsWithChildren<Props>> = ({
 
       <main className={styles.mainContent}>
         <div className={styles.wrapper}>
-          <article className={styles.articleContent}>
-            <section className={styles.hero}>
-              <picture className={styles.heroPicture}>
+          <section className={styles.hero}>
+            <picture className={styles.heroPicture}>
+              <img
+                className={styles.heroImage}
+                src={heroImageUrl}
+                alt={heroImageAlt}
+              />
+            </picture>
+
+            <div className={styles.heroContent}>
+              <div className={styles.heroAuthorship}>
                 <img
-                  className={styles.heroImage}
-                  src={heroImageUrl}
-                  alt={heroImageAlt}
+                  className="mr-s"
+                  src="/icons/bullet-red.svg"
+                  alt=""
+                  aria-hidden="true"
                 />
-              </picture>
-
-              <div className={styles.heroContent}>
-                <div className={styles.heroAuthorship}>
-                  <img
-                    className="mr-s"
-                    src="/icons/bullet-red.svg"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  {authorship}
-                </div>
-
-                <h1 className={styles.heroTitle}>
-                  <img
-                    className={styles.heroTitleImage}
-                    src="/images/nostalgia-para-combatir/nostalgia.svg"
-                    alt="Palabra: nostalgia"
-                  />
-                  <br />
-                  {title}
-                </h1>
-
-                <p className={styles.heroDescription}>{description}</p>
+                {authorship}
               </div>
-            </section>
 
+              <h1 className={styles.heroTitle}>
+                <img
+                  className={styles.heroTitleImage}
+                  src="/images/nostalgia-para-combatir/nostalgia.svg"
+                  alt="Palabra: nostalgia"
+                />
+                <br />
+                {title}
+              </h1>
+
+              <p className={styles.heroDescription}>{description}</p>
+            </div>
+          </section>
+
+          <article className={styles.articleContent}>
+            <img
+              className={styles.backgroundBlur}
+              src="/images/nostalgia-para-combatir/bg-blur.webp"
+            />
+            <img
+              className={styles.backgroundStar}
+              src="/images/nostalgia-para-combatir/bg-star.webp"
+            />
             {children}
 
             <section className={styles.articleFooter}>
