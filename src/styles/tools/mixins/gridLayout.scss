@@ -16,8 +16,7 @@
     column-gap: var(--grid-gutter-gap);
   }
 
-  * {
+  &:has(*) {
     grid-column: 1 / -1;
   }
-
 }
