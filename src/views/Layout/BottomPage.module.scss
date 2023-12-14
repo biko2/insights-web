@@ -2,151 +2,146 @@
 @import "../../styles/tools/mixins/displayFont.scss";
 @import "../../styles/tools/mixins/titleFont.scss";
 @import "../../styles/tools/mixins/textFont.scss";
-@import '../../styles/tools/mixins/container.scss';
-@import '../../styles/tools/mixins/outline.scss';
-@import '../../styles/tools/mixins/gridLayout.scss';
+@import "../../styles/tools/mixins/container.scss";
+@import "../../styles/tools/mixins/outline.scss";
+@import "../../styles/tools/mixins/gridLayout.scss";
 @import "../../styles/tools/mixins/paragraphLayout.scss";
 
-
 .authorship {
-    @include textFontXS;
-    color: var(--secondary-grey);
+  @include textFontXS;
+  color: var(--secondary-grey);
 
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 
-    @media #{$onlyTablet} {
-        grid-column: 2 / 8;
-    }
+  @media #{$onlyTablet} {
+    grid-column: 2 / 8;
+  }
 
-    @media #{$onlyLaptop} {
-        grid-column: 3 / 11;
-    }
+  @media #{$onlyLaptop} {
+    grid-column: 3 / 11;
+  }
 
-    @media #{$fromDesktop} {
-        grid-column: 4 / 11;
-    }
+  @media #{$fromDesktop} {
+    grid-column: 4 / 11;
+  }
 }
 
 .authorship__subtitle {
-    margin-left:#{toRem(20)};
+  margin-left: #{toRem(20)};
 
-    color: var(--secondary-grey-500);
+  color: var(--secondary-grey-500);
 }
 
 .banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    padding: var(--space-l);
-    margin-bottom: var(--space-3xl);
+  padding: var(--space-l);
+  margin-bottom: var(--space-3xl);
 
-    background-color: var(--jakala-primitive-color-primary-blue-900);
-    border-radius: var(--space-m);
+  background-color: var(--jakala-primitive-color-primary-blue-900);
+  border-radius: var(--space-m);
 
-    @include textFontS;
-    color: var(--background-default);
-    text-align: center;
+  @include textFontS;
+  color: var(--background-default);
+  text-align: center;
 
-    @media #{$fromTablet} {
-        padding: var(--space-4xl);
-    }
+  @media #{$fromTablet} {
+    padding: var(--space-4xl);
+  }
 }
 
 .downloadLink {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-s);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-s);
 
-    width: 100%;
+  width: 100%;
 
-    padding: var(--space-l);
+  padding: var(--space-l);
 
+  background: var(--background-secondary-default);
+  border: none;
+  border-radius: var(--space-6xl);
 
-    background: var(--background-secondary-default);
-    border: none;
-    border-radius: var(--space-6xl);
+  @include textFontS;
+  font-weight: bold;
+  color: var(--background-default);
 
-    @include textFontS;
-    font-weight: bold;
+  transition: background 0.2s ease-in-out;
+
+  &:focus-visible {
+    @include outline;
+  }
+
+  &:link,
+  &:visited {
     color: var(--background-default);
+  }
 
-    transition: background 0.2s ease-in-out;
+  &:hover {
+    background: var(--background-secondary-default-hover);
+  }
 
-
-    &:focus-visible {
-        @include outline;
-    }
-
-
-    &:link,
-    &:visited {
-        color: var(--background-default);
-    }
-
-    &:hover {
-        background: var(--background-secondary-default-hover);
-    }
-
-    @media #{$fromTablet} {
-        width: fit-content;
-    }
-
+  @media #{$fromTablet} {
+    width: fit-content;
+  }
 }
 
 .caption {
-    margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-xl);
 
-    color: var(--primary-blue);
-    @include textFontXS;
+  color: var(--primary-blue);
+  @include textFontXS;
 
-    @media #{$fromDesktop} {
-        margin-bottom: var(--space-4xl);
-    }
+  @media #{$fromDesktop} {
+    margin-bottom: var(--space-4xl);
+  }
 }
 
 .caption_link {
+  text-decoration: underline;
+
+  transition: color 0.2s ease-in-out;
+
+  &:focus-visible {
+    @include outline;
+  }
+
+  &:link,
+  &:visited {
     text-decoration: underline;
+  }
 
-    transition: color 0.2s ease-in-out;
-
-    &:focus-visible {
-        @include outline;
-    }
-
-    &:link,
-    &:visited {
-        text-decoration: underline;
-    }
-
-    &:hover {
-        color: var(--link-hover);
-    }
+  &:hover {
+    color: var(--background-secondary-default-hover);
+  }
 }
 
 .goToTop {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .goToTop_link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: var(--space-xs);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--space-xs);
 
-    gap: var(--space-xs);
+  gap: var(--space-xs);
 
+  color: var(--secondary-grey-500);
+
+  &:link,
+  &:visited {
     color: var(--secondary-grey-500);
+  }
 
-    &:link,
-    &:visited {
-        color: var(--secondary-grey-500);
-    }
-
-    &:focus-visible {
-        @include outline;
-    }
+  &:focus-visible {
+    @include outline;
+  }
 }
