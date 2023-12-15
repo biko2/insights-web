@@ -10,43 +10,34 @@
 
 .backgroundBlur {
   position: absolute;
-  top: 900px;
-  right: -150px;
+  top: #{toRem(150)};
+  right: #{toRem(-150)};
   transform: rotate(173deg);
 
   @media #{$fromTablet} {
-    top: 860px;
-    left: -150px;
+    top: #{toRem(20)};
+    left: #{toRem(-150)};
     transform: none;
-  }
-
-  @media #{$fromLaptop} {
-    top: 680px;
-    left: -120px;
-  }
-
-  @media #{$fromDesktop} {
-    top: 900px;
   }
 }
 
 .backgroundStar {
   position: absolute;
-  top: 1640px;
-  right: -380px;
+  top: #{toRem(880)};
+  right: #{toRem(-380)};
 
   @media #{$fromTablet} {
-    top: 1500px;
-    right: -410px;
+    top: #{toRem(680)};
+    right: #{toRem(-320)};
   }
 
   @media #{$fromLaptop} {
-    top: 1200px;
-    right: -300px;
+    top: #{toRem(600)};
+    right: #{toRem(-280)};
   }
 
   @media #{$fromDesktop} {
-    top: 1500px;
+    right: #{toRem(-180)};
   }
 }
 
