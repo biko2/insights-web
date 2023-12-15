@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { classNames } from "../../utilities/classnames";
-import bottomPage from "../Layout/BottomPage.module.scss";
-import footer from "../Layout/Footer.module.scss";
-import { Header } from "../Layout/Header/Header";
-import subHeader from "../Layout/SubHeader.module.scss";
-import hero from "./NostalgyHero.module.scss";
-import nostalgyPage from "./NostalgyPage.module.scss";
+import { classNames } from '../../utilities/classnames';
+import bottomPage from '../Layout/BottomPage.module.scss';
+import footer from '../Layout/Footer.module.scss';
+import { Header } from '../Layout/Header/Header';
+import subHeader from '../Layout/SubHeader.module.scss';
+import hero from './NostalgyHero.module.scss';
+import nostalgyPage from './NostalgyPage.module.scss';
 
 const styles = {
   ...footer,
@@ -36,6 +36,8 @@ export const NostalgyPage: React.FC<React.PropsWithChildren<Props>> = ({
   authorshipSubtitle,
   audioSrc,
 }) => {
+  const titleWithoutNostalgia = title.replace("Nostalgia ", "");
+
   return (
     <>
       <Header audioSrc={audioSrc} />
@@ -63,13 +65,15 @@ export const NostalgyPage: React.FC<React.PropsWithChildren<Props>> = ({
               </div>
 
               <h1 className={styles.heroTitle}>
+                <span className="visually-hidden">{title}</span>
                 <img
                   className={styles.heroTitleImage}
                   src="/images/nostalgia-para-combatir/nostalgia.svg"
                   alt="Palabra: nostalgia"
+                  aria-hidden="true"
                 />
                 <br />
-                {title}
+                <span aria-hidden="true">{titleWithoutNostalgia}</span>
               </h1>
 
               <p className={styles.heroDescription}>{description}</p>
