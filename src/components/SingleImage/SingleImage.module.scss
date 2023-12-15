@@ -1,0 +1,12 @@
+@import "../../styles/tools/mediaQueries.scss";
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-5xl);
+
+  @media #{$fromDesktop} {
+    margin-bottom: var(--space-6xl);
+  }
+}

@@ -3,6 +3,7 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import { ArticlePage } from "../views/ArticlePage/ArticlePage";
 import { EditorialPage } from "../views/EditorialPage/EditorialPage";
+import { NostalgyPage } from "../views/NostalgyPage/NostalgyPage";
 
 import { blogTags } from "../components/blogTags";
 
@@ -26,18 +27,39 @@ const { Content } = await post.render();
   metaImageSrc={post.data.metaImageSrc}
   metaImageAlt={post.data.metaImageAlt}
 >
-  { post.data.type === "editorial" ?  
-    <EditorialPage
-      client:load
-      title={post.data.title}
-      authorship={post.data.authorship}
-      authorshipSubtitle={post.data.authorshipSubtitle}
-      audioSrc={post.data.audioSrc}
-    >
-      <Content components={blogTags} />
-    </EditorialPage>
-    : 
-    <ArticlePage 
+  {
+    post.data.type === "editorial" && (
+      <EditorialPage
+        client:load
+        title={post.data.title}
+        authorship={post.data.authorship}
+        authorshipSubtitle={post.data.authorshipSubtitle}
+        audioSrc={post.data.audioSrc}
+      >
+        <Content components={blogTags} />
+      </EditorialPage>
+    )
+  }
+  {
+    post.data.type === "nostalgy" && (
+      <NostalgyPage
+        client:load
+        heroImageUrl={post.data.heroImageUrl}
+        heroImageAlt={post.data.heroImageAlt}
+        title={post.data.title}
+        description={post.data.description}
+        authorship={post.data.authorship}
+        authorshipSubtitle={post.data.authorshipSubtitle}
+        audioSrc={post.data.audioSrc}
+      >
+        <Content components={blogTags} />
+      </NostalgyPage>
+    )
+  }
+
+  {
+    !post.data.type && (
+      <ArticlePage
         client:load
         heroImageUrl={post.data.heroImageUrl}
         heroImageAlt={post.data.heroImageAlt}
@@ -49,8 +71,8 @@ const { Content } = await post.render();
       >
         <Content components={blogTags} />
       </ArticlePage>
+    )
   }
-
 </Layout>
 
 <script type="text/javascript">

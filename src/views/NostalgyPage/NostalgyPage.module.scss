@@ -1,0 +1,103 @@
+@import "../../styles/tools/mediaQueries.scss";
+@import "../../styles/tools/mixins/container.scss";
+@import "../../styles/tools/mixins/gridLayout.scss";
+@import "../../styles/tools/functions.scss";
+
+.mainContent {
+  position: relative;
+  @include container;
+}
+
+.backgroundBlur {
+  position: absolute;
+  top: #{toRem(150)};
+  right: #{toRem(-150)};
+  transform: rotate(173deg);
+
+  @media #{$fromTablet} {
+    top: #{toRem(20)};
+    left: #{toRem(-150)};
+    transform: none;
+  }
+}
+
+.backgroundStar {
+  position: absolute;
+  top: #{toRem(880)};
+  right: #{toRem(-380)};
+
+  @media #{$fromTablet} {
+    top: #{toRem(680)};
+    right: #{toRem(-320)};
+  }
+
+  @media #{$fromLaptop} {
+    top: #{toRem(600)};
+    right: #{toRem(-280)};
+  }
+
+  @media #{$fromDesktop} {
+    right: #{toRem(-180)};
+  }
+}
+
+.wrapper {
+  @include fullWidthContainer;
+
+  background-color: var(--background-dark);
+}
+
+.articleContent {
+  @include gridLayout;
+  @include container;
+
+  row-gap: var(--space-5xl);
+  margin-bottom: var(--space-5xl);
+
+  overflow: hidden;
+
+  @media #{$fromDesktop} {
+    row-gap: var(--space-6xl);
+    margin-bottom: var(--space-6xl);
+  }
+
+  @media #{$onlyDesktopLarge} {
+    overflow: visible;
+  }
+
+  * {
+    color: var(
+      --secondary-grey-jakala-global-color-secondary-grey-50
+    ) !important;
+  }
+}
+
+.articleFooter {
+  @include gridLayout;
+  margin-bottom: var(--space-5xl);
+
+  @media #{$fromDesktop} {
+    margin-bottom: var(--space-6xl);
+  }
+}
+
+.bottomLinks {
+  @include container;
+
+  padding-top: var(--space-5xl);
+
+  background-color: var(--background-default);
+
+  @media #{$fromDesktop} {
+    padding-top: var(--space-6xl);
+  }
+}
+
+.nostalgy_authorship {
+  color: var(--background-default);
+}
+.nostalgy_authorship__subtitle {
+  margin-left: #{toRem(20)};
+
+  color: var(--background-medium) !important;
+}
