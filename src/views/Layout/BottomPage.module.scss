@@ -96,7 +96,7 @@
   color: var(--primary-blue);
   @include textFontXS;
 
-  @media #{$fromDesktop} {
+  @media #{$fromLaptop} {
     margin-bottom: var(--space-4xl);
   }
 }
