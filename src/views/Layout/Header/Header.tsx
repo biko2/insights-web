@@ -17,14 +17,14 @@ export const Header: React.FC<Props> = ({ audioSrc }) => {
 
   return (
     <>
-      {openMenu && <MobileMenu isOpen={openMenu} onOpenMenu={handleMenu} />}
+      <MobileMenu isOpen={openMenu} onOpenMenu={handleMenu} />
 
       <header className={styles.header}>
         <div className={styles.mainHeader}>
           <a onClick={handleMenu} title="Abrir menú">
             <img
               className={styles.menuButton}
-              src="/icons/red-hexagon.svg"
+              src="/icons/menu.svg"
               alt="Logo de Jakala BikoInsights"
             />
           </a>

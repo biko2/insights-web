@@ -30,15 +30,15 @@ export const Home: React.FC = () => {
 
   return (
     <>
-      {openMenu && <MobileMenu isOpen={openMenu} onOpenMenu={handleMenu} />}
+      <MobileMenu isOpen={openMenu} onOpenMenu={handleMenu} />
 
       <header className={styles.header}>
         {!openMenu && (
           <a onClick={handleMenu} title="Abrir menú">
             <img
               className={styles.menuButton}
-              src="/icons/red-hexagon.svg"
-              alt="Logo de Jakala BikoInsights"
+              src="/icons/menu.svg"
+              aria-hidden="true"
             />
           </a>
         )}

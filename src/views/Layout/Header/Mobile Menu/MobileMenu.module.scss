@@ -4,19 +4,59 @@
 @import '../../../../styles/tools/mixins/outline.scss';
 @import "../../../../styles/tools/mixins/textFont.scss";
 
+@keyframes slidein {
+  from {
+    right: 100vw;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slideout {
+  from {
+    right: 0;
+  }
+
+  to {
+    right: 100vw;
+    display: none;
+  }
+}
+
 .mobileMenu {
+  display: none;
   position: absolute;
 
   padding: 0 var(--space-m);
+  top: 0;
+  right: 100vw;
 
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 
-  background: url("/images/bg-medium.jpg") no-repeat;
+  background: url("/images/bgmenu.jpg") no-repeat;
   background-position: center;
   background-size: cover;
 
   z-index: 1000;
+}
+
+.mobileMenu__open {
+  display: block;
+  right: 0;
+
+  animation-duration: 0.5s;
+  animation-name: slidein;
+}
+
+.mobileMenu__close {
+  display: block;
+  right: 100vw;
+
+  animation-duration: 0.5s;
+  animation-name: slideout;
 }
 
 .mobileMenu_header {
@@ -71,12 +111,17 @@
   border-bottom: 1px solid var(--border);
 
   color: var(--secondary-grey);
+  @include textFontL;
 
   &:not(:first-child) {
     margin-top: var(--space-m);
   }
 
-  &:hover :focus-visible {
+  & a:hover:active:link {
     color: var(--focus-outline);
+  }
+
+  & a:focus-visible {
+    @include outline;
   }
 }
