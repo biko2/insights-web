@@ -12,14 +12,41 @@
   right: 0;
   left: 0;
 
-  display: flex;
-  justify-content: space-between;
-  gap: var(--space-m);
   padding-top: var(--space-l);
   margin-bottom: var(--space-m);
 
   z-index: 100;
   background-color: transparent;
+
+  @media #{$onlyMobile} {
+    padding-left: var(--space-4xl);
+  }
+
+  @media #{$fromTablet} {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-m);
+  }
+}
+
+.menuButton {
+  position: absolute;
+
+  top: var(--space-s);
+  left: var(--space-m);
+  bottom: 0;
+  margin: auto;
+
+  width: auto;
+  max-width: 100%;
+  height: #{toRem(37)};
+
+  cursor: pointer;
+
+  @media #{$fromTablet} {
+    display: none;
+  }
+
 }
 
 .logo {

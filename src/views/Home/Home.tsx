@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { classNames } from "../../utilities/classnames";
 import container from "../Layout/Container.module.scss";
 import footer from "../Layout/Footer.module.scss";
+import { MobileMenu } from "../Layout/Header/Mobile Menu/MobileMenu";
 import collection from "./Collection.module.scss";
 import { DownlandLink } from "./DownlandLink/DownlandLink";
 import header from "./Header.module.scss";
@@ -21,9 +22,27 @@ const styles = {
 };
 
 export const Home: React.FC = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const handleMenu = () => {
+    setOpenMenu(!openMenu);
+  };
+
   return (
     <>
+      {openMenu && <MobileMenu isOpen={openMenu} onOpenMenu={handleMenu} />}
+
       <header className={styles.header}>
+        {!openMenu && (
+          <a onClick={handleMenu} title="Abrir menú">
+            <img
+              className={styles.menuButton}
+              src="/icons/red-hexagon.svg"
+              alt="Logo de Jakala BikoInsights"
+            />
+          </a>
+        )}
+
         <img
           className={styles.logo}
           src="/logo-bikoinsights.svg"

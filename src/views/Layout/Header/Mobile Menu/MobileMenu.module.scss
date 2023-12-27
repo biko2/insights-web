@@ -1,0 +1,82 @@
+@import "../../../../styles/tools/mediaQueries.scss";
+@import '../../../../styles/tools/mixins/container.scss';
+@import '../../../../styles/tools/functions.scss';
+@import '../../../../styles/tools/mixins/outline.scss';
+@import "../../../../styles/tools/mixins/textFont.scss";
+
+.mobileMenu {
+  position: absolute;
+
+  padding: 0 var(--space-m);
+
+  width: 100%;
+  height: 100vh;
+
+  background: url("/images/bg-medium.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  z-index: 1000;
+}
+
+.mobileMenu_header {
+  position: relative;
+
+  padding-left: var(--space-3xl);
+  padding-top: var(--space-l);
+
+  margin-bottom: var(--space-l);
+
+  z-index: 100;
+  background-color: transparent;
+}
+
+.mobileMenu_menuButton {
+  position: absolute;
+
+  top: var(--space-s);
+  left: 0;
+  bottom: 0;
+  margin: auto;
+
+  width: auto;
+  max-width: 100%;
+  height: #{toRem(37)};
+
+  cursor: pointer;
+}
+
+.mobileMenu_logo {
+  width: auto;
+  max-width: 100%;
+  height: #{toRem(31)};
+
+  @media #{$fromDesktop} {
+    height: #{toRem(42)};
+  }
+}
+
+.mobileMenu_list {
+  margin: 0 var(--space-m);
+  padding: var(--space-l);
+
+  background-color: var(--background-default);
+  border-radius: var(--space-xs);
+
+}
+
+.mobileMenu_listItem {
+  padding-bottom: var(--space-m);
+
+  border-bottom: 1px solid var(--border);
+
+  color: var(--secondary-grey);
+
+  &:not(:first-child) {
+    margin-top: var(--space-m);
+  }
+
+  &:hover :focus-visible {
+    color: var(--focus-outline);
+  }
+}
