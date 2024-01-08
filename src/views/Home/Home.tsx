@@ -247,16 +247,32 @@ export const Home: React.FC = () => {
                   </svg>
                 </a>
               </li>
+
               <li className={styles.summaryList_Box}>
-                <h3 className={styles.summaryList_Title}>
-                  Complejidad, evolución y el fin del ciclo del internet de los
-                  pioneros
-                </h3>
-                <p className={styles.summaryList_Description}>
-                  En 2023, internet ya no es ese lugar de 25 años atrás, sino un
-                  commodity de una complejidad extrema.
-                </p>
+                <a
+                  className={styles.summaryList_Link}
+                  href="/complejidad-evolución-y-el-fin-del-ciclo-del-internet-de-los-pioneros"
+                >
+                  <div>
+                    <h3 className={styles.summaryList_Title}>
+                      Complejidad, evolución y el fin del ciclo del internet de
+                      los pioneros.
+                    </h3>
+                    <p className={styles.summaryList_Description}>
+                      En 2023, internet ya no es ese lugar de 25 años atrás,
+                      sino un commodity de una complejidad extrema.
+                    </p>
+                  </div>
+                  <svg
+                    style={{ width: 44, height: 44 }}
+                    role="img"
+                    aria-label="Lee el artículo 'Nostalgia para combatir el aburrimiento'"
+                  >
+                    <use xlinkHref={"/sprite.svg#jakala-arrow"} />
+                  </svg>
+                </a>
               </li>
+
               <li className={styles.summaryList_Box}>
                 <h3 className={styles.summaryList_Title}>
                   Automatizando las tareas sucias, peligrosas y aburridas

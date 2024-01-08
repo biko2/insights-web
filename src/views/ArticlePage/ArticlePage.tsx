@@ -1,5 +1,6 @@
 import React from "react";
 
+import { ResponsiveImage } from "../../components/ResponsiveImage";
 import { classNames } from "../../utilities/classnames";
 import bottomPage from "../Layout/BottomPage.module.scss";
 import footer from "../Layout/Footer.module.scss";
@@ -24,6 +25,7 @@ interface Props {
   authorship: string;
   authorshipSubtitle: string;
   audioSrc: string;
+  footerImage: string;
 }
 
 export const ArticlePage: React.FC<React.PropsWithChildren<Props>> = ({
@@ -35,6 +37,7 @@ export const ArticlePage: React.FC<React.PropsWithChildren<Props>> = ({
   authorship,
   authorshipSubtitle,
   audioSrc,
+  footerImage,
 }) => {
   return (
     <>
@@ -87,6 +90,18 @@ export const ArticlePage: React.FC<React.PropsWithChildren<Props>> = ({
           >
             {authorshipSubtitle}
           </span>
+
+          {footerImage && (
+            <ResponsiveImage
+              desktopSrc={footerImage}
+              desktopWidth={1416}
+              desktopHeight={797}
+              mobileSrc={footerImage}
+              mobileWidth={1416}
+              mobileHeight={797}
+              alt="medio circulo en colores pastel"
+            />
+          )}
         </section>
 
         <section className={styles.banner}>

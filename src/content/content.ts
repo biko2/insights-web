@@ -13,6 +13,7 @@ const blog = defineCollection({
       metaImageAlt: z.string(),
       audioSrc: z.string(),
       type: z.string(),
+      footerImage: z.string(),
     }),
 });
 
