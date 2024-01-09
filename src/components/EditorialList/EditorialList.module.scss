@@ -21,3 +21,23 @@
     }
   }
 }
+
+.itemList__darkMode {
+  padding-left: var(--space-l);
+
+  li {
+    position: relative;
+    padding-left: var(--space-l);
+    margin-bottom: var(--space-l);
+
+    @include textFontS;
+    color: var(--background-default);
+
+    &::before {
+      position: absolute;
+      left: calc(var(--space-l) * -1);
+      top: #{toRem(2)};
+      content: url("/public/icons/item-arrow-white.svg");
+    }
+  }
+}
