@@ -1,0 +1,72 @@
+@import "../../styles/tools/mediaQueries.scss";
+@import "../../styles/tools/mixins/textFont.scss";
+@import "../../styles/tools/functions.scss";
+
+.imageLayout {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: var(--space-2xl);
+
+    grid-column: 1 / -1;
+
+    @media #{$fromTablet} {
+        grid-column: 2 / 8;
+    }
+
+    @media #{$fromLaptop} {
+        grid-column: 3 / 11;
+    }
+
+    @media #{$fromDesktop} {
+        grid-column: 2 / 12;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    figcaption {
+        margin-top: var(--space-l);
+        font-weight: 700;
+    }
+}
+
+.backgroundImage {
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+
+    width: 200%;
+    height: 100%;
+
+    background: url("/images/complejidad/bg-matrix.webp") no-repeat;
+    background-position: bottom;
+    background-size: auto;
+
+    z-index: -1;
+}
+
+.topImages {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--space-2xl);
+
+    @media #{$fromDesktop} {
+        gap: var(--space-5xl);
+        flex-direction: row;
+    }
+}
+
+.secondImage {
+    @media #{$fromDesktop} {
+        margin-bottom: unset;
+        margin-top: var(--space-5xl);
+    }
+}
