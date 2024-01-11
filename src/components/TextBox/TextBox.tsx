@@ -5,9 +5,10 @@ import styles from "./TextBox.module.scss";
 
 export const TextBox: React.FC = () => {
   return (
-    <section className={styles.textBox}>
+    <section id="bibliotecas" className={styles.textBox}>
       <h3 className={styles.textBox_title}>
-        La utopía de las bibliotecas públicas
+        La utopía de las
+        <br /> bibliotecas públicas
       </h3>
       <p className={styles.textBox_content}>
         Hablando de la biblioteca universal que hemos conseguido con la llegada

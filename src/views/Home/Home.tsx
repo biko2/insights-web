@@ -251,7 +251,7 @@ export const Home: React.FC = () => {
               <li className={styles.summaryList_Box}>
                 <a
                   className={styles.summaryList_Link}
-                  href="/complejidad-evolución-y-el-fin-del-ciclo-del-internet-de-los-pioneros"
+                  href="/complejidad-evolucion-y-el-fin-del-ciclo-del-internet-de-los-pioneros"
                 >
                   <div>
                     <h3 className={styles.summaryList_Title}>

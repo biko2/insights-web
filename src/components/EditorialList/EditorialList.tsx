@@ -30,7 +30,7 @@ export const EditorialList: React.FC = () => {
         - Quizás no nos damos cuenta de que el internet ya no es ese espacio de
         oportunidad para pioneros, sino algo tan complejo que resulta frustrante
         hincarle el diente{" "}
-        <Link href="/complejidad-evolución-y-el-fin-del-ciclo-del-internet-de-los-pioneros">
+        <Link href="/complejidad-evolucion-y-el-fin-del-ciclo-del-internet-de-los-pioneros">
           (Aritz Suescun lo explica);
         </Link>
       </li>
