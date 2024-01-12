@@ -1,0 +1,39 @@
+@import "../../styles/tools/mixins/textFont.scss";
+@import "../../styles/tools/mixins/paragraphLayout.scss";
+
+.textBox {
+  @include paragraphLayout;
+
+  background-color: var(--secondary-grey-jakala-global-color-secondary-grey-50);
+  padding: var(--space-2xl) var(--space-m);
+  border-radius: var(--space-m);
+
+  margin-bottom: var(--space-l);
+
+  @media #{$fromTablet} {
+    grid-column: 1 / 10;
+    padding: var(--space-2xl);
+  }
+}
+
+.textBox_title {
+  @include textFontL;
+  color: var(--primary-blue);
+  font-weight: 700;
+
+  margin-bottom: var(--space-l);
+}
+
+.textBox_content {
+  @include textFontS;
+  color: var(--secondary-grey);
+
+  &:not(:last-child) {
+    margin-bottom: var(--space-l);
+  }
+}
+
+.textBox_content__highlighted {
+  font-style: italic;
+  font-weight: 400;
+}
