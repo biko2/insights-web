@@ -1,0 +1,131 @@
+@import "../../styles/tools/mixins/textFont.scss";
+@import "../../styles/tools/mediaQueries.scss";
+@import "../../styles/tools/functions.scss";
+
+
+.tableContainer {
+  grid-column: 2 / -1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media #{$onlyLaptop} {
+    grid-column: 3 / 11;
+  }
+
+  @media #{$fromDesktop} {
+    grid-column: 2 / 12;
+  }
+}
+
+.table {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-xxs);
+  gap: var(--space-xxs);
+
+  width: #{toRem(232)};
+
+  background-color: var(--background-primary-default);
+  border-top-right-radius: var(--space-m);
+  border-bottom-right-radius: var(--space-m);
+
+  @media #{$fromLaptop} {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-end;
+
+    width: #{toRem(1056)};
+
+    border-radius: var(--space-m);
+  }
+}
+
+.table_header {
+  position: absolute;
+  top: 0;
+  left: -120px;
+
+  display: flex;
+  flex-direction: column;
+
+  width: #{toRem(120)};
+  height: #{toRem(465)};
+
+  border-top-left-radius: var(--space-m);
+  border-bottom-left-radius: var(--space-m);
+  background-color: var(--background-primary-default);
+
+  color: var(--background-default);
+  font-weight: 700;
+
+  @media #{$fromLaptop} {
+    position: static;
+  }
+
+
+}
+
+.table_headerContent {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  justify-content: stretch;
+  flex-grow: 1;
+
+  @include textFontXS;
+
+  padding: var(--space-l) var(--space-m);
+  padding-left: var(--space-xxs);
+
+  font-weight: 700;
+  text-align: right;
+}
+
+.table_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+
+  background-color: var(--background-default);
+  border-radius: var(--space-m);
+
+  @include textFontXS;
+  color: var(--secondary-grey);
+
+  @media #{$fromLaptop} {
+    width: #{toRem(232)};
+  }
+}
+
+.table_content {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  flex-grow: 1;
+  padding: var(--space-l) var(--space-m);
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+.table_content__highlighted {
+  font-weight: 700 !important;
+  /** Revisar esto!/ */
+}
+
+.row_small {
+  height: #{toRem(80)};
+}
+
+.row_medium {
+  height: #{toRem(88)};
+}
+
+.row_big {
+  height: #{toRem(144)};
+}

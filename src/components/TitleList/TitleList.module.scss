@@ -1,0 +1,42 @@
+@import "../../styles/tools/mixins/textFont.scss";
+@import "../../styles/tools/mediaQueries.scss";
+@import "../../styles/tools/mixins/paragraphLayout.scss";
+@import "../../styles/tools/functions.scss";
+
+.titleList {
+  @include paragraphLayout;
+
+  &>*:not(:last-child) {
+    margin-bottom: var(--space-3xl);
+  }
+}
+
+.titleList_item {
+  display: flex;
+  flex-direction: column;
+
+  @media #{$fromDesktop} {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.titleList_title {
+  flex: 1 0 50%;
+
+  @include textFontL;
+  color: var(--background-primary-default);
+  font-weight: 700;
+
+  & svg {
+    width: var(--space-l);
+    height: var(--space-l);
+  }
+}
+
+.titleList_content {
+  flex: 1 0 50%;
+
+  @include textFontS;
+  color: var(--secondary-grey);
+}
