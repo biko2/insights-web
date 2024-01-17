@@ -1,0 +1,1 @@
+export { FullContainerImage } from "./FullContainerImage";

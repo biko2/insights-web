@@ -3,8 +3,7 @@ title: "Automatizando las tareas sucias, peligrosas y aburridas… y algunas cua
 description: "Cuestiones a considerar para que la automatización aumente nuestra autonomía."
 authorship: "Un artículo de Ujue Agudo & Karlos g. Liberal."
 authorshipSubtitle: "Bikolabs."
-squareHeroImageUrl: "/images/automatizando-las-tareas/square-hero.webp"
-heroImageUrl: "/images/automatizando-las-tareas/panoramic-hero.webp"
+heroImageUrl: "/images/automatizando-las-tareas/hero.png"
 heroImageAlt: "Ilustración que muestra una composición de cuadrados con círuclos en sus aristas"
 metaImageSrc: "https://insightsmag.io/images/automatizando-las-tareas/meta-cover.png"
 metaImageAlt: "Automatizando las tareas sucias, peligrosas y aburridas… y algunas cuantas más. Un artículo de Ujue Agudo & Karlos g. Liberal"
@@ -16,6 +15,9 @@ import { ArticleSection } from "../../components/ArticleSection";
 import { ResponsiveImage } from "../../components/ResponsiveImage";
 import { NumberedSectionTitle } from "../../components/NumberedSectionTitle";
 import { SingleImage } from "../../components/SingleImage";
+import { FullContainerImage } from "../../components/FullContainerImage";
+import { ImageText } from "../../components/ImageText";
+import { HighlightedText } from "../../components/HighlightedText";
 
 <ArticleIntroduccion>
 ChatGTP, Midjourney y similares, algoritmos de inteligencia artificial que nos sugieren 
@@ -115,7 +117,7 @@ sin que siquiera [seamos conscientes de ello](https://www.lavanguardia.com/vida/
   lenguajes (ver destacados de RisCanvi y ChatGPT para más detalle).
 </ArticleSection>
 
-## Sección con fotos!!!!
+<ImageText />
 
 <ArticleSection>
   <NumberedSectionTitle number={2} subtitle={"Debemos investigar el impacto de los algoritmos en las decisiones humanas."}/>
@@ -251,14 +253,7 @@ con su premiada propuesta [“Cinco Máquinas”](https://designawards.core77.co
 
 </ArticleSection>
 
-<ArticleSection>
-  <SingleImage
-    src="/images/nostalgia-para-combatir/tetris.webp"
-    alt="Foto de la autora de las cinco máquinas"
-    caption="Design squiggle"
-  />
-  [**Design squiggle**](https://designawards.core77.com/Interaction/83604/Five-Machines)
-</ArticleSection>
+<FullContainerImage />
 
 <ArticleSection>
 Pero conviviendo con estas sugerentes aproximaciones de la automatización de tareas, 
@@ -294,6 +289,6 @@ empezamos a ser conscientes de que nuestro afán por automatizar tareas y proces
 no es la panacea que imaginamos. Por ello, es tiempo de tomar las riendas y lograr
 así que nuestra interacción con la tecnología nos libre realmente de tareas sucias,
 peligrosas y aburridas en lugar de menoscabar o precarizar nuestra capacidad de decisión,
-nuestra autonomía, e incluso nuestros derechos. **Empecemos**.
+nuestra autonomía, e incluso nuestros derechos. <HighlightedText text={"Empecemos."}/>
 
 </ArticleSection>

@@ -1,0 +1,17 @@
+@import "../../styles/tools/mediaQueries.scss";
+
+.FullContainerImage {
+  grid-column: 3 / 11;
+}
+
+.image {
+  display: block;
+  width: 100%;
+
+}
+
+.caption {
+  margin-top: var(--space-l);
+
+  font-weight: 700;
+}
