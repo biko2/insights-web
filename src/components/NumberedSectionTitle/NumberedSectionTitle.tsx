@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import styles from './NumberedSectionTitle.module.scss';
+import { classNames } from "../../utilities/classnames";
+import styles from "./NumberedSectionTitle.module.scss";
 
 interface Props {
   number: number;
-  title: string;
+  title?: string;
   subtitle: string;
 }
 
@@ -19,7 +20,11 @@ export const NumberedSectionTitle: React.FC<React.PropsWithChildren<Props>> = ({
       <div className={styles.numberedSectionTitle} aria-hidden="true">
         <span className={styles.numberedSectionTitle_number}>{number}</span>
         <div className={styles.numberedSectionTitle_title}>{title}</div>
-        <span>{subtitle}</span>
+        <div
+          className={classNames(!title && styles.numberedSectionTitle_subtitle)}
+        >
+          {subtitle}
+        </div>
       </div>
     </>
   );

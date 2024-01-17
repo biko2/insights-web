@@ -1,0 +1,299 @@
+---
+title: "Automatizando las tareas sucias, peligrosas y aburridas… y algunas cuantas más"
+description: "Cuestiones a considerar para que la automatización aumente nuestra autonomía."
+authorship: "Un artículo de Ujue Agudo & Karlos g. Liberal."
+authorshipSubtitle: "Bikolabs."
+squareHeroImageUrl: "/images/automatizando-las-tareas/square-hero.webp"
+heroImageUrl: "/images/automatizando-las-tareas/panoramic-hero.webp"
+heroImageAlt: "Ilustración que muestra una composición de cuadrados con círuclos en sus aristas"
+metaImageSrc: "https://insightsmag.io/images/automatizando-las-tareas/meta-cover.png"
+metaImageAlt: "Automatizando las tareas sucias, peligrosas y aburridas… y algunas cuantas más. Un artículo de Ujue Agudo & Karlos g. Liberal"
+audioSrc: "/audio/automatizando-las-tareas.wav"
+---
+
+import { ArticleIntroduccion } from "../../components/ArticleIntroduccion";
+import { ArticleSection } from "../../components/ArticleSection";
+import { ResponsiveImage } from "../../components/ResponsiveImage";
+import { NumberedSectionTitle } from "../../components/NumberedSectionTitle";
+import { SingleImage } from "../../components/SingleImage";
+
+<ArticleIntroduccion>
+ChatGTP, Midjourney y similares, algoritmos de inteligencia artificial que nos sugieren 
+qué contenido consumir en redes, qué pelis o series ver, qué música escuchar, con quién 
+ligar o cuántos pasos caminar. Estamos rodeados de tecnología que se adelanta y modela 
+nuestro comportamiento; que automatiza nuestros procesos, tareas y decisiones. 
+Y, salvo pequeñas desavenencias, en general parece que esto es algo que nos gusta.
+
+Y tiene su lógica que aboguemos por la automatización, puesto que siempre la hemos
+asociado con la liberación humana de tres tipos de tareas: tareas peligrosas,
+tareas sucias y tareas aburridas (las tareas de las tres Ds: _dirty, dangerous & dull_).
+Si las máquinas venían a librarnos de ellas, ¡bienvenido Mr. Marshall!
+
+</ArticleIntroduccion>
+
+<ArticleSection>
+Este es el anhelo que nos ha empujado, en los últimos años, a introducir algoritmos de 
+inteligencia artificial en cada vez más decisiones de ámbito público y privado. 
+Automatizaciones que quizá empezaron por centrarse en tareas sucias, peligrosas y aburridas, 
+pero que acabaron por introducirse en todo tipo de decisiones de calado.
+
+¿Sabías que en este país ya se usan sistemas automatizados para tomar decisiones públicas
+de [impacto social](https://digitalfuturesociety.com/app/uploads/2023/03/Uso_algoritmos_en_el_sector_publico_en_Espana-1.pdf)?
+Por ejemplo, en Cataluña, el sistema RisCanvi predice el riesgo de
+que los reclusos puedan reincidir en caso de concederles la libertad condicional.
+Por su parte, en la mayoría de comunidades autónomas, el sistema VioGén evalúa el
+riesgo de que una mujer vuelva a sufrir maltrato en casos de violencia de género.
+E, incluso, existe un algoritmo, BOSCO, que de forma cuasi-automatizada determina a
+qué personas en situación de vulnerabilidad se les adjudica la ayuda social de electricidad.
+
+En estas tareas, que dificilmente podrían calificarse como sucias, peligrosas o aburridas,
+se delega parte de la decisión al algoritmo automatizado, pero sin terminar de prescindir
+de la intervención humana. Esto es debido, en parte, a que las directrices europeas
+advierten del derecho de los ciudadanos a no someterse a una decisión totalmente
+[automatizada](https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai),
+considerando así necesaria la presencia humana como salvaguarda y
+protección frente a una posible [decisión algorítmica errónea o sesgada](https://www.sciencedirect.com/science/article/pii/S0267364922000292?via%3Dihub).
+
+A este tipo de procesos en los que se combina automatización e intervención humana
+se les conoce como procesos “human-in-the-loop” (o humano en el bucle). En ellos,
+la persona puede adquirir el papel de supervisor del algoritmo, es decir, interviniendo
+en caso de que el algoritmo se equivoque; y/o el papel de decisor final, donde el
+algoritmo apoya a la persona haciendo una predicción o recomendación, pero es
+responsabilidad del decisor humano dar por buena o no la sugerencia del algoritmo.
+En ambos casos, adquiera el algoritmo el papel principal o el de apoyo en la decisión,
+esta interacción que se produce entre humanos En ambos casos, adquiera el algoritmo
+el papel principal o el de apoyo en la decisión, esta interacción que se produce
+entre humanos y máquinas redibuja ostensiblemente ese soñado horizonte, liberado
+de tareas sucias, peligrosas y aburridas, que pretendíamos alcanzar mediante la
+automatización. Principalmente porque no solo estamos automatizando otro tipo de
+decisiones que no encajan en ese esquema, sino porque, además, nos obliga a
+preocuparnos de, al menos, tres cuestiones hasta ahora ignoradas:
+
+</ArticleSection>
+
+<ArticleSection>
+  <NumberedSectionTitle number={1}
+  subtitle={"Necesitamos entender el nuevo contexto de decisiones automatizadas."}/>
+
+En general, podemos afirmar que los ciudadanos no conocemos en qué decisiones
+(tanto de ámbito privado como público) se utilizan algoritmos, y aún menos conocemos
+qué peso adquiere la intervención algorítmica en ellas. Por ejemplo, en una encuesta
+realizada en 2019 con una [muestra de 10.960 ciudadanos europeos](https://www.bertelsmann-stiftung.de/fileadmin/files/BSt/Publikationen/GrauePublikationen/WhatEuropeKnowsAndThinkAboutAlgorithm.pdf),
+el 48% de los encuestados afirmaron no saber qué era un algoritmo o nunca habían oído hablar de él.
+Y los que sí sabían de su existencia, desconocían su uso en tareas de calado relevante,
+como la preselección de candidatos para un puesto de trabajo, la evaluación crediticia
+o el diagnóstico de enfermedades.
+
+Este desconocimiento dificulta claramente el siguiente reto a lograr: adquirir, de
+forma popularizada, la nueva terminología que impone esta realidad de decisiones
+automatizadas. Y no solo a nivel de normalizar el uso de ciertos términos y conceptos
+hasta ahora exclusivos de contextos técnicos y académicos, sino hasta el punto necesario
+de comprenderlos y diferenciarlos.
+
+Pongamos un ejemplo: ¿cómo saber si el mencionado algoritmo de RisCanvi, que predice
+la probabilidad de reincidencia de los presos en Cataluña, es acertado? ¿O justo?
+Estas preguntas exigen la necesidad de (entre otras cosas) comprender el matiz
+diferencial entre un buen puñado de términos estadísticos que se utilizan para
+evaluar el acierto de un algoritmo. Conceptos como “accuracy” o precisión, sensibilidad,
+especificidad, falsos positivos o negativos, o valor predictivo, entre otros.
+De no comprenderse, tendremos difícil defender, contraargumentar o incluso comprender
+si es adecuado o no utilizar un algoritmo para decisiones de semejante importancia.
+Decisiones que, y esto es necesario resaltar, llevan más de una década siendo automatizadas
+sin que siquiera [seamos conscientes de ello](https://www.lavanguardia.com/vida/20211206/7888727/algoritmo-sirve-denegar-permisos-presos-pese-fallos.html).
+
+</ArticleSection>
+
+> Desde Bikolabs hemos apostado por generar nuevos formatos narrativos que ayuden a comprender el impacto de los algoritmos en nuestras decisiones vitales.
+
+<ArticleSection>
+  Es preciso, por tanto, conocer cuál es la realidad de esas decisiones
+  automatizadas de las que no sabíamos de su existencia y adquirir lenguajes y
+  formatos que nos ayuden a comprender la nueva situación que ahora nos abruma
+  pero que lleva años instaurándose. Por ello, desde Bikolabs llevamos tiempo
+  trabajando en nuevos formatos divulgativos que ayuden a entender aquello que
+  necesitamos conocer. Porque a veces, los nuevos retos implican nuevos
+  lenguajes (ver destacados de RisCanvi y ChatGPT para más detalle).
+</ArticleSection>
+
+## Sección con fotos!!!!
+
+<ArticleSection>
+  <NumberedSectionTitle number={2} subtitle={"Debemos investigar el impacto de los algoritmos en las decisiones humanas."}/>
+
+Debido a la complejidad técnica de los algoritmos de inteligencia artificial y a que muchos
+de ellos son de propiedad privada (o aun [siendo modelos opensource](https://doctorow.medium.com/open-ai-isnt-93c17a203aeb)), habitualmente no es
+posible conocer cómo ha tomado una decisión un sistema automatizado, qué han ponderado
+para dar una recomendación o en qué datos específicos han basado su predicción (vaya, que
+no dejan un log ni nada parecido en el que curiosear y descubrir todo esto, como me
+preguntaron una vez).
+
+Esta opacidad afecta a las personas que deben supervisarlos o usarlos para tomar la decisión
+final. Por ejemplo, en el caso de RisCanvi, se ha publicado que los funcionarios que lo
+utilizan se encuentran conformes con la decisión que sugiere el algoritmo en [el 96,8% de
+las ocasiones](https://www.lavanguardia.com/vida/20211206/7888727/algoritmo-sirve-denegar-permisos-presos-pese-fallos.html). Es decir, que en más de 9 casos de cada 10 los funcionarios confirman el
+nivel de riesgo que el sistema asigna a los presos de las cárceles de Cataluña.
+¿Chirría un poco tal nivel de coincidencia entre las opiniones humanas y algorítmicas, no?
+Cuesta imaginar algún contexto donde tal coincidencia se produzca. Y esto a pesar de que,
+como indicamos en el destacado de RisCanvi de este artículo, la eficacia del algoritmo
+utilizado en este caso no está claramente garantizada.
+
+Para tratar de aportar transparencia a estos procesos de decisión automatizados, entidades
+normalmente externas realizan auditorías mediante procesos de ingeniería inversa y así
+inferir cómo funcionan estos algoritmos. Sin embargo, incluso en dichas auditorías, es
+habitual que se ignore un aspecto clave: cómo afecta al humano presente en el bucle esa
+interacción con el algoritmo.
+
+Las propias directrices europeas, como decíamos anteriormente, asumen que las personas
+en procesos human-in-the-loop actuarán como salvaguarda en las decisiones automatizadas
+de alto riesgo; sin embargo, no se tiene en cuenta que cuestiones como la experiencia
+de estos humanos en el bucle, el tiempo del que dispongan, o la estructura de incentivos
+a la que se vincule su desempeño pueden provocar que ese humano se convierta en un [mero
+validador del algoritmo](https://digitalfuturesociety.com/report/towards-a-meaningful-human-oversight-of-automated-decision-making-systems/) o, incluso, en el chivo expiatorio al que responsabilizar cuando
+el algoritmo se equivoque.
+
+Es por esto que, en Bikolabs, consideramos crítico ampliar la poca investigación que
+existe sobre estos temas. Así, en breve publicaremos un artículo científico, en
+colaboración con la catedrática en Psicología Helena Matute, de la Universidad de Deusto,
+donde hemos estudiado cómo afecta ver la predicción de un algoritmo a los humanos en el
+bucle que tienen que tomar la decisión final. Porque, como compartiremos en el artículo,
+no podemos ignorar lo que un algoritmo nos sugiere, sea ésta una sugerencia acertada o errónea.
+
+Así, reiteramos la necesidad de investigar sobre cómo impacta la automatización en nuestras
+vidas. Si no lo hacemos, posiblemente nos encontremos con que hemos perdido el control
+de nuestras propias decisiones.
+
+</ArticleSection>
+
+<ArticleSection>
+  <NumberedSectionTitle number={3}
+  subtitle={"Es hora de dejar de reproducir el pasado y construir el futuro que queremos."}/>
+
+Muchos de los algoritmos que se han introducido en los últimos años en los procesos de decisión
+han sido señalados por perpetuar desigualdades y mostrar sesgos. La automatización que nos iba
+a liberar de las tareas sucias, peligrosas y aburridas está, en muchos casos, reproduciendo
+nuestras vergüenzas y dándoles continuidad en lugar de eliminarlas.
+
+Como explica Virgina Eubanks en su libro “La automatización de la desigualdad”, los algoritmos
+en muchos casos no están mejorando nuestro presente, o al menos no el de aquellos colectivos
+vulnerables a los que se les vendió la idea de que la tecnología acabaría con su situación.
+Así explica, por ejemplo, que los algoritmos predictivos de criminalidad en EEUU favorecen
+el aumento de la vigilancia y control policial en los vecindarios negros y latinos, lo que
+a su vez supone el reporte de un mayor número de delitos en estos barrios, lo que retroalimenta
+al sistema y refuerza un estereotipo que no permite vías de escape.
+
+Es por esto que, en nuestra opinión, si alguien tiene que sentirse sucio, en peligro y aburrido
+ante semejantes automatizaciones son estos colectivos a los que se les realizó una promesa que,
+lejos de hacerse realidad, contribuye a perpetuar su miseria. O que genera incluso nuevos
+colectivos desfavorecidos, como puede ocurrir en [el caso de los guionistas de Hollywood](https://maldita.es/malditatecnologia/20230808/huelga-hollywood-ia-interpretes-guionistas/),
+donde el uso de inteligencia artificial generativa en este sector no está acabando con el
+trabajo humano del guionista pero sí está poniendo en riesgo su derecho a firmar el guión
+(y, por ello, su propiedad intelectual asociada).
+
+¿Cómo afronta el sector tecnológico esta situación? En muchos casos tratando de contrarrestar
+estos problemas de sesgo o prejuicio heredado en las máquinas, pero, en algunos otros,
+simplemente añadiendo disclaimers en sus páginas de producto, donde se reconoce el problema
+inserto en sus algoritmos pero no por ello se frena su lanzamiento.
+
+Esta desafección con la tecnología debido a sus promesas incumplidas no solo afecta a los
+colectivos más desfavorecidos. La experta en Ética de Datos e Inteligencia Artificial,
+Shannon Vallor, manifestaba en un artículo a finales del pasado año su sentimiento de hastío
+y resignación ante los continuos lanzamientos de innovaciones tecnológicas. Según Vallor,
+esta desafección se debía a que las personas habíamos dejado de ser los principales
+beneficiarios de dichas innovaciones para convertirnos en el [producto mercantil de las
+empresas tecnológicas](https://www.technologyreview.es/s/14743/cuando-perdimos-la-ilusion-por-la-tecnologia).
+
+Esto nos lleva a preguntarnos: si la tecnología iba a ayudarnos a mejorar nuestros mundos
+pero no está contribuyendo a ello, ¿por qué seguimos automatizando decisiones?.
+
+Puestos a imaginar y construir el futuro que queremos, quizá no deberíamos asumir que ese
+futuro pasa por automatizar nuestras elecciones. Quizá deberíamos tratar de imaginar ese
+futuro sin arrastrar y repetir constantemente el pasado.
+
+En febrero de este año, Nassim Pavin escribía un [artículo sobre este tema](https://www.technologyreview.es/s/14743/cuando-perdimos-la-ilusion-por-la-tecnologia),
+sugiriendo que deberíamos afrontar el diseño de nuestra realidad desde una indagación ética. Utiliza
+para ello el caso de los coches autónomos, donde se ha discutido durante años cómo diseñar
+un algoritmo que decida adecuadamente cuándo un accidente es inevitable, en lugar de
+plantear este desafío de diseño desde una perspectiva diferente; por ejemplo, desde
+preguntarse cómo serían las ciudades si las pensáramos para los peatones y no para los
+vehículos. O cómo sería vivir en una ciudad que excluye la posibilidad de utilizar
+coches autónomos y en la que, por tanto, nunca un algoritmo asesino en forma de automóvil
+podría acabar con la vida de nadie.
+
+Si nos liberamos de herencias pasadas, por decisiones mal tomadas o ideas asumidas como
+inevitables, quizá podamos reflexionar sobre cuándo y cómo la automatización puede
+contribuir al futuro que realmente deseamos y no a replicar lo que no nos gusta de
+nuestro pasado.
+
+</ArticleSection>
+
+## Una automatización para aumentar nuestra autonomía
+
+<ArticleSection>
+Donald Norman, pionero en el estudio de la interacción humano-computadora, hablaba, ya 
+en 2010, de este anhelo del sector tecnológico por automatizar las tareas sucias, 
+peligrosas y aburridas. Según Norman, el propósito que se perseguía era otorgar a 
+las personas la posibilidad de centrarse en tareas limpias, excitantes, creativas y 
+seguras, en las que la automatización no solo no sustituiría a las personas sino que 
+les ayudaría a aumentar sus habilidades humanas. Una aspiración muy interesante que, 
+pasados 13 años desde la sugerencia de Norman, no terminamos de alcanzar. Aunque no es 
+por falta de intentos sugerentes.
+
+Por ejemplo, tras la locura colectiva que provocó el lanzamiento de ChatGPT y pasados
+los primeros meses de titulares con [más hype que realidad](https://www.independent.co.uk/tech/ai-chatbot-chatgpt-google-openai-b2237834.html) y un uso a menudo equivocado
+de la herramienta (ver destacado ChatGPT), hoy ChatGPT tiene la potencialidad de utilizarse
+como un asistente que, en base a nuestras órdenes, realice esas tareas arduas y aburridas
+que forman parte de nuestro cotidiano general. Frente a la posibilidad de que ChatGTP
+reemplace a las personas o precarice su empleo como si de un agente con vida propia se
+tratase, cada vez es más viable, como decíamos, su uso como ese colaborador maquínico
+cuya función principal es ejecutar las órdenes del humano y hacer más agradable su trabajo.
+Algo al estilo de lo que se imaginó como futuro posible la diseñadora y artista Yuxi Liu
+con su premiada propuesta [“Cinco Máquinas”](https://designawards.core77.com/Interaction/83604/Five-Machines).
+
+</ArticleSection>
+
+<ArticleSection>
+  <SingleImage
+    src="/images/nostalgia-para-combatir/tetris.webp"
+    alt="Foto de la autora de las cinco máquinas"
+    caption="Design squiggle"
+  />
+  [**Design squiggle**](https://designawards.core77.com/Interaction/83604/Five-Machines)
+</ArticleSection>
+
+<ArticleSection>
+Pero conviviendo con estas sugerentes aproximaciones de la automatización de tareas, 
+tenemos al mismo tiempo a humanos realizando la labor que esperábamos delegar a las máquinas. 
+Es el caso de la automatización en la recomendación de contenidos que implica que un amplio 
+volumen de personas ejecuten la aburrida labor de recopilar, limpiar y clasificar cantidades 
+ingentes de datos con los que entrenar a los algoritmos, lo que supone que las personas 
+deban asumir la dañina tarea, por ejemplo en redes sociales, de vigilar y censurar las 
+recomendaciones del algoritmo cuando estas contienen contenido inapropiado, dañino o 
+incluso denunciable.
+
+Por eso, reclamamos, como Norman, una automatización que realmente aumente al humano.
+No vale simplemente con que las grandes tecnológicas añadan disclaimers a sus páginas
+de producto donde se exoneran de la responsabilidad y la vergüenza que supone lanzar
+una nueva tecnología que perpetúa desigualdades o genera nuevas. Si el papel de la
+tecnología es aumentarnos como humanos, o esa tecnología mejora lo presente o no debería
+ser aceptada.
+
+Del mismo modo, no vale con herramientas que nos liberen de tareas aburridas. Si aspiramos
+a aumentar las capacidades humanas, esperaremos que la tecnología se utilice para suplir
+nuestras carencias y potenciar nuestras virtudes, no para lo contrario.
+
+Por ello, tampoco vale con introducir a un humano en el bucle esperando que vigile las
+decisiones de un algoritmo y se convierta en su salvaguarda cuando el sistema equivoque
+(y el error se haga público). Si automatizamos decisiones que sea porque la tarea a
+automatizar es susceptible de ello, mejora la situación presente y contribuye al control
+humano.
+
+Porque, si nada de esto se cumple, ¿de verdad tiene sentido continuar por el mismo camino?
+
+Estamos en un momento de relación con la tecnología relevante, puesto que por fin
+empezamos a ser conscientes de que nuestro afán por automatizar tareas y procesos
+no es la panacea que imaginamos. Por ello, es tiempo de tomar las riendas y lograr
+así que nuestra interacción con la tecnología nos libre realmente de tareas sucias,
+peligrosas y aburridas en lugar de menoscabar o precarizar nuestra capacidad de decisión,
+nuestra autonomía, e incluso nuestros derechos. **Empecemos**.
+
+</ArticleSection>
