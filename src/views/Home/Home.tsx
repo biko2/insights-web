@@ -274,13 +274,27 @@ export const Home: React.FC = () => {
               </li>
 
               <li className={styles.summaryList_Box}>
-                <h3 className={styles.summaryList_Title}>
-                  Automatizando las tareas sucias, peligrosas y aburridas
-                </h3>
-                <p className={styles.summaryList_Description}>
-                  Cuestiones a considerar para que la automatización aumente
-                  nuestra autonomía.
-                </p>
+                <a
+                  className={styles.summaryList_Link}
+                  href="/automatizando-las-tareas-sucias-peligrosas-y-aburridas"
+                >
+                  <div>
+                    <h3 className={styles.summaryList_Title}>
+                      Automatizando las tareas sucias, peligrosas y aburridas
+                    </h3>
+                    <p className={styles.summaryList_Description}>
+                      Cuestiones a considerar para que la automatización aumente
+                      nuestra autonomía.
+                    </p>
+                  </div>
+                  <svg
+                    style={{ width: 44, height: 44 }}
+                    role="img"
+                    aria-label="Lee el artículo 'Nostalgia para combatir el aburrimiento'"
+                  >
+                    <use xlinkHref={"/sprite.svg#jakala-arrow"} />
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
