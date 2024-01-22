@@ -1,0 +1,9 @@
+@import "../../styles/tools/mixins/textFont.scss";
+
+.highlightedText {
+  @include textFontS;
+
+  color: var(--background-secondary-default);
+
+  font-weight: 700;
+}
