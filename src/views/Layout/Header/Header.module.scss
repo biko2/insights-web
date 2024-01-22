@@ -22,10 +22,40 @@
 }
 
 .mainHeader {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--space-m);
   padding-top: var(--space-l);
+
+  @media #{$onlyMobile} {
+    position: relative;
+
+    padding-left: var(--space-3xl);
+  }
+
+  @media #{$fromTablet} {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-m);
+  }
+
+}
+
+.menuButton {
+  position: absolute;
+
+  top: var(--space-s);
+  left: 0;
+  bottom: 0;
+  margin: auto;
+
+  width: auto;
+  max-width: 100%;
+  height: #{toRem(37)};
+
+  cursor: pointer;
+
+  @media #{$fromTablet} {
+    display: none;
+  }
+
 }
 
 .logo {
