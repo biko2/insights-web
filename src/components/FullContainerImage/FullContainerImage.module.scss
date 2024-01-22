@@ -1,7 +1,15 @@
 @import "../../styles/tools/mediaQueries.scss";
 
 .FullContainerImage {
-  grid-column: 3 / 11;
+  grid-column: 1 / -1;
+
+  @media #{$onlyTablet} {
+    grid-column: 2 / 8;
+  }
+
+  @media #{$fromLaptop} {
+    grid-column: 3 / 11;
+  }
 }
 
 .image {
