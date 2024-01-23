@@ -196,14 +196,26 @@ export const Home: React.FC = () => {
                 </a>
               </li>
               <li className={styles.summaryList_Box}>
-                <div>
-                  <h3 className={styles.summaryList_Title}>
-                    Paren las redes, que yo me bajo
-                  </h3>
-                  <p className={styles.summaryList_Description}>
-                    Devolvamos las redes a su esencia para hacerlas mejores.
-                  </p>
-                </div>
+                <a
+                  className={styles.summaryList_Link}
+                  href="/paren-las-redes-que-yo-me-bajo"
+                >
+                  <div>
+                    <h3 className={styles.summaryList_Title}>
+                      Paren las redes, que yo me bajo
+                    </h3>
+                    <p className={styles.summaryList_Description}>
+                      Devolvamos las redes a su esencia para hacerlas mejores.
+                    </p>
+                  </div>
+                  <svg
+                    style={{ width: 44, height: 44 }}
+                    role="img"
+                    aria-label="Lee el artículo 'Nostalgia para combatir el aburrimiento'"
+                  >
+                    <use xlinkHref={"/sprite.svg#jakala-arrow"} />
+                  </svg>
+                </a>
               </li>
               <li className={styles.summaryList_Box}>
                 <a
